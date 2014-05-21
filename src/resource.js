@@ -1,4 +1,5 @@
 //Imagens
+var s_teste = "";
 var s_big_stone = "big-stone.png";
 var s_buggy = "buggy.png";
 var s_bullet_v = "bullet-v.png";
