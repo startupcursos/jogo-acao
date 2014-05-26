@@ -1,4 +1,4 @@
-var RollingStone = cc.Sprite.extend({
+var SmallRollingStone = cc.Sprite.extend({
 	active : true,
 	healthPoints : 1,
 	speedX : -100,
@@ -7,9 +7,9 @@ var RollingStone = cc.Sprite.extend({
 	ctor : function(x, y) {
 		this._super();
 		this.setPosition(x, y);
-		this.init(s_rolling_stone);
+		this.init(s_small_rolling_stone);
 		GAME.CONTAINER.ENEMIES.push(this);
-		var actionRotate = cc.RotateBy.create(2, -360);
+		var actionRotate = cc.RotateBy.create(2, 360).reverse();
 		this.runAction(cc.RepeatForever.create(actionRotate));
 	},
 	update : function(dt) {
