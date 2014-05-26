@@ -40,6 +40,7 @@
         appFiles:[
             'src/resource.js',
             'src/config/GameConfig.js',
+            'src/sprites/NaveSeguidora.js',
             'src/sprites/BigStone.js',
             'src/sprites/Buggy.js',
             'src/sprites/BulletH.js',
@@ -48,6 +49,8 @@
             'src/sprites/HoleSmall.js',
             'src/sprites/HoleBig.js',
             'src/sprites/Ground.js',
+            'src/sprites/RollingStone.js',
+            'src/sprites/SmallRollingStone.js',
             'src/sprites/Stone.js',
             'src/sprites/Ufo1.js',
             'src/layers/GameLayer.js',
