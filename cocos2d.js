@@ -47,6 +47,7 @@
             'src/sprites/EnemyBulletV.js',
             'src/sprites/Hole.js',
             'src/sprites/Ground.js',
+            'src/sprites/RollingStone.js',
             'src/sprites/Stone.js',
             'src/sprites/Ufo1.js',
             'src/layers/GameLayer.js',
