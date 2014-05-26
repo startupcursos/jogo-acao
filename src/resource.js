@@ -10,6 +10,7 @@ var s_hole_big = "hole-big.png";
 var s_ground = "groundAcidentado.png";
 var s_landscape_1 = "landscape1.png";
 var s_landscape_2 = "landscape2.png";
+var s_little_stone = "little-stone.png";
 var s_rolling_stone = "rolling-stone.png";
 var s_small_rolling_stone = "small-rolling-stone.png";
 var s_stone = "stone.png";
@@ -43,6 +44,7 @@ var g_resources = [
     {src:s_ground},
     {src:s_landscape_1},
     {src:s_landscape_2},
+    {src:s_little_stone},
     {src:s_hole_small},
     {src:s_hole_big},
     {src:s_rolling_stone},
