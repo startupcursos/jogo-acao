@@ -57,8 +57,11 @@ var GameLayer = cc.Layer.extend({
 	},
 
 	levelOne : function() {
-		var obstacle = new RollingStone(1600, this.canvas.height / 3.5);
-	
+		var obstacle = new SmallRollingStone(1600, this.canvas.height / 4);
+		this.addChild(obstacle, obstacle.zOrder);
+		obstacle = new RollingStone(2000, this.canvas.height / 3.5);
+		this.addChild(obstacle, obstacle.zOrder);
+		obstacle = new SmallRollingStone(2600, this.canvas.height / 4);
 		this.addChild(obstacle, obstacle.zOrder);
 		// var enemy = new Ufo1(1000, 5 / 6 * this.canvas.height);
 		// this.addChild(enemy, enemy.zOrder);
