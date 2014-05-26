@@ -1,4 +1,4 @@
-var Hole = cc.Sprite.extend({
+var HoleSmall = cc.Sprite.extend({
 	active : true,
 	healthPoints : 1,
 	speedX : 0,
@@ -7,7 +7,7 @@ var Hole = cc.Sprite.extend({
 	ctor : function(x, y) {
 		this._super();
 		this.setPosition(x, y);
-		this.init(s_hole);
+		this.init(s_hole_small);
 		GAME.CONTAINER.ENEMIES.push(this);
 	},
 	update : function(dt) {
