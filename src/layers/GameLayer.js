@@ -57,11 +57,24 @@ var GameLayer = cc.Layer.extend({
 	},
 
 	levelOne : function() {
-		var enemy = new Ufo1(1000, 5 / 6 * this.canvas.height);
-		this.addChild(enemy, enemy.zOrder);
+		//var enemy = new Ufo1(1000, 5 / 6 * this.canvas.height);
+		//this.addChild(enemy, enemy.zOrder);
 		//this.addChild(new BigStone(1600, this.canvas.height / 3.5));
 		// this.addChild(new Hole(2000, this.canvas.height / 5));
-		this.addChild(new Stone(2600, this.canvas.height / 3.5));
+		//this.addChild(new Stone(2600, this.canvas.height / 3.5));
+		
+		//this.addChild(enemy, enemy.zOrder);
+		this.addChild(new NaveSeguidora(-500, this.canvas.height / 4));
+		
+		
+		
+		
+		
+		//this.addChild(new BigStone(1600, this.canvas.height / 3.5));
+		// this.addChild(new Hole(2000, this.canvas.height / 5));
+		
+		
+		
 	},
 	scrolling : function(dt) {
 		var ds = this.player.speedX * dt;
