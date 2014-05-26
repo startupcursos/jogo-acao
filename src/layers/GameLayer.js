@@ -30,6 +30,7 @@ var GameLayer = cc.Layer.extend({
 	canvas : null,
 	deslocamentoTotal : 0,
 	zOrder : 2,
+	randomHole : null,
 
 	init : function() {
 		GAME.CONTAINER.ENEMIES = [];
@@ -45,7 +46,7 @@ var GameLayer = cc.Layer.extend({
 		}
 
 		this.canvas = cc.Director.getInstance().getWinSize();
-		this.player = new Buggy(this.canvas.width / 3, this.canvas.height / 3);
+		this.player = new Buggy(this.canvas.width / 3, this.canvas.height / 3.1);
 		this.addChild(this.player, this.player.zOrder);
 		this.ground = new Ground(0, 0);
 		this.addChild(this.ground, this.ground.zOrder);
@@ -57,13 +58,15 @@ var GameLayer = cc.Layer.extend({
 	},
 
 	levelOne : function() {
-		//var enemy = new Ufo1(1000, 5 / 6 * this.canvas.height);
-		//this.addChild(enemy, enemy.zOrder);
 		this.addChild(new Stone(1200, this.canvas.height / 3.5));
 		this.addChild(new LittleStone(1600, this.canvas.height / 4));
 		this.addChild(new BigStone(2000, this.canvas.height / 3.3));
-		// this.addChild(new Hole(2000, this.canvas.height / 5));
-		//this.addChild(new Stone(2600, this.canvas.height / 3.5));
+		var obstacle = new SmallRollingStone(1600, this.canvas.height / 4);
+		this.addChild(obstacle, obstacle.zOrder);
+		obstacle = new RollingStone(2000, this.canvas.height / 3.5);
+		this.addChild(obstacle, obstacle.zOrder);
+		obstacle = new SmallRollingStone(2600, this.canvas.height / 4);
+		this.addChild(obstacle, obstacle.zOrder);
 	},
 	scrolling : function(dt) {
 		var ds = this.player.speedX * dt;
@@ -89,7 +92,8 @@ var GameLayer = cc.Layer.extend({
 	// } else {
 	// this.ground.setPosition(cc.p(newPosX, posGround.y));
 	// }
-	// },
+	// },	
+	
 	detectCollision : function() {
 		//Player Collisions com inimigos
 		var bboxPlayer = this.player.getBoundingBox();
@@ -122,10 +126,20 @@ var GameLayer = cc.Layer.extend({
 				this.player.hurt();
 				selEnemyBullet.hurt();
 			}
-			if (cc.rectIntersectsRect(bboxGround, bboxSelEnemyBullet)) {
+			if (cc.rectIntersectsRect(bboxGround, bboxSelEnemyBullet)) {				
 				selEnemyBullet.hurt();
-				var novoBuraco = new Hole(selEnemyBullet.getPosition().x, this.canvas.height / 6);
-				this.addChild(novoBuraco, novoBuraco.zOrder);
+				
+				//Gerar número aleatório de 1 a 10, para gerar buraco normal e grande.
+				this.randomHole = Math.floor((Math.random() * 10) + 1);
+							
+				if(this.randomHole > 5){
+					var newSmallHole = new HoleSmall(selEnemyBullet.getPosition().x, this.canvas.height / 6.45);
+					this.addChild(newSmallHole, newSmallHole.zOrder);
+				}
+				else{
+					var newBigHole = new HoleBig(selEnemyBullet.getPosition().x, this.canvas.height / 6.45);
+					this.addChild(newBigHole, newBigHole.zOrder);									
+				}
 			}
 		}
 	},
