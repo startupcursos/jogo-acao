@@ -45,7 +45,7 @@ var NaveSeguidora = cc.Sprite.extend({
 	updateSpeed : function() {
 		
 	
-		
+		if(this._dtOnScreen < 20){
 		
 		if (this.getPosition().x - GAME.SCROLLING.TOTAL > 50) {
 			this.speedX = GAME.SCROLLING.SPEED_X ;
@@ -54,7 +54,10 @@ var NaveSeguidora = cc.Sprite.extend({
 			this.speedX = GAME.SCROLLING.SPEED_X * 6;
 			this.speedY = 0;
 		}
-		
+		}else{
+			
+			this.speedX = GAME.SCROLLING.SPEED_X * 5;
+		}
 		
 	},
 	destroy : function() {
