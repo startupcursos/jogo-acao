@@ -13,6 +13,8 @@ var s_rolling_stone = "rolling-stone.png";
 var s_small_rolling_stone = "small-rolling-stone.png";
 var s_stone = "stone.png";
 var s_ufo_1 = "ufo-1.png";
+var s_naveseguidora = "naveseguidora.png";
+
 
 var s_rocket_1 = "rocket-1.png";
 var s_rocket_2 = "rocket-2.png";
@@ -44,6 +46,7 @@ var g_resources = [
     {src:s_small_rolling_stone},
     {src:s_hole},
     {src:s_stone},
+    {src:s_naveseguidora},
     {src:s_ufo_1},
     
     //plist 
