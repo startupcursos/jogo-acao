@@ -1,5 +1,4 @@
 //Imagens
-var s_teste = "";
 var s_big_stone = "big-stone.png";
 var s_buggy = "buggy.png";
 var s_bullet_v = "bullet-v.png";
@@ -10,6 +9,7 @@ var s_hole = "hole.png";
 var s_ground = "ground.png";
 var s_landscape_1 = "landscape1.png";
 var s_landscape_2 = "landscape2.png";
+var s_rolling_stone = "rolling-stone.png";
 var s_stone = "stone.png";
 var s_ufo_1 = "ufo-1.png";
 
@@ -39,6 +39,7 @@ var g_resources = [
     {src:s_ground},
     {src:s_landscape_1},
     {src:s_landscape_2},
+    {src:s_rolling_stone},
     {src:s_hole},
     {src:s_stone},
     {src:s_ufo_1},
