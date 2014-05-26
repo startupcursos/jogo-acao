@@ -9,7 +9,7 @@ var RollingStone = cc.Sprite.extend({
 		this.setPosition(x, y);
 		this.init(s_rolling_stone);
 		GAME.CONTAINER.ENEMIES.push(this);
-		var actionRotate = cc.RotateBy.create(2, 360).reverse();
+		var actionRotate = cc.RotateBy.create(2, -360);
 		this.runAction(cc.RepeatForever.create(actionRotate));
 	},
 	update : function(dt) {
