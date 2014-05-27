@@ -11,18 +11,17 @@ var s_ground = "groundAcidentado.png";
 var s_landscape_1 = "landscape1.png";
 var s_landscape_2 = "landscape2.png";
 var s_little_stone = "little-stone.png";
-var s_mina_1 = "Mina-1.png";
-var s_mina_2 = "Mina-2.png";
 var s_little_stone = "little-stone.png";
 var s_rolling_stone = "rolling-stone.png";
 var s_small_rolling_stone = "small-rolling-stone.png";
 var s_stone = "stone.png";
 var s_ufo_1 = "ufo-1.png";
 var s_naveseguidora = "naveseguidora.png";
-
-
 var s_rocket_1 = "rocket-1.png";
 var s_rocket_2 = "rocket-2.png";
+var s_mina1 = "Mina-1.png";
+var s_mina2 = "Mina-2.png";
+
 //plist
 var s_spritesheet = "spritesheet.png";
 var s_spritesheet_plist = "spritesheet.plist";
@@ -50,8 +49,8 @@ var g_resources = [
     {src:s_little_stone},
     {src:s_hole_small},
     {src:s_hole_big},
-    {src:s_mina_1},
-    {src:s_mina_2},
+    {src:s_mina1},
+    {src:s_mina2},
     {src:s_rolling_stone},
     {src:s_small_rolling_stone},
     {src:s_stone},

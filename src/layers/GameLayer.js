@@ -66,7 +66,7 @@ var GameLayer = cc.Layer.extend({
 		this.addChild(new RollingStone(7000, this.canvas.height / 3.5));
 		this.addChild(new HoleSmall(7000, this.canvas.height / 6.5));
 		this.addChild(new HoleBig(8000, this.canvas.height / 6.5));
-		// this.addChild(new Mina1(9000, this.canvas.height / 4));
+		this.addChild(new Mina1(500, this.canvas.height / 4.5));
 	},
 	scrolling : function(dt) {
 		var ds = this.player.speedX * dt;
