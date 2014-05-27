@@ -16,8 +16,6 @@ var Mina1 = cc.Sprite.extend({
 		var animFrames = [];
 		for (var i = 1; i <= 2; i++) {
 			var str = "Mina-" + i + ".png";
-			
-			
 			var frame = cc.SpriteFrameCache.getInstance().getSpriteFrame(str);
 			animFrames.push(frame);
 		}

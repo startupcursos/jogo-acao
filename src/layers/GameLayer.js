@@ -58,15 +58,15 @@ var GameLayer = cc.Layer.extend({
 	},
 
 	levelOne : function() {
-		this.addChild(new Stone(1200, this.canvas.height / 3.5));
-		this.addChild(new LittleStone(1600, this.canvas.height / 4));
-		this.addChild(new BigStone(2000, this.canvas.height / 3.3));
-		var obstacle = new SmallRollingStone(1600, this.canvas.height / 4);
-		this.addChild(obstacle, obstacle.zOrder);
-		obstacle = new RollingStone(2000, this.canvas.height / 3.5);
-		this.addChild(obstacle, obstacle.zOrder);
-		obstacle = new SmallRollingStone(2600, this.canvas.height / 4);
-		this.addChild(obstacle, obstacle.zOrder);
+		this.addChild(new NaveSeguidora(-500, this.canvas.height / 4));
+		this.addChild(new Stone(2000, this.canvas.height / 3.5));
+		this.addChild(new LittleStone(3000, this.canvas.height / 4));
+		this.addChild(new BigStone(4000, this.canvas.height / 3.3));
+		this.addChild(new SmallRollingStone(6000, this.canvas.height / 4));
+		this.addChild(new RollingStone(7000, this.canvas.height / 3.5));
+		this.addChild(new HoleSmall(7000, this.canvas.height / 6.5));
+		this.addChild(new HoleBig(8000, this.canvas.height / 6.5));
+		// this.addChild(new Mina1(9000, this.canvas.height / 4));
 	},
 	scrolling : function(dt) {
 		var ds = this.player.speedX * dt;

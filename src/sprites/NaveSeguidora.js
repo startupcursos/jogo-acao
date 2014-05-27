@@ -4,13 +4,12 @@ var NaveSeguidora = cc.Sprite.extend({
 	speedX : GAME.SCROLLING.SPEED_X * 2,
 	speedY : 0,
 	zOrder : 1,
-	
-	
+
 	_dtOnScreen : null,
 	ctor : function(x, y) {
 		this._super();
 		this.setPosition(x, y);
-		
+
 		this.init(s_naveseguidora);
 		GAME.CONTAINER.ENEMIES.push(this);
 	},
@@ -25,40 +24,35 @@ var NaveSeguidora = cc.Sprite.extend({
 		var temp = 0;
 		var finalP = cc.p(p0.x + dx, p0.y + dy);
 		/*
-		if (finalP.x < 0) {
-			this.destroy();
-		}
-		*/
+		 if (finalP.x < 0) {
+		 this.destroy();
+		 }
+		 */
 		if (finalP.x - GAME.SCROLLING.TOTAL < canvas.width && this._dtOnScreen === null) {
 			this._dtOnScreen = 0;
 		}
 		if (this._dtOnScreen != null) {
 			this._dtOnScreen += dt;
-			//this.fireTimes();	
+			//this.fireTimes();
 		}
 		this.setPosition(finalP);
 		this.updateSpeed();
 		this._dtLastFireV += dt;
 	},
-	
-	
+
 	updateSpeed : function() {
-		
-	
-		if(this._dtOnScreen < 20){
-		
-		if (this.getPosition().x - GAME.SCROLLING.TOTAL > 50) {
-			this.speedX = GAME.SCROLLING.SPEED_X ;
-			this.speedY = 0;
-		} else if (this.getPosition().x - GAME.SCROLLING.TOTAL > 600 && this.speedX > 60) {
-			this.speedX = GAME.SCROLLING.SPEED_X * 6;
-			this.speedY = 0;
+
+		if (this._dtOnScreen < 50) {
+			if (this.getPosition().x - GAME.SCROLLING.TOTAL > 50) {
+				this.speedX = GAME.SCROLLING.SPEED_X;
+				this.speedY = 0;
+			} else if (this.getPosition().x - GAME.SCROLLING.TOTAL > 600 && this.speedX > 60) {
+				this.speedX = GAME.SCROLLING.SPEED_X * 2;
+				this.speedY = 0;
+			}
+		} else {
+			this.speedX = GAME.SCROLLING.SPEED_X * 2;
 		}
-		}else{
-			
-			this.speedX = GAME.SCROLLING.SPEED_X * 5;
-		}
-		
 	},
 	destroy : function() {
 		this.setVisible(false);
@@ -69,7 +63,7 @@ var NaveSeguidora = cc.Sprite.extend({
 			GAME.CONTAINER.ENEMIES.splice(index, 1);
 		}
 	},
-	
+
 	hurt : function() {
 		this.healthPoints--;
 	}
