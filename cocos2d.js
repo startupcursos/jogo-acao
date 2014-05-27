@@ -49,6 +49,7 @@
             'src/sprites/HoleSmall.js',
             'src/sprites/HoleBig.js',
             'src/sprites/Ground.js',
+            'src/sprites/Mina-1.js',
             'src/sprites/RollingStone.js',
             'src/sprites/SmallRollingStone.js',
             'src/sprites/Stone.js',
