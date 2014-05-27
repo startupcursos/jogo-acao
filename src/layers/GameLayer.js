@@ -58,7 +58,7 @@ var GameLayer = cc.Layer.extend({
 	},
 
 	levelOne : function() {
-		this.addChild(new NaveSeguidora(-500, this.canvas.height / 4));
+		this.addChild(new NaveSeguidora(-500, this.canvas.height / 3.5));
 		this.addChild(new Stone(2000, this.canvas.height / 3.5));
 		this.addChild(new LittleStone(3000, this.canvas.height / 4));
 		this.addChild(new BigStone(4000, this.canvas.height / 3.3));
