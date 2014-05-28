@@ -28,14 +28,13 @@ var GameLayer = cc.Layer.extend({
 	player : null,
 	ground : null,
 	canvas : null,
+	deslocamentoTotal : 0,
 	zOrder : 2,
-	randomHole : null,
 
 	init : function() {
 		GAME.CONTAINER.ENEMIES = [];
 		GAME.CONTAINER.PLAYER_BULLETS = [];
 		GAME.CONTAINER.ENEMIES_BULLETS = [];
-		GAME.SCROLLING.TOTAL = 0;
 
 		// 1. super init first
 		this._super();
@@ -46,23 +45,51 @@ var GameLayer = cc.Layer.extend({
 		}
 
 		this.canvas = cc.Director.getInstance().getWinSize();
-		this.player = new Buggy(this.canvas.width / 3, this.canvas.height / 3.1);
+		this.player = new Buggy(this.canvas.width / 3, this.canvas.height / 3);
 		this.addChild(this.player, this.player.zOrder);
 		this.ground = new Ground(0, 0);
 		this.addChild(this.ground, this.ground.zOrder);
+		this.levelOne();
 		this.scheduleUpdate();
 		if (GAME.SOUND) {
 			cc.AudioEngine.getInstance().playMusic(s_bgm_1, true);
 		}
 	},
+
+	levelOne : function() {
+		//var enemy = new Ufo1(1000, 5 / 6 * this.canvas.height);
+		//this.addChild(enemy, enemy.zOrder);
+		this.addChild(new Stone(1200, this.canvas.height / 3.5));
+		this.addChild(new LittleStone(1600, this.canvas.height / 4));
+		this.addChild(new BigStone(2000, this.canvas.height / 3.3));
+		// this.addChild(new Hole(2000, this.canvas.height / 5));
+		//this.addChild(new Stone(2600, this.canvas.height / 3.5));
+	},
 	scrolling : function(dt) {
 		var ds = this.player.speedX * dt;
 		GAME.SCROLLING.TOTAL += ds;
-		if (GAME.SCROLLING.TOTAL > 10000) this.getParent().levelFinished();
 		var layerPos = this.getPosition();
 		var scrolledPos = cc.p((layerPos.x - ds), layerPos.y);
 		this.setPosition(scrolledPos);
 	},
+
+	// scrolling : function(dt) {
+	// var ds = -this.player.speedX * dt;
+	// this.deslocamentoTotal += ds;
+	// for (var i in GAME.CONTAINER.ENEMIES) {
+	// var selEnemy = GAME.CONTAINER.ENEMIES[i];
+	// var posSelEnemy = selEnemy.getPosition();
+	// var scrollPosSelEnemy = cc.p((posSelEnemy.x + ds), posSelEnemy.y);
+	// selEnemy.setPosition(scrollPosSelEnemy);
+	// }
+	// var posGround = this.ground.getPosition();
+	// var newPosX = posGround.x + ds;
+	// if (newPosX < -this.canvas.width) {
+	// this.ground.setPosition(cc.p(newPosX + this.canvas.width, posGround.y));
+	// } else {
+	// this.ground.setPosition(cc.p(newPosX, posGround.y));
+	// }
+	// },
 	detectCollision : function() {
 		//Player Collisions com inimigos
 		var bboxPlayer = this.player.getBoundingBox();
@@ -95,20 +122,9 @@ var GameLayer = cc.Layer.extend({
 				this.player.hurt();
 				selEnemyBullet.hurt();
 			}
-			if (cc.rectIntersectsRect(bboxGround, bboxSelEnemyBullet)) {				
+			if (cc.rectIntersectsRect(bboxGround, bboxSelEnemyBullet)) {
 				selEnemyBullet.hurt();
 				
-				//Gerar número aleatório de 1 a 10, para gerar buraco normal e grande.
-				this.randomHole = Math.floor((Math.random() * 10) + 1);
-							
-				if(this.randomHole > 5){
-					var newSmallHole = new HoleSmall(selEnemyBullet.getPosition().x, this.canvas.height / 6.45);
-					this.addChild(newSmallHole, newSmallHole.zOrder);
-				}
-				else{
-					var newBigHole = new HoleBig(selEnemyBullet.getPosition().x, this.canvas.height / 6.45);
-					this.addChild(newBigHole, newBigHole.zOrder);									
-				}
 			}
 		}
 	},
