@@ -58,7 +58,8 @@
             'src/layers/Landscape1Layer.js',
             'src/layers/Landscape2Layer.js',
             'src/sprites/LittleStone.js',
-            'src/scenes/GameplayScene.js',
+            'src/scenes/LevelOneScene.js',
+            'src/scenes/LevelTwoScene.js',
             'src/scenes/MainmenuScene.js',
             'src/scenes/SettingsScene.js'
         ]

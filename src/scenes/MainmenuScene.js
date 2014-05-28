@@ -14,8 +14,7 @@ var MainmenuScene = cc.Scene.extend({
 	},
 	onPlay : function() {
 		cc.log("Play pressed");
-		var transition = cc.TransitionFade.create(1, new GameplayScene());
-		cc.Director.getInstance().pushScene(transition);
+		cc.Director.getInstance().pushScene(cc.TransitionFade.create(1, new LevelOneScene()));
 	},
 	onHighScore : function() {
 		cc.log("HighScore pressed");
