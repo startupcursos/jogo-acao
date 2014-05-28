@@ -4,9 +4,11 @@
 var BulletV = cc.Sprite.extend({
 	active : true,
 	healthPoints : 1,
-	speedX : GAME.SCROLLING.SPEED_X,
-	speedY : GAME.SCROLLING.SPEED_X * 3,
+	speedX : 0,
+	speedY : 600,
 	zOrder : 0,
+	
+	
 	ctor : function(x,y) {
 		this._super();
 		this.setPosition(x, y);
@@ -27,6 +29,9 @@ var BulletV = cc.Sprite.extend({
 			this.destroy();
 		}
 	},
+	
+	
+	
 	destroy : function() {
 		this.setVisible(false);
 		this.active = false;

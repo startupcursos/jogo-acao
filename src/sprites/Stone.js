@@ -34,9 +34,6 @@ var Stone = cc.Sprite.extend({
 		}
 	},
 	hurt : function() {
-		if (GAME.SOUND) {
-			cc.AudioEngine.getInstance().playEffect(s_stone_explosion_sfx);
-		}
 		this.healthPoints--;
 	}
 });
