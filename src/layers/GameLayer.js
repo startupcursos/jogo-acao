@@ -56,15 +56,6 @@ var GameLayer = cc.Layer.extend({
 		}
 	},
 
-	levelOne : function() {
-		//var enemy = new Ufo1(1000, 5 / 6 * this.canvas.height);
-		//this.addChild(enemy, enemy.zOrder);
-		//this.addChild(new BigStone(1600, this.canvas.height / 3.5));
-		//this.addChild(new Hole(1000, this.canvas.height / 6.3));
-		//this.addChild(new Stone(2600, this.canvas.height / 3.5));
-		this.addChild(new Planta1(1000, this.canvas.height / 4.9));
-		
-	},
 	scrolling : function(dt) {
 		var ds = this.player.speedX * dt;
 		GAME.SCROLLING.TOTAL += ds;
@@ -124,8 +115,7 @@ var GameLayer = cc.Layer.extend({
 			}
 			if (cc.rectIntersectsRect(bboxGround, bboxSelEnemyBullet)) {
 				selEnemyBullet.hurt();
-				var novoBuraco = new Hole(selEnemyBullet.getPosition().x, this.canvas.height / 6);
-				this.addChild(novoBuraco, novoBuraco.zOrder);
+				
 			}
 		}
 	},
