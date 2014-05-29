@@ -49,6 +49,8 @@
             'src/sprites/Ground.js',
             'src/sprites/Stone.js',
             'src/sprites/Ufo1.js',
+            'src/sprites/Planta1.js',
+            //'src/sprites/Planta2.js',
             'src/layers/GameLayer.js',
             'src/layers/Landscape1Layer.js',
             'src/layers/Landscape2Layer.js',
