@@ -18,6 +18,7 @@ var s_rolling_stone = "rolling-stone.png";
 var s_small_rolling_stone = "small-rolling-stone.png";
 var s_stone = "stone.png";
 var s_ufo_1 = "ufo-1.png";
+var s_ufo_a = "ufoa.png";
 var s_naveseguidora = "naveseguidora.png";
 var s_ufo_b = "ufo-1.png";
 var s_explosion_1 = "explosion-1.png";
@@ -68,6 +69,7 @@ var g_resources = [
     {src:s_small_rolling_stone},
     {src:s_stone},
     {src:s_naveseguidora},
+    {src:s_ufo_a},
     {src:s_ufo_1},
     {src:s_ufo_b},
     {src:s_enemyrocket_2},
@@ -82,9 +84,6 @@ var g_resources = [
     {src:s_explosion_8},
     {src:s_explosion_9},
     {src:s_explosion_10},
-
-    //plist 
-    
     {src:s_spritesheet},
     {src:s_spritesheet_plist},
 

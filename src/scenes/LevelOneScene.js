@@ -22,7 +22,7 @@ var LevelOneScene = cc.Scene.extend({
 	},
 	enemyPlacement : function() {
 		this.gamelayer.addChild(new NaveSeguidora(-500, this.canvas.height / 3.5));
-		this.gamelayer.addChild(new UfoB(1000,  5 / 6 * this.canvas.height));
+		this.gamelayer.addChild(new UfoA(1000,  5 / 6 * this.canvas.height));
 		this.gamelayer.addChild(new Stone(2000, this.canvas.height / 3.5));
 		this.gamelayer.addChild(new LittleStone(3000, this.canvas.height / 4));
 		this.gamelayer.addChild(new BigStone(4000, this.canvas.height / 3.3));
