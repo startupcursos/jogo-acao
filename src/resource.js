@@ -4,6 +4,8 @@ var s_buggy = "buggy.png";
 var s_bullet_v = "bullet-v.png";
 var s_bullet_h = "bullet-h.png";
 var s_enemy_bullet_v = "enemy-bullet-v.png";
+var s_enemyrocket_1= "enemyrocket-1.png";
+var s_enemyrocket_2 = "enemyrocket-2.png";
 var s_fire = "fire.png";
 var s_hole_small = "hole-small.png";
 var s_hole_big = "hole-big.png";
@@ -17,6 +19,17 @@ var s_small_rolling_stone = "small-rolling-stone.png";
 var s_stone = "stone.png";
 var s_ufo_1 = "ufo-1.png";
 var s_naveseguidora = "naveseguidora.png";
+var s_ufo_b = "ufo-1.png";
+var s_explosion_1 = "explosion-1.png";
+var s_explosion_2 = "explosion-2.png";
+var s_explosion_3 = "explosion-3.png";
+var s_explosion_4 = "explosion-4.png";
+var s_explosion_5 = "explosion-5.png";
+var s_explosion_6 = "explosion-6.png";
+var s_explosion_7 = "explosion-7.png";
+var s_explosion_8 = "explosion-8.png";
+var s_explosion_9 = "explosion-9.png";
+var s_explosion_10 = "explosion-10.png";
 var s_rocket_1 = "rocket-1.png";
 var s_rocket_2 = "rocket-2.png";
 var s_mina1 = "Mina-1.png";
@@ -56,7 +69,20 @@ var g_resources = [
     {src:s_stone},
     {src:s_naveseguidora},
     {src:s_ufo_1},
-    
+    {src:s_ufo_b},
+    {src:s_enemyrocket_2},
+    {src:s_enemyrocket_1},
+    {src:s_explosion_1},
+    {src:s_explosion_2},
+    {src:s_explosion_3},
+    {src:s_explosion_4},
+    {src:s_explosion_5},
+    {src:s_explosion_6},
+    {src:s_explosion_7},
+    {src:s_explosion_8},
+    {src:s_explosion_9},
+    {src:s_explosion_10},
+
     //plist 
     
     {src:s_spritesheet},

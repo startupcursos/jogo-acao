@@ -22,6 +22,7 @@ var LevelOneScene = cc.Scene.extend({
 	},
 	enemyPlacement : function() {
 		this.gamelayer.addChild(new NaveSeguidora(-500, this.canvas.height / 3.5));
+		this.gamelayer.addChild(new UfoB(1000,  5 / 6 * this.canvas.height));
 		this.gamelayer.addChild(new Stone(2000, this.canvas.height / 3.5));
 		this.gamelayer.addChild(new LittleStone(3000, this.canvas.height / 4));
 		this.gamelayer.addChild(new BigStone(4000, this.canvas.height / 3.3));
@@ -29,7 +30,8 @@ var LevelOneScene = cc.Scene.extend({
 		this.gamelayer.addChild(new RollingStone(7000, this.canvas.height / 3.5));
 		this.gamelayer.addChild(new HoleSmall(7000, this.canvas.height / 6.5));
 		this.gamelayer.addChild(new HoleBig(8000, this.canvas.height / 6.5));
-		this.gamelayer.addChild(new Mina1(1500, this.canvas.height / 4.5));
+		/* Está com erro pq na ultima versão do branch não está a imagem no spritesheet */
+		//this.gamelayer.addChild(new Mina1(1500, this.canvas.height / 4.5));
 	},
 	levelFinished : function() {
 		cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new LevelTwoScene()));
