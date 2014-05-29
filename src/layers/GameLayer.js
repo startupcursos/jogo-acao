@@ -29,7 +29,7 @@ var GameLayer = cc.Layer.extend({
 	ground : null,
 	canvas : null,
 	deslocamentoTotal : 0,
-	zOrder : 2,
+	zOrder : 1,
 
 	init : function() {
 		GAME.CONTAINER.ENEMIES = [];
@@ -56,15 +56,6 @@ var GameLayer = cc.Layer.extend({
 		}
 	},
 
-	levelOne : function() {
-		//var enemy = new Ufo1(1000, 5 / 6 * this.canvas.height);
-		//this.addChild(enemy, enemy.zOrder);
-		this.addChild(new Stone(1200, this.canvas.height / 3.5));
-		this.addChild(new LittleStone(1600, this.canvas.height / 4));
-		this.addChild(new BigStone(2000, this.canvas.height / 3.3));
-		// this.addChild(new Hole(2000, this.canvas.height / 5));
-		//this.addChild(new Stone(2600, this.canvas.height / 3.5));
-	},
 	scrolling : function(dt) {
 		var ds = this.player.speedX * dt;
 		GAME.SCROLLING.TOTAL += ds;
