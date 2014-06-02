@@ -37,7 +37,7 @@ var HudLayer = cc.Layer.extend({
 		this.scheduleUpdate();
 	},
 	update : function(dt) {
-		this.labelScore.setString("SCORE: " + GAME.CONTAINER.SCORE);
+		this.labelScore.setString("SCORE: " + GAME.SCORE);
 	}
 });
 
