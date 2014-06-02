@@ -78,5 +78,6 @@ var UfoB = cc.Sprite.extend({
 	},
 	hurt : function() {
 		this.healthPoints--;
+		GAME.SCORE += 300;
 	}
 });
