@@ -44,6 +44,10 @@
             'src/sprites/BulletH.js',
             'src/sprites/BulletV.js',
             'src/sprites/Stone.js',
+            'src/sprites/Ufo1.js',
+            'src/sprites/Planta1.js',
+            'src/sprites/UfoB.js',
+            'src/sprites/UfoA.js',
             'src/layers/GameLayer.js',
             'src/scenes/GameplayScene.js'
         ]
