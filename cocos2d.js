@@ -58,6 +58,7 @@
             'src/sprites/UfoB.js',
             'src/sprites/UfoA.js',
             'src/layers/GameLayer.js',
+            'src/layers/HudLayer.js',
             'src/layers/Landscape1Layer.js',
             'src/layers/Landscape2Layer.js',
             'src/sprites/LittleStone.js',

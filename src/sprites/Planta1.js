@@ -52,5 +52,6 @@ var Planta1 = cc.Sprite.extend({
 	},
 	hurt : function() {
 		this.healthPoints--;
+		GAME.SCORE += 250;
 	}
 });
