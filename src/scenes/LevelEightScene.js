@@ -1,4 +1,4 @@
-var LevelThreeScene = cc.Scene.extend({
+var LevelEightScene = cc.Scene.extend({
 	player: null,
 	gamelayer: null,
 	canvas: null,
@@ -22,14 +22,13 @@ var LevelThreeScene = cc.Scene.extend({
 	},
 	enemyPlacement : function() {
 		this.gamelayer.addChild(new HoleSmall(1000, this.canvas.height / 6.5));
-		this.gamelayer.addChild(new HoleBig(3000, this.canvas.height / 6.5));
-		this.gamelayer.addChild(new HoleSmall(4000, this.canvas.height / 6.5));
-		this.gamelayer.addChild(new HoleBig(6000, this.canvas.height / 6.5));
-		this.gamelayer.addChild(new HoleBig(7000, this.canvas.height / 6.5));
-		this.gamelayer.addChild(new HoleSmall(8000, this.canvas.height / 6.5));
+		this.gamelayer.addChild(new Stone(2000, this.canvas.height / 3.8));
+		this.gamelayer.addChild(new UfoA(800,  5 / 6 * this.canvas.height));
+		this.gamelayer.addChild(new UfoB(1200,  5 / 6 * this.canvas.height));
+	
 	},
 	levelFinished : function() {
-		cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new LevelFourScene()));
+		cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new LevelNineScene()));
 	}
 
 });

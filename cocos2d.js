@@ -63,6 +63,10 @@
             'src/sprites/LittleStone.js',
             'src/scenes/LevelOneScene.js',
             'src/scenes/LevelTwoScene.js',
+            'src/scenes/LevelEightScene.js',
+            'src/scenes/LevelNineScene.js', //LevelElevenScene, LevelTwelveScene
+            'src/scenes/LevelElevenScene.js', 
+            'src/scenes/LevelTwelveScene.js', 
             'src/scenes/MainmenuScene.js',
             'src/scenes/SettingsScene.js'
         ]
