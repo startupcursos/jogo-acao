@@ -66,6 +66,7 @@
             'src/scenes/LevelFourScene.js',
             'src/scenes/LevelFiveScene.js',
             'src/scenes/LevelSixScene.js',
+            'src/scenes/LevelTenScene.js',
             'src/scenes/MainmenuScene.js',
             'src/scenes/SettingsScene.js'
         ]
