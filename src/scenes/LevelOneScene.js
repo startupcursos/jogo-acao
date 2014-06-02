@@ -23,6 +23,7 @@ var LevelOneScene = cc.Scene.extend({
 		var hudLayer = new HudLayer();
 		hudLayer.init();
 		this.addChild(hudLayer, hudLayer.zOrder);
+		GAME.SCORE = 0;
 	},
 	enemyPlacement : function() {
 		this.gamelayer.addChild(new NaveSeguidora(-500, this.canvas.height / 3.5));
