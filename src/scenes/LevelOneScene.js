@@ -22,16 +22,17 @@ var LevelOneScene = cc.Scene.extend({
 	},
 	enemyPlacement : function() {
 		this.gamelayer.addChild(new NaveSeguidora(-500, this.canvas.height / 3.5));
-		this.gamelayer.addChild(new UfoA(1000,  5 / 6 * this.canvas.height));
-		this.gamelayer.addChild(new Stone(2000, this.canvas.height / 3.5));
-		this.gamelayer.addChild(new LittleStone(3000, this.canvas.height / 4));
-		this.gamelayer.addChild(new BigStone(4000, this.canvas.height / 3.3));
-		this.gamelayer.addChild(new SmallRollingStone(6000, this.canvas.height / 4));
-		this.gamelayer.addChild(new RollingStone(7000, this.canvas.height / 3.5));
-		this.gamelayer.addChild(new HoleSmall(7000, this.canvas.height / 6.5));
-		this.gamelayer.addChild(new HoleBig(8000, this.canvas.height / 6.5));
-		/* Está com erro pq na ultima versão do branch não está a imagem no spritesheet */
-		//this.gamelayer.addChild(new Mina1(1500, this.canvas.height / 4.5));
+		this.gamelayer.addChild(new UfoA(800,  5 / 6 * this.canvas.height));
+		this.gamelayer.addChild(new UfoB(1200,  5 / 6 * this.canvas.height));
+		this.gamelayer.addChild(new Stone(1600, this.canvas.height / 3.5));
+		this.gamelayer.addChild(new LittleStone(2400, this.canvas.height / 4));
+		this.gamelayer.addChild(new BigStone(3200, this.canvas.height / 3.3));
+		this.gamelayer.addChild(new SmallRollingStone(10000, this.canvas.height / 4));
+		this.gamelayer.addChild(new RollingStone(11000, this.canvas.height / 3.5));
+		this.gamelayer.addChild(new HoleSmall(4000, this.canvas.height / 6.5));
+		this.gamelayer.addChild(new HoleBig(4800, this.canvas.height / 6.5));
+		this.gamelayer.addChild(new Mina1(5600, this.canvas.height / 4.5));
+		this.gamelayer.addChild(new Planta1(6400, this.canvas.height / 6.5));
 	},
 	levelFinished : function() {
 		cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new LevelTwoScene()));

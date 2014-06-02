@@ -29,12 +29,13 @@ var GameLayer = cc.Layer.extend({
 	ground : null,
 	canvas : null,
 	deslocamentoTotal : 0,
-	zOrder : 2,
+	zOrder : 1,
 
 	init : function() {
 		GAME.CONTAINER.ENEMIES = [];
 		GAME.CONTAINER.PLAYER_BULLETS = [];
 		GAME.CONTAINER.ENEMIES_BULLETS = [];
+		GAME.SCROLLING.TOTAL = 0;
 
 		// 1. super init first
 		this._super();
@@ -49,47 +50,20 @@ var GameLayer = cc.Layer.extend({
 		this.addChild(this.player, this.player.zOrder);
 		this.ground = new Ground(0, 0);
 		this.addChild(this.ground, this.ground.zOrder);
-		this.levelOne();
 		this.scheduleUpdate();
 		if (GAME.SOUND) {
 			cc.AudioEngine.getInstance().playMusic(s_bgm_1, true);
 		}
 	},
 
-	levelOne : function() {
-		//var enemy = new Ufo1(1000, 5 / 6 * this.canvas.height);
-		//this.addChild(enemy, enemy.zOrder);
-		this.addChild(new Stone(1200, this.canvas.height / 3.5));
-		this.addChild(new LittleStone(1600, this.canvas.height / 4));
-		this.addChild(new BigStone(2000, this.canvas.height / 3.3));
-		// this.addChild(new Hole(2000, this.canvas.height / 5));
-		//this.addChild(new Stone(2600, this.canvas.height / 3.5));
-	},
 	scrolling : function(dt) {
 		var ds = this.player.speedX * dt;
 		GAME.SCROLLING.TOTAL += ds;
+		if (GAME.SCROLLING.TOTAL > 10000) this.getParent().levelFinished();
 		var layerPos = this.getPosition();
 		var scrolledPos = cc.p((layerPos.x - ds), layerPos.y);
 		this.setPosition(scrolledPos);
 	},
-
-	// scrolling : function(dt) {
-	// var ds = -this.player.speedX * dt;
-	// this.deslocamentoTotal += ds;
-	// for (var i in GAME.CONTAINER.ENEMIES) {
-	// var selEnemy = GAME.CONTAINER.ENEMIES[i];
-	// var posSelEnemy = selEnemy.getPosition();
-	// var scrollPosSelEnemy = cc.p((posSelEnemy.x + ds), posSelEnemy.y);
-	// selEnemy.setPosition(scrollPosSelEnemy);
-	// }
-	// var posGround = this.ground.getPosition();
-	// var newPosX = posGround.x + ds;
-	// if (newPosX < -this.canvas.width) {
-	// this.ground.setPosition(cc.p(newPosX + this.canvas.width, posGround.y));
-	// } else {
-	// this.ground.setPosition(cc.p(newPosX, posGround.y));
-	// }
-	// },
 	detectCollision : function() {
 		//Player Collisions com inimigos
 		var bboxPlayer = this.player.getBoundingBox();

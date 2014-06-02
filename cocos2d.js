@@ -54,6 +54,7 @@
             'src/sprites/SmallRollingStone.js',
             'src/sprites/Stone.js',
             'src/sprites/Ufo1.js',
+            'src/sprites/Planta1.js',
             'src/sprites/UfoB.js',
             'src/sprites/UfoA.js',
             'src/layers/GameLayer.js',
@@ -62,6 +63,9 @@
             'src/sprites/LittleStone.js',
             'src/scenes/LevelOneScene.js',
             'src/scenes/LevelTwoScene.js',
+            'src/scenes/LevelFourScene.js',
+            'src/scenes/LevelFiveScene.js',
+            'src/scenes/LevelSixScene.js',
             'src/scenes/MainmenuScene.js',
             'src/scenes/SettingsScene.js'
         ]
