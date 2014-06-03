@@ -40,5 +40,7 @@ var RollingStone = cc.Sprite.extend({
 			cc.AudioEngine.getInstance().playEffect(s_stone_explosion_sfx);
 		}
 		this.healthPoints--;
+		GAME.SCORE += 200;
+
 	}
 });
