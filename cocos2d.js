@@ -68,7 +68,7 @@
             'src/scenes/LevelFourScene.js',
             'src/scenes/LevelFiveScene.js',
             'src/scenes/LevelSixScene.js',
-            
+            'src/scenes/LevelSevenScene.js',
             'src/scenes/LevelEightScene.js',
             'src/scenes/LevelNineScene.js', //LevelElevenScene, LevelTwelveScene
             'src/scenes/LevelTenScene.js',
