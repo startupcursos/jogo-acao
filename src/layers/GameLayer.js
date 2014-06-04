@@ -40,8 +40,8 @@ var GameLayer = cc.Layer.extend({
 		// 1. super init first
 		this._super();
 		if ('touches' in sys.capabilities) {
-			this.setTouchEnabled(true);
-		} else {
+		//	this.setTouchEnabled(true);
+		//} else {
 			this.setKeyboardEnabled(true);
 		}
 
