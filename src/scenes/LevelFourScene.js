@@ -1,4 +1,4 @@
-var LevelThreeScene = cc.Scene.extend({
+var LevelFourScene = cc.Scene.extend({
 	player: null,
 	gamelayer: null,
 	canvas: null,
@@ -22,14 +22,16 @@ var LevelThreeScene = cc.Scene.extend({
 	},
 	enemyPlacement : function() {
 		this.gamelayer.addChild(new HoleSmall(1000, this.canvas.height / 6.5));
-		this.gamelayer.addChild(new HoleBig(3000, this.canvas.height / 6.5));
-		this.gamelayer.addChild(new HoleSmall(4000, this.canvas.height / 6.5));
-		this.gamelayer.addChild(new HoleBig(6000, this.canvas.height / 6.5));
-		this.gamelayer.addChild(new HoleBig(7000, this.canvas.height / 6.5));
-		this.gamelayer.addChild(new HoleSmall(8000, this.canvas.height / 6.5));
+		this.gamelayer.addChild(new HoleBig(2000, this.canvas.height / 6.5));
+		this.gamelayer.addChild(new UfoB(4200, 5 / 6 * this.canvas.height));
+		this.gamelayer.addChild(new UfoB(4500, 5 / 6 * this.canvas.height));
+		this.gamelayer.addChild(new UfoB(4900, 5 / 6 * this.canvas.height));
+		this.gamelayer.addChild(new Stone(5200, this.canvas.height / 3.5));		
+		this.gamelayer.addChild(new UfoC(7500, 5 / 6 * this.canvas.height));
+		this.gamelayer.addChild(new UfoC(8500, 5 / 6 * this.canvas.height));			
 	},
 	levelFinished : function() {
-		cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new LevelFourScene()));
+		cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new LevelFiveScene()));
 	}
 
 });

@@ -1,4 +1,4 @@
-var LevelThreeScene = cc.Scene.extend({
+var LevelSevenScene = cc.Scene.extend({
 	player: null,
 	gamelayer: null,
 	canvas: null,
@@ -21,15 +21,18 @@ var LevelThreeScene = cc.Scene.extend({
 		this.player = this.gamelayer.player;
 	},
 	enemyPlacement : function() {
+		//this.gamelayer.addChild(new UfoC(1000,  5 / 6 * this.canvas.height));
 		this.gamelayer.addChild(new HoleSmall(1000, this.canvas.height / 6.5));
-		this.gamelayer.addChild(new HoleBig(3000, this.canvas.height / 6.5));
-		this.gamelayer.addChild(new HoleSmall(4000, this.canvas.height / 6.5));
-		this.gamelayer.addChild(new HoleBig(6000, this.canvas.height / 6.5));
-		this.gamelayer.addChild(new HoleBig(7000, this.canvas.height / 6.5));
-		this.gamelayer.addChild(new HoleSmall(8000, this.canvas.height / 6.5));
+		this.gamelayer.addChild(new HoleSmall(2000, this.canvas.height / 6.5));
+		this.gamelayer.addChild(new HoleSmall(3000, this.canvas.height / 6.5));
+		this.gamelayer.addChild(new HoleBig(4000, this.canvas.height / 6.5));
+		//this.gamelayer.addChild(new Planta1(5000, this.canvas.height / 6.5));
+		this.gamelayer.addChild(new Stone(5800, this.canvas.height / 3.8));
+		//this.gamelayer.addChild(new Planta1(5000, this.canvas.height / 6.5));
+		
 	},
 	levelFinished : function() {
-		cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new LevelFourScene()));
+		cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new LevelEightScene()));
 	}
 
 });

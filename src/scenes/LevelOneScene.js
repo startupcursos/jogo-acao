@@ -19,6 +19,11 @@ var LevelOneScene = cc.Scene.extend({
 		this.gamelayer.init();
 		this.enemyPlacement();
 		this.player = this.gamelayer.player;
+		
+		var hudLayer = new HudLayer();
+		hudLayer.init();
+		this.addChild(hudLayer, hudLayer.zOrder);
+		GAME.SCORE = 0;
 	},
 	enemyPlacement : function() {
 		

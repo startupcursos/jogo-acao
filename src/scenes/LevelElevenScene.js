@@ -1,4 +1,4 @@
-var LevelThreeScene = cc.Scene.extend({
+var LevelElevenScene = cc.Scene.extend({
 	player: null,
 	gamelayer: null,
 	canvas: null,
@@ -21,15 +21,15 @@ var LevelThreeScene = cc.Scene.extend({
 		this.player = this.gamelayer.player;
 	},
 	enemyPlacement : function() {
-		this.gamelayer.addChild(new HoleSmall(1000, this.canvas.height / 6.5));
-		this.gamelayer.addChild(new HoleBig(3000, this.canvas.height / 6.5));
-		this.gamelayer.addChild(new HoleSmall(4000, this.canvas.height / 6.5));
-		this.gamelayer.addChild(new HoleBig(6000, this.canvas.height / 6.5));
-		this.gamelayer.addChild(new HoleBig(7000, this.canvas.height / 6.5));
-		this.gamelayer.addChild(new HoleSmall(8000, this.canvas.height / 6.5));
+		this.gamelayer.addChild(new Mina1(600, this.canvas.height / 4.5));
+		this.gamelayer.addChild(new Mina1(1300, this.canvas.height / 4.5));
+		this.gamelayer.addChild(new Mina1(1800, this.canvas.height / 4.5));
+		this.gamelayer.addChild(new Mina1(2300, this.canvas.height / 4.5));
+		this.gamelayer.addChild(new Mina1(3300, this.canvas.height / 4.5));
+	
 	},
 	levelFinished : function() {
-		cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new LevelFourScene()));
+		cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new LevelTwelveScene()));
 	}
 
 });
