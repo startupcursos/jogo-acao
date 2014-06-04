@@ -39,10 +39,14 @@ var s_rocket_1 = "rocket-1.png";
 var s_rocket_2 = "rocket-2.png";
 var s_mina1 = "Mina-1.png";
 var s_mina2 = "Mina-2.png";
+var s_tank = "tank.png";
+
 
 //plist
 var s_spritesheet = "spritesheet.png";
 var s_spritesheet_plist = "spritesheet.plist";
+var s_explosion_anim_plist = "explosion_anim.plist";
+var s_explosion_anim = "explosion_anim.png";
 
 //Sfx
 var s_fire_sfx = "res/soundFx/fire.ogg";
@@ -93,10 +97,13 @@ var g_resources = [
     {src:s_explosion_10},
 	{src:s_planta_1},
 	{src:s_planta_2},
+	{src:s_tank},
+	
 	//plist
     {src:s_spritesheet},
     {src:s_spritesheet_plist},
-
+	{src:s_explosion_anim},
+    {src:s_explosion_anim_plist},
     //fnt
 
     //tmx

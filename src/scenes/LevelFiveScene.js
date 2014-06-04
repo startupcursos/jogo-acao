@@ -43,3 +43,4 @@ var LevelFiveScene = cc.Scene.extend({
 	}
 
 });
+
