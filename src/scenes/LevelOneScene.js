@@ -21,6 +21,8 @@ var LevelOneScene = cc.Scene.extend({
 		this.player = this.gamelayer.player;
 	},
 	enemyPlacement : function() {
+		
+		
 		this.gamelayer.addChild(new NaveSeguidora(-500, this.canvas.height / 3.5));
 		this.gamelayer.addChild(new UfoA(800,  5 / 6 * this.canvas.height));
 		this.gamelayer.addChild(new UfoB(1200,  5 / 6 * this.canvas.height));
