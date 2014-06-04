@@ -48,6 +48,7 @@ var s_spritesheet_plist = "spritesheet.plist";
 var s_fire_sfx = "res/soundFx/fire.ogg";
 var s_jump_sfx = "res/soundFx/jump.ogg";
 var s_stone_explosion_sfx = "res/soundFx/stone-explosion-sfx.ogg";
+var s_end_game = "res/soundFx/davidbain__end-game-fail.wav";
 //Bgm
 var s_bgm_1 = "res/music/bg-music1.ogg";
 
@@ -106,5 +107,6 @@ var g_resources = [
     //effect
     {src:s_jump_sfx},
     {src:s_fire_sfx},
-    {src:s_stone_explosion_sfx}
+    {src:s_stone_explosion_sfx},
+    {src:s_end_game}
 ];

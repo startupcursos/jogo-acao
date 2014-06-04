@@ -19,6 +19,18 @@ var LevelTenScene = cc.Scene.extend({
 		this.gamelayer.init();
 		this.enemyPlacement();
 		this.player = this.gamelayer.player;
+		
+		var hudLayer = new HudLayer();
+		hudLayer.init();
+		this.addChild(hudLayer, hudLayer.zOrder);
+		GAME.SCORE;
+		
+		var lifeLayer = new LifeLayer();
+		lifeLayer.init();		
+		this.addChild(lifeLayer, lifeLayer.zOrder);
+		GAME.LIFE;
+		
+		GAME.LASTLEVEL = new LevelTenScene();
 	},
 	enemyPlacement : function() {
 		this.gamelayer.addChild(new Mina1(2000, this.canvas.height / 4.5));
