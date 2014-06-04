@@ -38,6 +38,7 @@ var BigStone = cc.Sprite.extend({
 			cc.AudioEngine.getInstance().playEffect(s_stone_explosion_sfx);
 		}
 		this.healthPoints--;
+		GAME.SCORE += 100;
 		if (this.healthPoints == 1) {
 			this.init(s_stone);
 		}

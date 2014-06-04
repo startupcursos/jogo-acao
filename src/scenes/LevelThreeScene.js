@@ -41,7 +41,7 @@ var LevelThreeScene = cc.Scene.extend({
 		this.gamelayer.addChild(new HoleSmall(8000, this.canvas.height / 6.5));
 	},
 	levelFinished : function() {
-		cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new LevelTowScene()));
+		cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new LevelFourScene()));
 	}
 
 });
