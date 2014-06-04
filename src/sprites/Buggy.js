@@ -41,6 +41,14 @@ var Buggy = cc.Sprite.extend({
         emitter.setPosition(this.getPosition());
 		this.getParent().addChild(emitter, 10);
         this.speedX = 0;
+        GAME.LIFES -= 1;        
+        if(GAME.LIFES <= 0){        	
+        	cc.AudioEngine.getInstance().stopMusic(s_bgm_1); 
+        	cc.AudioEngine.getInstance().playEffect(s_end_game);
+        	cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new EndGameScene()));        	
+			return;	
+        }
+        cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, GAME.LASTLEVEL)); 
  	},
 	hurt : function() {
 		this.healthPoints--;

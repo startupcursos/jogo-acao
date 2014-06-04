@@ -19,6 +19,18 @@ var LevelSixScene = cc.Scene.extend({
 		this.gamelayer.init();
 		this.enemyPlacement();
 		this.player = this.gamelayer.player;
+		
+		var hudLayer = new HudLayer();
+		hudLayer.init();
+		this.addChild(hudLayer, hudLayer.zOrder);
+		GAME.SCORE;
+		
+		var lifeLayer = new LifeLayer();
+		lifeLayer.init();		
+		this.addChild(lifeLayer, lifeLayer.zOrder);
+		GAME.LIFE;
+		
+		GAME.LASTLEVEL = new LevelSixScene();
 	},
 	enemyPlacement : function() {
 		this.gamelayer.addChild(new UfoC(700, 5 / 6 * this.canvas.height));

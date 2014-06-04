@@ -58,6 +58,7 @@
             'src/sprites/UfoB.js',
             'src/sprites/UfoA.js',
             'src/layers/GameLayer.js',
+            'src/layers/LifeLayer.js',
             'src/layers/HudLayer.js',
             'src/layers/Landscape1Layer.js',
             'src/layers/Landscape2Layer.js',
@@ -69,7 +70,8 @@
             'src/scenes/LevelSixScene.js',
             'src/scenes/LevelTenScene.js',
             'src/scenes/MainmenuScene.js',
-            'src/scenes/SettingsScene.js'
+            'src/scenes/SettingsScene.js',
+            'src/scenes/EndGameScene.js'
         ]
     };
 
