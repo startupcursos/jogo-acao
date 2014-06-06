@@ -39,11 +39,11 @@ var GameLayer = cc.Layer.extend({
 
 		// 1. super init first
 		this._super();
-		if ('touches' in sys.capabilities) {
+		//if ('touches' in sys.capabilities) {
 		//	this.setTouchEnabled(true);
 		//} else {
 			this.setKeyboardEnabled(true);
-		}
+		//}
 
 		this.canvas = cc.Director.getInstance().getWinSize();
 		this.player = new Buggy(this.canvas.width / 3, this.canvas.height / 3);
