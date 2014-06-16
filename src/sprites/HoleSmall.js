@@ -34,6 +34,6 @@ var HoleSmall = cc.Sprite.extend({
 		}
 	},
 	hurt : function() {
-		this.healthPoints--;
+		// this.healthPoints--;
 	}
 });

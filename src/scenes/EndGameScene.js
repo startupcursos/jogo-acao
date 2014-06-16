@@ -9,7 +9,7 @@ var EndGameScene = cc.Scene.extend({
         
 		cc.MenuItemFont.setFontName("Algerian");
 		cc.MenuItemFont.setFontSize(100);
-		var title1 = cc.MenuItemFont.create("THE END");
+		var title1 = cc.MenuItemFont.create("GAMEOVER");
 		title1.setEnabled(false);
 
 		cc.MenuItemFont.setFontName("Arial");
