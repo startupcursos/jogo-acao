@@ -53,6 +53,7 @@
             'src/sprites/Ground.js',
             'src/sprites/Mina-1.js',
             'src/sprites/RollingStone.js',
+            'src/sprites/Roda.js',
             'src/sprites/Tank.js',
             'src/sprites/EnemyBulletH.js',
             'src/sprites/SmallRollingStone.js',
