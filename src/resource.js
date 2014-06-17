@@ -82,7 +82,7 @@ var g_resources = [
     {src:s_naveseguidora},
     {src:s_ufo_a},
     {src:s_ufo_b},
-     {src:s_ufo_c},
+    {src:s_ufo_c},
     {src:s_enemyrocket_2},
     {src:s_enemyrocket_1},
     {src:s_explosion_1},
