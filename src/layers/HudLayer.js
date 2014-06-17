@@ -28,16 +28,21 @@ var HudLayer = cc.Layer.extend({
 	canvas : null,
 	zOrder : 10,
 	labelScore: null,
+	labelLife: null,
 	init : function() {
 		this._super();
 		this.canvas = cc.Director.getInstance().getWinSize();
 		this.labelScore = cc.LabelTTF.create("SCORE: 0", "Impact", 14);
         this.labelScore.setPosition(this.canvas.width - 60, this.canvas.height - 30);
         this.addChild(this.labelScore);
+   		this.labelLife = cc.LabelTTF.create("LIFE: 0", "Impact", 14);        
+        this.labelLife.setPosition(this.canvas.width - 150, this.canvas.height - 30);
+        this.addChild(this.labelLife);
 		this.scheduleUpdate();
 	},
 	update : function(dt) {
 		this.labelScore.setString("SCORE: " + GAME.SCORE);
+		this.labelLife.setString("LIFE: " + GAME.LIFES);
 	}
 });
 

@@ -25,11 +25,6 @@ var LevelOneScene = cc.Scene.extend({
 		this.addChild(hudLayer, hudLayer.zOrder);
 		GAME.SCORE = 0;
 		
-		var lifeLayer = new LifeLayer();
-		lifeLayer.init();		
-		this.addChild(lifeLayer, lifeLayer.zOrder);
-		GAME.LIFES;
-		
 		//Armazeno a última fase carregada
 		GAME.LASTLEVEL = new LevelOneScene();
 	},

@@ -23,13 +23,6 @@ var LevelFiveScene = cc.Scene.extend({
 		var hudLayer = new HudLayer();
 		hudLayer.init();
 		this.addChild(hudLayer, hudLayer.zOrder);
-		GAME.SCORE;
-		
-		var lifeLayer = new LifeLayer();
-		lifeLayer.init();		
-		this.addChild(lifeLayer, lifeLayer.zOrder);
-		GAME.LIFE;
-		
 		GAME.LASTLEVEL = new LevelFiveScene();
 	},
 	enemyPlacement : function() {

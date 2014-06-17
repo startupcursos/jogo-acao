@@ -24,12 +24,6 @@ var LevelTwoScene = cc.Scene.extend({
 		hudLayer.init();
 		this.addChild(hudLayer, hudLayer.zOrder);
 		GAME.SCORE;
-		
-		var lifeLayer = new LifeLayer();
-		lifeLayer.init();		
-		this.addChild(lifeLayer, lifeLayer.zOrder);
-		GAME.LIFE;
-		
 		GAME.LASTLEVEL = new LevelTwoScene();
 	},
 	enemyPlacement : function() {
