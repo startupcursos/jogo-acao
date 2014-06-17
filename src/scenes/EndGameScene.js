@@ -2,14 +2,9 @@ var EndGameScene = cc.Scene.extend({
 	onEnter : function() {
 		this._super();
 		
-		/*this.canvas = cc.Director.getInstance().getWinSize();
-		this.labelLife = cc.LabelTTF.create("THE END", "Algerian", 100);        
-        this.labelLife.setPosition(this.canvas.width / 2, this.canvas.height / 2);
-        this.addChild(this.labelLife);*/
-        
 		cc.MenuItemFont.setFontName("Algerian");
 		cc.MenuItemFont.setFontSize(100);
-		var title1 = cc.MenuItemFont.create("GAMEOVER");
+		var title1 = cc.MenuItemFont.create("GAME OVER");
 		title1.setEnabled(false);
 
 		cc.MenuItemFont.setFontName("Arial");
