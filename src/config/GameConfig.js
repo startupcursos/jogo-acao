@@ -1,3 +1,5 @@
+cc.SPRITE_DEBUG_DRAW =  0;
+
 GAME = {};
 GAME.SCORE=0;
 GAME.LIFES=3;
