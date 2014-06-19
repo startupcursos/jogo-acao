@@ -109,11 +109,10 @@ var GameLayer = cc.Layer.extend({
 			}
 			if (cc.rectIntersectsRect(bboxGround, bboxSelEnemyBullet)) {
 				selEnemyBullet.hurt();
-				
 			}
 		}
-		var bboxRoda1 = this.roda1.getBoundingBox();
-		if (cc.rectIntersectsRect(bboxRoda1, bboxGround)) {
+
+		if (this.roda1.getPosition().y - this.roda1.getBoundingCircleRadius() < this.ground.getContentSize().height) {
 			var p0 = this.roda1.getPosition();
 			this.roda1.setPosition(cc.p(p0.x, p0.y + 1));
 		} else {

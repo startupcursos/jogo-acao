@@ -25,5 +25,15 @@ var Roda = cc.Sprite.extend({
 	},
 	hurt : function() {
 		this.healthPoints--;
+	},
+
+	getBoundingCircleRadius : function() {
+		return Math.sqrt(((this.getContentSize().width / 2 * this.getContentSize().width / 2) + (this.getContentSize().height / 2 * this.getContentSize().height / 2)));
+	},
+	drawBoundingCircle : function() {
+        cc.drawingUtil.setLineWidth(5);
+        cc.drawingUtil.setDrawColor4B(255,255,255,255);
+		var radius = this.getBoundingCircleRadius();
+        cc.drawingUtil.drawCircle(this.getPosition(), radius, 360, 10, false);
 	}
 });
