@@ -34,6 +34,6 @@ var HoleUfoC = cc.Sprite.extend({
 		}
 	},
 	hurt : function() {
-		this.healthPoints--;
+		// this.healthPoints--;
 	}
 });

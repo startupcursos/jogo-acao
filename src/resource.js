@@ -3,6 +3,7 @@ var s_big_stone = "big-stone.png";
 var s_buggy = "buggy.png";
 var s_bullet_v = "bullet-v.png";
 var s_bullet_h = "bullet-h.png";
+var s_carro = "carro.png";
 var s_enemy_bullet_v = "enemy-bullet-v.png";
 var s_enemy_bullet_v2 = "enemy-bullet-v2.png";
 var s_enemyrocket_1= "enemyrocket-1.png";
@@ -37,6 +38,7 @@ var s_explosion_9 = "explosion-9.png";
 var s_explosion_10 = "explosion-10.png";
 var s_rocket_1 = "rocket-1.png";
 var s_rocket_2 = "rocket-2.png";
+var s_roda = "roda.png";
 var s_mina1 = "Mina-1.png";
 var s_mina2 = "Mina-2.png";
 var s_tank = "tank.png";
@@ -65,6 +67,7 @@ var g_resources = [
     {src:s_buggy},
     {src:s_bullet_v},
     {src:s_bullet_h},
+    {src:s_carro},
     {src:s_enemy_bullet_v},
     {src:s_enemy_bullet_v2},
     {src:s_fire},
@@ -78,12 +81,13 @@ var g_resources = [
     {src:s_mina1},
     {src:s_mina2},
     {src:s_rolling_stone},
+    {src:s_roda},
     {src:s_small_rolling_stone},
     {src:s_stone},
     {src:s_naveseguidora},
     {src:s_ufo_a},
     {src:s_ufo_b},
-     {src:s_ufo_c},
+    {src:s_ufo_c},
     {src:s_enemyrocket_2},
     {src:s_enemyrocket_1},
     {src:s_explosion_1},

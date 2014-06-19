@@ -52,14 +52,11 @@ var GameLayer = cc.Layer.extend({
 		this.player = new Buggy(this.canvas.width / 3, this.canvas.height / 3.5);
 		this.addChild(this.player, this.player.zOrder);
 		
-		this.roda1 = new Roda(this.player.getPosition().x + 25, this.player.getPosition().y - 25);
 		this.addChild(this.roda1, this.roda1.zOrder);
-		
 		this.roda2 = new Roda(this.player.getPosition().x - 15, this.player.getPosition().y - 25);
-		this.addChild(this.roda2, this.roda1.zOrder);
-		
-		this.roda3 = new Roda(this.player.getPosition().x - 55, this.player.getPosition().y - 25);
-		this.addChild(this.roda3, this.roda1.zOrder);
+		this.addChild(this.roda2, this.roda2.zOrder);
+		this.roda3 = new Roda(this.player.getPosition().x - 50, this.player.getPosition().y - 25);
+		this.addChild(this.roda3, this.roda3.zOrder);
 		
 		this.ground = new Ground(0, 0);
 		this.addChild(this.ground, this.ground.zOrder);
@@ -111,33 +108,33 @@ var GameLayer = cc.Layer.extend({
 			}
 			if (cc.rectIntersectsRect(bboxGround, bboxSelEnemyBullet)) {
 				selEnemyBullet.hurt();
-				
 			}
 		}
 		var bboxRoda1 = this.roda1.getBoundingBox();
 		if (cc.rectIntersectsRect(bboxRoda1, bboxGround)) {
 			var p0 = this.roda1.getPosition();
-			this.roda1.setPosition(cc.p(p0.x, p0.y +1));
-		}else {
+			this.roda1.setPosition(cc.p(p0.x, p0.y + 1));
+		} else {
 			var p0 = this.roda1.getPosition();
-			this.roda1.setPosition(cc.p(p0.x, p0.y -1));
+			this.roda1.setPosition(cc.p(p0.x, p0.y - 1));
 		}
 		var bboxRoda2 = this.roda2.getBoundingBox();
 		if (cc.rectIntersectsRect(bboxRoda2, bboxGround)) {
 			var p0 = this.roda2.getPosition();
-			this.roda2.setPosition(cc.p(p0.x, p0.y +1));
-		}else {
+			this.roda2.setPosition(cc.p(p0.x, p0.y + 1));
+		} else {
 			var p0 = this.roda2.getPosition();
-			this.roda2.setPosition(cc.p(p0.x, p0.y -1));
+			this.roda2.setPosition(cc.p(p0.x, p0.y - 1));
 		}
 		var bboxRoda3 = this.roda3.getBoundingBox();
 		if (cc.rectIntersectsRect(bboxRoda3, bboxGround)) {
 			var p0 = this.roda3.getPosition();
-			this.roda3.setPosition(cc.p(p0.x, p0.y +1));
-		}else {
+			this.roda3.setPosition(cc.p(p0.x, p0.y + 1));
+		} else {
 			var p0 = this.roda3.getPosition();
-			this.roda3.setPosition(cc.p(p0.x, p0.y -1));
+			this.roda3.setPosition(cc.p(p0.x, p0.y - 1));
 		}
+
 	},
 	updateActiveUnits : function(dt) {
 		var selChild, children = this.getChildren();

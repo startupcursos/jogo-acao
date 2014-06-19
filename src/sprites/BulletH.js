@@ -45,34 +45,7 @@ var BulletH = cc.Sprite.extend({
 			
 			
 		}
-	},
-	
-	explosion : function() {
-	
-	cc.SpriteFrameCache.getInstance().addSpriteFrames(s_spritesheet_plist);
-		//Montar um Array com cada quadro da Animação
-		var animFrames = [];
-		for (var i = 1; i <= 11; i++) {
-			var str = "explosion-" + i + ".png";
-			var frame = cc.SpriteFrameCache.getInstance().getSpriteFrame(str);
-			animFrames.push(frame);
-		}
-		
-		
-		
-		this.initWithSpriteFrame(animFrames[0]);
-		var animation = cc.Animation.create(animFrames, 0.1/2);
-		//var action = cc.RepeatForever.create(cc.Animate.create(animation));
-		var action = cc.Animate.create(animation);
-		this.runAction(action);
-	//	this.explosion(true);
-	
-	this.speedX = 0;
-		
-	},
-	
-	
-	
+	},	
 	
 	
 	explode : function(){
@@ -80,7 +53,7 @@ var BulletH = cc.Sprite.extend({
 		cc.SpriteFrameCache.getInstance().addSpriteFrames(s_explosion_anim_plist);
 		//Montar um Array com cada quadro da Animação
 		var animFrames2 = [];
-		for (var i = 1; i <= 12; i++) {
+		for (var i = 1; i <= 13; i++) {
 			var str2 = "explosion_bullet" + i + ".png";
 			var frame2 = cc.SpriteFrameCache.getInstance().getSpriteFrame(str2);
 			animFrames2.push(frame2);
