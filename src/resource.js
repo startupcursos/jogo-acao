@@ -40,7 +40,8 @@ var s_rocket_2 = "rocket-2.png";
 var s_mina1 = "Mina-1.png";
 var s_mina2 = "Mina-2.png";
 var s_tank = "tank.png";
-
+var s_carro = "carro.png";
+var s_roda = "roda.png";
 
 //plist
 var s_spritesheet = "spritesheet.png";
@@ -98,6 +99,8 @@ var g_resources = [
 	{src:s_planta_1},
 	{src:s_planta_2},
 	{src:s_tank},
+	{src:s_carro},
+	{src:s_roda},
 	
 	//plist
     {src:s_spritesheet},

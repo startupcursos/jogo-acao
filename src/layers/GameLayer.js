@@ -26,6 +26,9 @@
 
 var GameLayer = cc.Layer.extend({
 	player : null,
+	roda1: null,
+	roda2: null,
+	roda3: null,
 	ground : null,
 	canvas : null,
 	deslocamentoTotal : 0,
@@ -46,8 +49,18 @@ var GameLayer = cc.Layer.extend({
 		}
 
 		this.canvas = cc.Director.getInstance().getWinSize();
-		this.player = new Buggy(this.canvas.width / 3, this.canvas.height / 4);
+		this.player = new Buggy(this.canvas.width / 3, this.canvas.height / 3.5);
 		this.addChild(this.player, this.player.zOrder);
+		
+		this.roda1 = new Roda(this.player.getPosition().x + 25, this.player.getPosition().y - 25);
+		this.addChild(this.roda1, this.roda1.zOrder);
+		
+		this.roda2 = new Roda(this.player.getPosition().x - 15, this.player.getPosition().y - 25);
+		this.addChild(this.roda2, this.roda1.zOrder);
+		
+		this.roda3 = new Roda(this.player.getPosition().x - 55, this.player.getPosition().y - 25);
+		this.addChild(this.roda3, this.roda1.zOrder);
+		
 		this.ground = new Ground(0, 0);
 		this.addChild(this.ground, this.ground.zOrder);
 		this.scheduleUpdate();
@@ -100,6 +113,30 @@ var GameLayer = cc.Layer.extend({
 				selEnemyBullet.hurt();
 				
 			}
+		}
+		var bboxRoda1 = this.roda1.getBoundingBox();
+		if (cc.rectIntersectsRect(bboxRoda1, bboxGround)) {
+			var p0 = this.roda1.getPosition();
+			this.roda1.setPosition(cc.p(p0.x, p0.y +1));
+		}else {
+			var p0 = this.roda1.getPosition();
+			this.roda1.setPosition(cc.p(p0.x, p0.y -1));
+		}
+		var bboxRoda2 = this.roda2.getBoundingBox();
+		if (cc.rectIntersectsRect(bboxRoda2, bboxGround)) {
+			var p0 = this.roda2.getPosition();
+			this.roda2.setPosition(cc.p(p0.x, p0.y +1));
+		}else {
+			var p0 = this.roda2.getPosition();
+			this.roda2.setPosition(cc.p(p0.x, p0.y -1));
+		}
+		var bboxRoda3 = this.roda3.getBoundingBox();
+		if (cc.rectIntersectsRect(bboxRoda3, bboxGround)) {
+			var p0 = this.roda3.getPosition();
+			this.roda3.setPosition(cc.p(p0.x, p0.y +1));
+		}else {
+			var p0 = this.roda3.getPosition();
+			this.roda3.setPosition(cc.p(p0.x, p0.y -1));
 		}
 	},
 	updateActiveUnits : function(dt) {

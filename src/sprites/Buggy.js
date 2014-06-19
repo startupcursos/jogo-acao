@@ -13,7 +13,7 @@ var Buggy = cc.Sprite.extend({
 	_dtLastFireH : 1,
 	ctor : function(x, y) {
 		this._super();
-		this.init(s_buggy);
+		this.init(s_carro);
 		this.setPosition(x, y);
 	},
 	update : function(dt) {
