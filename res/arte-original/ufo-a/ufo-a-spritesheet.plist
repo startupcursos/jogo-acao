@@ -4,7 +4,7 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>ufo-a-1-hd.png</key>
+            <key>ufo-a-1.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,2},{100,47}}</string>
@@ -17,7 +17,7 @@
                 <key>sourceSize</key>
                 <string>{100,47}</string>
             </dict>
-            <key>ufo-a-2-hd.png</key>
+            <key>ufo-a-2.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{104,2},{100,47}}</string>
@@ -40,7 +40,7 @@
             <key>size</key>
             <string>{206,51}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:c446dd2817c11c7304cbceaede189648:f65e9c037d32c39a08f3abfe11de9cdb:712b8fe5d76db3bc6fc7ff9e537d751d$</string>
+            <string>$TexturePacker:SmartUpdate:3b9795fd2a3ecc2b6524afa5f7a78265:f65e9c037d32c39a08f3abfe11de9cdb:712b8fe5d76db3bc6fc7ff9e537d751d$</string>
             <key>textureFileName</key>
             <string>ufo-a-spritesheet.png</string>
         </dict>

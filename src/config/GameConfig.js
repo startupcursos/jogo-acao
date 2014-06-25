@@ -1,4 +1,4 @@
-cc.SPRITE_DEBUG_DRAW =  1;
+cc.SPRITE_DEBUG_DRAW =  0;
 
 GAME = {};
 GAME.SCORE=0;
