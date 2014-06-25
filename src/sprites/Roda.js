@@ -26,7 +26,6 @@ var Roda = cc.Sprite.extend({
 	hurt : function() {
 		this.healthPoints--;
 	},
-
 	getBoundingCircleRadius : function() {
 		return Math.sqrt(((this.getContentSize().width / 2 * this.getContentSize().width / 2) + (this.getContentSize().height / 2 * this.getContentSize().height / 2)));
 	},

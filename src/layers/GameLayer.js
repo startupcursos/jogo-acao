@@ -52,7 +52,6 @@ var GameLayer = cc.Layer.extend({
 		this.player = new Buggy(this.canvas.width / 3, this.canvas.height / 3.5);
 		this.addChild(this.player, this.player.zOrder);
 		
-		this.roda1 = new Roda(this.player.getPosition().x + 20, this.player.getPosition().y - 25);
 		this.addChild(this.roda1, this.roda1.zOrder);
 		this.roda2 = new Roda(this.player.getPosition().x - 15, this.player.getPosition().y - 25);
 		this.addChild(this.roda2, this.roda2.zOrder);
@@ -111,8 +110,8 @@ var GameLayer = cc.Layer.extend({
 				selEnemyBullet.hurt();
 			}
 		}
-
-		if (this.roda1.getPosition().y - this.roda1.getBoundingCircleRadius() < this.ground.getContentSize().height) {
+		var bboxRoda1 = this.roda1.getBoundingBox();
+		if (cc.rectIntersectsRect(bboxRoda1, bboxGround)) {
 			var p0 = this.roda1.getPosition();
 			this.roda1.setPosition(cc.p(p0.x, p0.y + 1));
 		} else {
