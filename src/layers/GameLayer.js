@@ -51,7 +51,8 @@ var GameLayer = cc.Layer.extend({
 		this.canvas = cc.Director.getInstance().getWinSize();
 		this.player = new Buggy(this.canvas.width / 3, this.canvas.height / 3.5);
 		this.addChild(this.player, this.player.zOrder);
-		
+
+		this.roda1 = new Roda(this.player.getPosition().x + 25, this.player.getPosition().y - 25);
 		this.addChild(this.roda1, this.roda1.zOrder);
 		this.roda2 = new Roda(this.player.getPosition().x - 15, this.player.getPosition().y - 25);
 		this.addChild(this.roda2, this.roda2.zOrder);
