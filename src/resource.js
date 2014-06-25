@@ -22,7 +22,8 @@ var s_small_rolling_stone = "small-rolling-stone.png";
 var s_stone = "stone.png";
 var s_planta_1 = "planta1.png";
 var s_planta_2 = "planta2.png";
-var s_ufo_a = "ufo-a.png";
+var s_ufo_a_2 = "ufo-a-1.png";
+var s_ufo_a_1 = "ufo-a-2.png";
 var s_naveseguidora = "naveseguidora.png";
 var s_ufo_b = "ufo-1.png";
 var s_ufo_c = "ufo-c.png";
@@ -50,6 +51,8 @@ var s_spritesheet = "spritesheet.png";
 var s_spritesheet_plist = "spritesheet.plist";
 var s_explosion_anim_plist = "explosion_anim.plist";
 var s_explosion_anim = "explosion_anim.png";
+var s_ufo_a_spritesheet = "ufo-a-spritesheet.png";
+var s_ufo_a_spritesheet_plist = "ufo-a-spritesheet.plist";
 
 //Sfx
 var s_fire_sfx = "res/soundFx/fire.ogg";
@@ -85,7 +88,8 @@ var g_resources = [
     {src:s_small_rolling_stone},
     {src:s_stone},
     {src:s_naveseguidora},
-    {src:s_ufo_a},
+    {src:s_ufo_a_1},
+    {src:s_ufo_a_2},
     {src:s_ufo_b},
     {src:s_ufo_c},
     {src:s_enemyrocket_2},
@@ -111,6 +115,9 @@ var g_resources = [
     {src:s_spritesheet_plist},
 	{src:s_explosion_anim},
     {src:s_explosion_anim_plist},
+    {src:s_ufo_a_spritesheet},
+    {src:s_ufo_a_spritesheet_plist},
+    
     //fnt
 
     //tmx
