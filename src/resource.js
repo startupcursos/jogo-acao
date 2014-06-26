@@ -120,6 +120,8 @@ var g_resources = [
     {src:s_explosion_anim_plist},
     {src:s_ufo_a_spritesheet},
     {src:s_ufo_a_spritesheet_plist},
+	{src:s_ufo_b_spritesheet},
+    {src:s_ufo_b_spritesheet_plist},
     
     //fnt
 
