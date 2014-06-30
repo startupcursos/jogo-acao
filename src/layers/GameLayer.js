@@ -156,8 +156,8 @@ var GameLayer = cc.Layer.extend({
 		}
 	},
 	update : function(dt) {
-		this.detectCollision();
 		this.updateActiveUnits(dt);
+		this.detectCollision();
 		this.scrolling(dt);
 	},
 

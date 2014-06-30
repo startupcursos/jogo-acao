@@ -4,7 +4,7 @@ var Roda = cc.Sprite.extend({
 	speedX : GAME.SCROLLING.SPEED_X,
 	speedY : 0,
 	zOrder : 2,
-	dy0:25, 
+	dy0:30, 
 	ctor : function(x, yBuggy) {
 		this._super();
 		this.setPosition(x, yBuggy - this.dy0);
@@ -17,10 +17,10 @@ var Roda = cc.Sprite.extend({
 		var dx = this.speedX * dt;
 		var dy = this.speedY * dt;
 		var finalP = cc.p(p0.x + dx, p0.y + dy);
-		if (this.getParent().player.getPosition().y - finalP.y > this.dy0 * 1.1) 
-			finalP = cc.p(p0.x + dx, this.getParent().player.getPosition().y * 1.1);
-		if (this.getParent().player.getPosition().y - finalP.y < this.dy0 * 0.9) 
-			finalP = cc.p(p0.x + dx, this.getParent().player.getPosition().y * 0.9);
+		if (this.getParent().player.getPosition().y - finalP.y > this.dy0 * 1.05) 
+			finalP = cc.p(p0.x + dx, this.getParent().player.getPosition().y - (this.dy0 * 1.05));
+		if (this.getParent().player.getPosition().y - finalP.y < this.dy0 * 0.5) 
+			finalP = cc.p(p0.x + dx, this.getParent().player.getPosition().y - (this.dy0 * 0.5));
 		this.setPosition(finalP);
 	},
 	destroy : function() {
