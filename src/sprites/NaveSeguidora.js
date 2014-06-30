@@ -23,17 +23,12 @@ var NaveSeguidora = cc.Sprite.extend({
 		var dy = this.speedY * dt;
 		var temp = 0;
 		var finalP = cc.p(p0.x + dx, p0.y + dy);
-		/*
-		 if (finalP.x < 0) {
-		 this.destroy();
-		 }
-		 */
+		
 		if (finalP.x - GAME.SCROLLING.TOTAL < canvas.width && this._dtOnScreen === null) {
 			this._dtOnScreen = 0;
 		}
 		if (this._dtOnScreen != null) {
 			this._dtOnScreen += dt;
-			//this.fireTimes();
 		}
 		this.setPosition(finalP);
 		this.updateSpeed();
@@ -43,7 +38,7 @@ var NaveSeguidora = cc.Sprite.extend({
 	updateSpeed : function() {
 
 		if (this._dtOnScreen < 50) {
-			if (this.getPosition().x - GAME.SCROLLING.TOTAL > 50) {
+			if (this.getPosition().x - GAME.SCROLLING.TOTAL > 25) {
 				this.speedX = GAME.SCROLLING.SPEED_X;
 				this.speedY = 0;
 			} else if (this.getPosition().x - GAME.SCROLLING.TOTAL > 600 && this.speedX > 60) {
