@@ -15,6 +15,10 @@ var s_hole_ufo_c = "hole-ufo-c.png";
 var s_ground = "groundAcidentado.png";
 var s_landscape_1 = "landscape1.png";
 var s_landscape_2 = "landscape2.png";
+var s_landscape_marte_ceu = "marte-ceu.png";
+var s_landscape_marte_chao = "marte-chao.png";
+var s_landscape_marte_estalagnite = "marte-estalagnite.png";
+var s_landscape_marte_montanha = "marte-montanha.png";
 var s_little_stone = "little-stone.png";
 var s_little_stone = "little-stone.png";
 var s_rolling_stone = "rolling-stone.png";
@@ -80,6 +84,10 @@ var g_resources = [
     {src:s_ground},
     {src:s_landscape_1},
     {src:s_landscape_2},
+    {src:s_landscape_marte_ceu},
+	{src:s_landscape_marte_chao},    
+    {src:s_landscape_marte_estalagnite},
+	{src:s_landscape_marte_montanha},
     {src:s_little_stone},
     {src:s_hole_small},
     {src:s_hole_big},
