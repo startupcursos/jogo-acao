@@ -46,6 +46,7 @@ var s_tank = "tank.png";
 var s_carro = "carro.png";
 var s_roda = "roda.png";
 
+
 //plist
 var s_spritesheet = "spritesheet.png";
 var s_spritesheet_plist = "spritesheet.plist";
@@ -53,6 +54,9 @@ var s_explosion_anim_plist = "explosion_anim.plist";
 var s_explosion_anim = "explosion_anim.png";
 var s_ufo_a_spritesheet = "ufo-a-spritesheet.png";
 var s_ufo_a_spritesheet_plist = "ufo-a-spritesheet.plist";
+var s_hover_ship = "hover_ship.png";
+var s_hover_ship_plist = "hover_ship.plist";
+
 
 //Sfx
 var s_fire_sfx = "res/soundFx/fire.ogg";
@@ -117,6 +121,7 @@ var g_resources = [
     {src:s_explosion_anim_plist},
     {src:s_ufo_a_spritesheet},
     {src:s_ufo_a_spritesheet_plist},
+    {src:s_hover_ship_plist},
     
     //fnt
 
