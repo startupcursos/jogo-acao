@@ -6,14 +6,18 @@ var LevelFiveScene = cc.Scene.extend({
 		this._super();
 		this.canvas = cc.Director.getInstance().getWinSize();
 
-		var layerLandscape2 = new Landscape2Layer();
-		this.addChild(layerLandscape2, layerLandscape2.zOrder);
-		layerLandscape2.init();
+		var landscapeMarteCeu = new LandscapeMarteCeu();
+		this.addChild(landscapeMarteCeu, landscapeMarteCeu.zOrder);
+		landscapeMarteCeu.init();
 		
-		var layerLandscape1 = new Landscape1Layer();
-		this.addChild(layerLandscape1, layerLandscape1.zOrder);
-		layerLandscape1.init();
+		var landscapeMarteMontanha = new LandscapeMarteMontanha();
+		this.addChild(landscapeMarteMontanha, landscapeMarteMontanha.zOrder);
+		landscapeMarteMontanha.init();
 		
+		var landscapeMarteEstalagnite = new LandscapeMarteEstalagnite();
+		this.addChild(landscapeMarteEstalagnite, landscapeMarteEstalagnite.zOrder);
+		landscapeMarteEstalagnite.init();
+				
 		this.gamelayer = new GameLayer();
 		this.addChild(this.gamelayer, this.gamelayer.zOrder);
 		this.gamelayer.init();
