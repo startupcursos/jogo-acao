@@ -2,7 +2,7 @@ var EndGameScene = cc.Scene.extend({
 	onEnter : function() {
 		this._super();
 		
-		cc.MenuItemFont.setFontName("Algerian");
+		cc.MenuItemFont.setFontName("Arial");
 		cc.MenuItemFont.setFontSize(100);
 		var title1 = cc.MenuItemFont.create("GAME OVER");
 		title1.setEnabled(false);

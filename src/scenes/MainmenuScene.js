@@ -1,7 +1,7 @@
 var MainmenuScene = cc.Scene.extend({
 	onEnter : function() {
 		this._super();
-		cc.MenuItemFont.setFontName("Algerian");
+		cc.MenuItemFont.setFontName("Arial");
 		cc.MenuItemFont.setFontSize(48);
 		var itemMenuPlay = cc.MenuItemFont.create("Play", this.onPlay);
 		var itemMenuHS = cc.MenuItemFont.create("HighScore", this.onHighScore);

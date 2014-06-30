@@ -51,7 +51,7 @@ var GameLayer = cc.Layer.extend({
 		this.addChild(this.player, this.player.zOrder);
 
 		this.rodas = [];
-		var roda = new Roda(this.player.getPosition().x + 25, this.player.getPosition().y);
+		var roda = new Roda(this.player.getPosition().x + 20, this.player.getPosition().y);
 		this.rodas.push(roda);
 		this.addChild(roda, roda.zOrder);
 		roda = new Roda(this.player.getPosition().x - 15, this.player.getPosition().y);
