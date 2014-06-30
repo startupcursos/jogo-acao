@@ -13,6 +13,12 @@ var s_hole_small = "hole-small.png";
 var s_hole_big = "hole-big.png";
 var s_hole_ufo_c = "hole-ufo-c.png";
 var s_ground = "groundAcidentado.png";
+
+var s_jupiter_ceu = "jupiter-ceu.png";
+var s_jupiter_montanha_perto = "jupiter-montanha-perto.png";
+var s_jupiter_montanha_longe = "jupiter-montanha-longe.png";
+
+
 var s_landscape_1 = "landscape1.png";
 var s_landscape_2 = "landscape2.png";
 var s_little_stone = "little-stone.png";
@@ -84,6 +90,10 @@ var g_resources = [
     {src:s_ground},
     {src:s_landscape_1},
     {src:s_landscape_2},
+    {src:s_jupiter_ceu},
+    {src:s_jupiter_montanha_longe},
+    {src:s_jupiter_montanha_perto},
+
     {src:s_little_stone},
     {src:s_hole_small},
     {src:s_hole_big},
