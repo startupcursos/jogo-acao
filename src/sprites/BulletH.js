@@ -8,6 +8,7 @@ var BulletH = cc.Sprite.extend({
 	speedY : 0,
 	zOrder : 0,
 	initialPosition: null,
+	timerExplosao: 1,
 	ctor : function(x,y) {
 		this._super();
 		this.setPosition(x, y);
@@ -24,7 +25,8 @@ var BulletH = cc.Sprite.extend({
 		}
 		this.initWithSpriteFrame(animFrames[0]);
 		var animation = cc.Animation.create(animFrames, 0.1);
-		var action =(cc.Animate.create(animation));
+		
+		var action = cc.Animate.create(animation);
 		this.runAction(action);
 		GAME.CONTAINER.PLAYER_BULLETS.push(this);
 	},
@@ -38,18 +40,18 @@ var BulletH = cc.Sprite.extend({
 		var dy = this.speedY * dt;
 		var finalP = cc.p(p0.x + dx, p0.y + dy);
 		this.setPosition(finalP);
-		if (finalP.x - GAME.SCROLLING.TOTAL > canvas.width - canvas.width/5) {
-			
-			this.explode();
-			//this.explosion();
-			
-			
+		
+		if (this.timerExplosao != null) {
+			this.timerExplosao -= dt;
+			if (this.timerExplosao <= 0) {
+				this.timerExplosao = null;
+				this.explode();
+			}
 		}
 	},	
 	
 	
 	explode : function(){
-		
 		cc.SpriteFrameCache.getInstance().addSpriteFrames(s_explosion_anim_plist);
 		//Montar um Array com cada quadro da Animação
 		var animFrames2 = [];
@@ -60,19 +62,12 @@ var BulletH = cc.Sprite.extend({
 		}
 		this.initWithSpriteFrame(animFrames2[0]);
 		var animation2 = cc.Animation.create(animFrames2, 0.05);
-		//var action2 = cc.Animate.create(animation2);
-		var action2 = (cc.Animate.create(animation2));
+		var action2 = cc.Sequence.create(cc.Animate.create(animation2), cc.CallFunc.create(this.destroy, this));
 		this.runAction(action2);
-		//this.explode().active = true;
-		
 		this.speedX = 0;
-		
-		
-		
 	},
 	
 	destroy : function() {
-		
 		this.setVisible(false);
 		this.active = false;
 		this.stopAllActions();
