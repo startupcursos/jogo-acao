@@ -39,7 +39,7 @@ var JupiterMontanhaLongeLayer = cc.Layer.extend({
 		this.scheduleUpdate();
 	},
 	update : function(dt) {
-		this._scrollSpeed = this.getParent().player.speedX / 2;
+		this._scrollSpeed = this.getParent().player.speedX / 4;
 		this.scrolling(dt);
 		
 	},
