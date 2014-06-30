@@ -10,7 +10,20 @@ var UfoB = cc.Sprite.extend({
 	ctor : function(x, y) {
 		this._super();
 		this.setPosition(x, y);
-		this.init(s_ufo_b);
+		
+		//Carrega no Cache as Imagens
+		cc.SpriteFrameCache.getInstance().addSpriteFrames(s_ufo_b_spritesheet_plist);
+		//Montar um Array com cada quadro da Animação
+		var animFrames = [];
+		for (var i = 1; i <= 4; i++) {
+			var str = "UfoB-" + i + ".png";
+			var frame = cc.SpriteFrameCache.getInstance().getSpriteFrame(str);
+			animFrames.push(frame);
+		}
+		this.initWithSpriteFrame(animFrames[0]);
+		var animation = cc.Animation.create(animFrames, 0.1);
+		var action =(cc.Animate.create(animation));
+		this.runAction(cc.RepeatForever.create(action));
 		GAME.CONTAINER.ENEMIES.push(this);
 	},
 	update : function(dt) {
