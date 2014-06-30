@@ -10,9 +10,27 @@ var NaveSeguidora = cc.Sprite.extend({
 		this._super();
 		this.setPosition(x, y);
 
-		this.init(s_naveseguidora);
+		cc.SpriteFrameCache.getInstance().addSpriteFrames(s_hover_ship_plist);
+		//Montar um Array com cada quadro da Animação
+		var animFrames = [];
+		for (var i = 1; i <= 6; i++) {
+			var str = "hover_ship-" + i + ".png";
+			var frame = cc.SpriteFrameCache.getInstance().getSpriteFrame(str);
+			animFrames.push(frame);
+		}
+		
+		this.initWithSpriteFrame(animFrames[0]);
+		var animation = cc.Animation.create(animFrames, 1);
+		var anim = cc.Animate.create(animation);
+		var action = cc.RepeatForever.create(anim);
+		var action = (anim);
+		this.runAction(action);
+		
 		GAME.CONTAINER.ENEMIES.push(this);
 	},
+	
+	
+	
 	update : function(dt) {
 		if (this.healthPoints <= 0) {
 			this.destroy();
