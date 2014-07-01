@@ -18,6 +18,11 @@ var s_jupiter_ceu = "jupiter-ceu.png";
 var s_jupiter_montanha_perto = "jupiter-montanha-perto.png";
 var s_jupiter_montanha_longe = "jupiter-montanha-longe.png";
 
+var s_terra_ceu = "terra-ceu.png";
+var s_terra_deserto = "terra-deserto.png";
+var s_terra_montanha = "terra-montanha.png";
+var s_terra_nuvem = "terra-nuvem.png";
+var s_terra_sol = "terra-sol.png";
 
 var s_landscape_1 = "landscape1.png";
 var s_landscape_2 = "landscape2.png";
@@ -94,10 +99,18 @@ var g_resources = [
     {src:s_ground},
     {src:s_landscape_1},
     {src:s_landscape_2},
+    
     {src:s_landscape_marte_ceu},
 	{src:s_landscape_marte_chao},    
     {src:s_landscape_marte_estalagnite},
 	{src:s_landscape_marte_montanha},
+
+    {src:s_terra_ceu},
+	{src:s_terra_deserto},
+	{src:s_terra_montanha},
+	{src:s_terra_nuvem},
+	{src:s_terra_sol},
+	
     {src:s_jupiter_ceu},
     {src:s_jupiter_montanha_longe},
     {src:s_jupiter_montanha_perto},
