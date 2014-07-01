@@ -26,9 +26,7 @@
 
 var GameLayer = cc.Layer.extend({
 	player : null,
-	roda1: null,
-	roda2: null,
-	roda3: null,
+	rodas : null,
 	ground : null,
 	canvas : null,
 	deslocamentoTotal : 0,
@@ -43,7 +41,7 @@ var GameLayer = cc.Layer.extend({
 		// 1. super init first
 		this._super();
 		this.setKeyboardEnabled(true);
-		
+
 		if ('touches' in sys.capabilities) {
 			this.setTouchEnabled(true);
 		}
@@ -52,13 +50,17 @@ var GameLayer = cc.Layer.extend({
 		this.player = new Buggy(this.canvas.width / 3, this.canvas.height / 3.5);
 		this.addChild(this.player, this.player.zOrder);
 
-		this.roda1 = new Roda(this.player.getPosition().x + 25, this.player.getPosition().y - 25);
-		this.addChild(this.roda1, this.roda1.zOrder);
-		this.roda2 = new Roda(this.player.getPosition().x - 15, this.player.getPosition().y - 25);
-		this.addChild(this.roda2, this.roda2.zOrder);
-		this.roda3 = new Roda(this.player.getPosition().x - 50, this.player.getPosition().y - 25);
-		this.addChild(this.roda3, this.roda3.zOrder);
-		
+		this.rodas = [];
+		var roda = new Roda(this.player.getPosition().x + 20, this.player.getPosition().y);
+		this.rodas.push(roda);
+		this.addChild(roda, roda.zOrder);
+		roda = new Roda(this.player.getPosition().x - 15, this.player.getPosition().y);
+		this.rodas.push(roda);
+		this.addChild(roda, roda.zOrder);
+		roda = new Roda(this.player.getPosition().x - 50, this.player.getPosition().y);
+		this.rodas.push(roda);
+		this.addChild(roda, roda.zOrder);
+
 		this.ground = new Ground(0, 0);
 		this.addChild(this.ground, this.ground.zOrder);
 		this.scheduleUpdate();
@@ -70,7 +72,8 @@ var GameLayer = cc.Layer.extend({
 	scrolling : function(dt) {
 		var ds = this.player.speedX * dt;
 		GAME.SCROLLING.TOTAL += ds;
-		if (GAME.SCROLLING.TOTAL > 10000) this.getParent().levelFinished();
+		if (GAME.SCROLLING.TOTAL > 10000)
+			this.getParent().levelFinished();
 		var layerPos = this.getPosition();
 		var scrolledPos = cc.p((layerPos.x - ds), layerPos.y);
 		this.setPosition(scrolledPos);
@@ -79,6 +82,7 @@ var GameLayer = cc.Layer.extend({
 		//Player Collisions com inimigos
 		var bboxPlayer = this.player.getBoundingBox();
 		for (var i in GAME.CONTAINER.ENEMIES) {
+			
 			var selEnemy = GAME.CONTAINER.ENEMIES[i];
 			if (!selEnemy.active)
 				continue;
@@ -86,6 +90,15 @@ var GameLayer = cc.Layer.extend({
 			if (cc.rectIntersectsRect(bboxPlayer, bboxSelEnemy)) {
 				this.player.hurt();
 			}
+			//Testa a colisão com as rodas
+			for (var j in this.rodas) {
+				var selRoda = this.rodas[j];
+				var bboxRoda = selRoda.getBoundingBox();
+				if (cc.rectIntersectsRect(bboxRoda, bboxSelEnemy)) {
+					this.player.hurt();
+				}
+			}
+
 			for (var j in GAME.CONTAINER.PLAYER_BULLETS) {
 				var selPlayerBullet = GAME.CONTAINER.PLAYER_BULLETS[j];
 				if (!selPlayerBullet.active)
@@ -97,6 +110,7 @@ var GameLayer = cc.Layer.extend({
 				}
 			}
 		}
+		
 		var bboxGround = this.ground.getBoundingBox();
 		for (var i in GAME.CONTAINER.ENEMIES_BULLETS) {
 			var selEnemyBullet = GAME.CONTAINER.ENEMIES_BULLETS[i];
@@ -107,35 +121,31 @@ var GameLayer = cc.Layer.extend({
 				this.player.hurt();
 				selEnemyBullet.hurt();
 			}
+
+			//Testa a colisão com as rodas
+			for (var j in this.rodas) {
+				var selRoda = this.rodas[j];
+				var bboxRoda = selRoda.getBoundingBox();
+				if (cc.rectIntersectsRect(bboxRoda, bboxSelEnemyBullet)) {
+					this.player.hurt();
+				}
+			}
+
 			if (cc.rectIntersectsRect(bboxGround, bboxSelEnemyBullet)) {
 				selEnemyBullet.hurt();
 			}
 		}
-		var bboxRoda1 = this.roda1.getBoundingBox();
-		if (cc.rectIntersectsRect(bboxRoda1, bboxGround)) {
-			var p0 = this.roda1.getPosition();
-			this.roda1.setPosition(cc.p(p0.x, p0.y + 1));
-		} else {
-			var p0 = this.roda1.getPosition();
-			this.roda1.setPosition(cc.p(p0.x, p0.y - 1));
+		
+		for (var i in this.rodas) {
+			var selRoda = this.rodas[i];
+			var bboxRoda = selRoda.getBoundingBox();
+			var p0 = selRoda.getPosition();
+			if (cc.rectIntersectsRect(bboxRoda, bboxGround)) {
+				selRoda.setPosition(cc.p(p0.x, p0.y + 1));
+			} else {
+				selRoda.setPosition(cc.p(p0.x, p0.y - 1));
+			}
 		}
-		var bboxRoda2 = this.roda2.getBoundingBox();
-		if (cc.rectIntersectsRect(bboxRoda2, bboxGround)) {
-			var p0 = this.roda2.getPosition();
-			this.roda2.setPosition(cc.p(p0.x, p0.y + 1));
-		} else {
-			var p0 = this.roda2.getPosition();
-			this.roda2.setPosition(cc.p(p0.x, p0.y - 1));
-		}
-		var bboxRoda3 = this.roda3.getBoundingBox();
-		if (cc.rectIntersectsRect(bboxRoda3, bboxGround)) {
-			var p0 = this.roda3.getPosition();
-			this.roda3.setPosition(cc.p(p0.x, p0.y + 1));
-		} else {
-			var p0 = this.roda3.getPosition();
-			this.roda3.setPosition(cc.p(p0.x, p0.y - 1));
-		}
-
 	},
 	updateActiveUnits : function(dt) {
 		var selChild, children = this.getChildren();
@@ -145,10 +155,9 @@ var GameLayer = cc.Layer.extend({
 				selChild.update(dt);
 		}
 	},
-
 	update : function(dt) {
-		this.detectCollision();
 		this.updateActiveUnits(dt);
+		this.detectCollision();
 		this.scrolling(dt);
 	},
 

@@ -33,14 +33,18 @@ var Buggy = cc.Sprite.extend({
 		this._dtLastFireH += dt;
 	},
 	destroy : function() {
-		// this.setVisible(false);
+		//Para o carro e as rodas
+        this.speedX = 0;
+        for (var i in this.getParent().rodas) {
+        	this.getParent().rodas[i].destroy();
+        }
+
 		this.active = false;
 		this.stopAllActions();
 		var emitter = cc.ParticleFire.create();
 		emitter.setTexture(cc.TextureCache.getInstance().addImage(s_fire));
         emitter.setPosition(this.getPosition());
 		this.getParent().addChild(emitter, 10);
-        this.speedX = 0;
         GAME.LIFES -= 1;        
         if(GAME.LIFES <= 0){        	
         	cc.AudioEngine.getInstance().stopMusic(s_bgm_1); 
