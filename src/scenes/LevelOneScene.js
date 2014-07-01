@@ -6,14 +6,26 @@ var LevelOneScene = cc.Scene.extend({
 		this._super();
 		this.canvas = cc.Director.getInstance().getWinSize();
 
-		var layerLandscape2 = new Landscape2Layer();
-		this.addChild(layerLandscape2, layerLandscape2.zOrder);
-		layerLandscape2.init();
+		var ceuLayer = new TerraCeuLayer();
+		this.addChild(ceuLayer, ceuLayer.zOrder);
+		ceuLayer.init();
+
+		var solLayer = new TerraSolLayer();
+		this.addChild(solLayer, solLayer.zOrder);
+		solLayer.init();
+
+		var nuvemLayer = new TerraNuvemLayer();
+		this.addChild(nuvemLayer, nuvemLayer.zOrder);
+		nuvemLayer.init();
 		
-		var layerLandscape1 = new Landscape1Layer();
-		this.addChild(layerLandscape1, layerLandscape1.zOrder);
-		layerLandscape1.init();
+		var montanhaLayer = new TerraMontanhaLayer();
+		this.addChild(montanhaLayer, montanhaLayer.zOrder);
+		montanhaLayer.init();
 		
+		var desertoLayer = new TerraDesertoLayer();
+		this.addChild(desertoLayer, desertoLayer.zOrder);
+		desertoLayer.init();
+			
 		this.gamelayer = new GameLayer();
 		this.addChild(this.gamelayer, this.gamelayer.zOrder);
 		this.gamelayer.init();

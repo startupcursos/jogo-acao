@@ -25,15 +25,16 @@ var BulletH = cc.Sprite.extend({
 		}
 		this.initWithSpriteFrame(animFrames[0]);
 		var animation = cc.Animation.create(animFrames, 0.1);
-		
 		var action = cc.Animate.create(animation);
 		this.runAction(action);
+		cc.RepeatForever(action);
 		GAME.CONTAINER.PLAYER_BULLETS.push(this);
 	},
 	update : function(dt) {
-		if (this.healthPoints <= 0) {
-			this.destroy();
-		}
+			if (this.healthPoints <= 0) {
+				this.destroy();
+			}
+	
 		var canvas = cc.Director.getInstance().getWinSize();
 		var p0 = this.getPosition();
 		var dx = this.speedX * dt;

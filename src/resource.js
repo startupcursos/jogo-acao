@@ -13,8 +13,23 @@ var s_hole_small = "hole-small.png";
 var s_hole_big = "hole-big.png";
 var s_hole_ufo_c = "hole-ufo-c.png";
 var s_ground = "groundAcidentado.png";
+
+var s_jupiter_ceu = "jupiter-ceu.png";
+var s_jupiter_montanha_perto = "jupiter-montanha-perto.png";
+var s_jupiter_montanha_longe = "jupiter-montanha-longe.png";
+
+var s_terra_ceu = "terra-ceu.png";
+var s_terra_deserto = "terra-deserto.png";
+var s_terra_montanha = "terra-montanha.png";
+var s_terra_nuvem = "terra-nuvem.png";
+var s_terra_sol = "terra-sol.png";
+
 var s_landscape_1 = "landscape1.png";
 var s_landscape_2 = "landscape2.png";
+var s_landscape_marte_ceu = "marte-ceu.png";
+var s_landscape_marte_chao = "marte-chao.png";
+var s_landscape_marte_estalagnite = "marte-estalagnite.png";
+var s_landscape_marte_montanha = "marte-montanha.png";
 var s_little_stone = "little-stone.png";
 var s_little_stone = "little-stone.png";
 var s_rolling_stone = "rolling-stone.png";
@@ -46,6 +61,7 @@ var s_tank = "tank.png";
 var s_carro = "carro.png";
 var s_roda = "roda.png";
 
+
 //plist
 var s_spritesheet = "spritesheet.png";
 var s_spritesheet = "spritesheet.png";
@@ -56,6 +72,9 @@ var s_explosion_anim_plist = "explosion_anim.plist";
 var s_explosion_anim = "explosion_anim.png";
 var s_ufo_a_spritesheet = "ufo-a-spritesheet.png";
 var s_ufo_a_spritesheet_plist = "ufo-a-spritesheet.plist";
+var s_hover_ship = "hover_ship.png";
+var s_hover_ship_plist = "hover_ship.plist";
+
 
 //Sfx
 var s_fire_sfx = "res/soundFx/fire.ogg";
@@ -80,6 +99,21 @@ var g_resources = [
     {src:s_ground},
     {src:s_landscape_1},
     {src:s_landscape_2},
+    
+    {src:s_landscape_marte_ceu},
+	{src:s_landscape_marte_chao},    
+    {src:s_landscape_marte_estalagnite},
+	{src:s_landscape_marte_montanha},
+
+    {src:s_terra_ceu},
+	{src:s_terra_deserto},
+	{src:s_terra_montanha},
+	{src:s_terra_nuvem},
+	{src:s_terra_sol},
+	
+    {src:s_jupiter_ceu},
+    {src:s_jupiter_montanha_longe},
+    {src:s_jupiter_montanha_perto},
     {src:s_little_stone},
     {src:s_hole_small},
     {src:s_hole_big},
@@ -122,6 +156,7 @@ var g_resources = [
     {src:s_ufo_a_spritesheet_plist},
 	{src:s_ufo_b_spritesheet},
     {src:s_ufo_b_spritesheet_plist},
+    {src:s_hover_ship_plist},
     
     //fnt
 

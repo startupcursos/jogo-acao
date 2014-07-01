@@ -6,19 +6,24 @@ var LevelNineScene = cc.Scene.extend({
 		this._super();
 		this.canvas = cc.Director.getInstance().getWinSize();
 
-		var layerLandscape2 = new Landscape2Layer();
-		this.addChild(layerLandscape2, layerLandscape2.zOrder);
-		layerLandscape2.init();
+		var layerCeu = new JupiterCeuLayer();
+		this.addChild(layerCeu, layerCeu.zOrder);
+		layerCeu.init();
 		
-		var layerLandscape1 = new Landscape1Layer();
-		this.addChild(layerLandscape1, layerLandscape1.zOrder);
-		layerLandscape1.init();
+		var layerMontanhaLonge = new JupiterMontanhaLongeLayer();
+		this.addChild(layerMontanhaLonge, layerMontanhaLonge.zOrder);
+		layerMontanhaLonge.init();
+
+		var layerMontanhaPerto = new JupiterMontanhaPertoLayer();
+		this.addChild(layerMontanhaPerto, layerMontanhaPerto.zOrder);
+		layerMontanhaPerto.init();
 		
 		this.gamelayer = new GameLayer();
 		this.addChild(this.gamelayer, this.gamelayer.zOrder);
 		this.gamelayer.init();
 		this.enemyPlacement();
 		this.player = this.gamelayer.player;
+		GAME.LASTLEVEL = new LevelNineScene();
 	},
 	enemyPlacement : function() {
 		
