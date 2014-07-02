@@ -26,7 +26,7 @@ var Roda = cc.Sprite.extend({
 	destroy : function() {
 		// this.setVisible(false);
 		this.speedX = 0;
-		this.active = false;
+		this.speedY = 0;
 		this.stopAllActions();
 	},
 	hurt : function() {

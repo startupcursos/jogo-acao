@@ -31,6 +31,7 @@ var GameLayer = cc.Layer.extend({
 	canvas : null,
 	deslocamentoTotal : 0,
 	zOrder : 1,
+	collisionDetector: null,
 
 	init : function() {
 		GAME.CONTAINER.ENEMIES = [];
@@ -67,6 +68,7 @@ var GameLayer = cc.Layer.extend({
 		if (GAME.SOUND) {
 			cc.AudioEngine.getInstance().playMusic(s_bgm_1, true);
 		}
+		this.collisionDetector = new CollisionDetector();
 	},
 
 	scrolling : function(dt) {
@@ -77,24 +79,24 @@ var GameLayer = cc.Layer.extend({
 		var layerPos = this.getPosition();
 		var scrolledPos = cc.p((layerPos.x - ds), layerPos.y);
 		this.setPosition(scrolledPos);
+		this.collisionDetector.setPosition(cc.p(this.getPosition().x * -1, this.getPosition().y * -1));
 	},
 	detectCollision : function() {
+		
 		//Player Collisions com inimigos
-		var bboxPlayer = this.player.getBoundingBox();
 		for (var i in GAME.CONTAINER.ENEMIES) {
 			
 			var selEnemy = GAME.CONTAINER.ENEMIES[i];
 			if (!selEnemy.active)
 				continue;
-			var bboxSelEnemy = selEnemy.getBoundingBox();
-			if (cc.rectIntersectsRect(bboxPlayer, bboxSelEnemy)) {
+				
+			if (this.collisionDetector.areTheSpritesColliding(this.player, selEnemy)) {
 				this.player.hurt();
 			}
 			//Testa a colisão com as rodas
 			for (var j in this.rodas) {
 				var selRoda = this.rodas[j];
-				var bboxRoda = selRoda.getBoundingBox();
-				if (cc.rectIntersectsRect(bboxRoda, bboxSelEnemy)) {
+				if (this.collisionDetector.areTheSpritesColliding(selRoda, selEnemy)) {
 					this.player.hurt();
 				}
 			}
@@ -103,21 +105,19 @@ var GameLayer = cc.Layer.extend({
 				var selPlayerBullet = GAME.CONTAINER.PLAYER_BULLETS[j];
 				if (!selPlayerBullet.active)
 					continue;
-				var bboxPlayerBullet = selPlayerBullet.getBoundingBox();
-				if (cc.rectIntersectsRect(bboxPlayerBullet, bboxSelEnemy)) {
+				if (this.collisionDetector.areTheSpritesColliding(selPlayerBullet, selEnemy)) {
 					selPlayerBullet.hurt();
 					selEnemy.hurt();
 				}
 			}
 		}
 		
-		var bboxGround = this.ground.getBoundingBox();
+
 		for (var i in GAME.CONTAINER.ENEMIES_BULLETS) {
 			var selEnemyBullet = GAME.CONTAINER.ENEMIES_BULLETS[i];
 			if (!selEnemyBullet.active)
 				continue;
-			var bboxSelEnemyBullet = selEnemyBullet.getBoundingBox();
-			if (cc.rectIntersectsRect(bboxPlayer, bboxSelEnemyBullet)) {
+			if (this.collisionDetector.areTheSpritesColliding(this.player, selEnemyBullet)) {
 				this.player.hurt();
 				selEnemyBullet.hurt();
 			}
@@ -125,22 +125,20 @@ var GameLayer = cc.Layer.extend({
 			//Testa a colisão com as rodas
 			for (var j in this.rodas) {
 				var selRoda = this.rodas[j];
-				var bboxRoda = selRoda.getBoundingBox();
-				if (cc.rectIntersectsRect(bboxRoda, bboxSelEnemyBullet)) {
+				if (this.collisionDetector.areTheSpritesColliding(selRoda, selEnemyBullet)) {
 					this.player.hurt();
 				}
 			}
 
-			if (cc.rectIntersectsRect(bboxGround, bboxSelEnemyBullet)) {
+			if (this.collisionDetector.areTheSpritesColliding(this.ground, selEnemyBullet)) {
 				selEnemyBullet.hurt();
 			}
 		}
 		
 		for (var i in this.rodas) {
 			var selRoda = this.rodas[i];
-			var bboxRoda = selRoda.getBoundingBox();
 			var p0 = selRoda.getPosition();
-			if (cc.rectIntersectsRect(bboxRoda, bboxGround)) {
+			if (this.collisionDetector.areTheSpritesColliding(selRoda, this.ground, true)) {
 				selRoda.setPosition(cc.p(p0.x, p0.y + 1));
 			} else {
 				selRoda.setPosition(cc.p(p0.x, p0.y - 1));
@@ -157,8 +155,8 @@ var GameLayer = cc.Layer.extend({
 	},
 	update : function(dt) {
 		this.updateActiveUnits(dt);
-		this.detectCollision();
 		this.scrolling(dt);
+		this.detectCollision();
 	},
 
 	onKeyDown : function(e) {

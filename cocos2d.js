@@ -40,6 +40,7 @@
         appFiles:[
             'src/resource.js',
             'src/config/GameConfig.js',
+            'src/util/CollisionDetector.js',
             'src/sprites/NaveSeguidora.js',
             'src/sprites/BigStone.js',
             'src/sprites/Buggy.js',
