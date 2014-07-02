@@ -54,9 +54,9 @@ var NaveSeguidora = cc.Sprite.extend({
 	},
 
 	updateSpeed : function() {
-		if (typeof this._dtOnScreen =='undefined' || this._dtOnScreen < 0.2) {
+		if (typeof this._dtOnScreen =='undefined' || this._dtOnScreen < 0.1) {
 			this.speedX = GAME.SCROLLING.SPEED_X * 1.5;
-		} else if(this._dtOnScreen > 0.2 && this._dtOnScreen < 10) {
+		} else if(this._dtOnScreen > 0.1 && this._dtOnScreen < 10) {
 			this.speedX = 0;
 		} else {
 			this.speedX = GAME.SCROLLING.SPEED_X;
