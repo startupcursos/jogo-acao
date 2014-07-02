@@ -1,7 +1,7 @@
 var SmallRollingStone = cc.Sprite.extend({
 	active : true,
 	healthPoints : 1,
-	speedX : -100,
+	speedX : -1.5*GAME.SCROLLING.SPEED_X,
 	speedY : 0,
 	zOrder : 10,
 	ctor : function(x, y) {

@@ -4,7 +4,7 @@
 var Buggy = cc.Sprite.extend({
 	active : true,
 	healthPoints : 1,
-	speedX : GAME.SCROLLING.SPEED_X,
+	speedX : 0,
 	speedY : 0,
 	zOrder : 1,
 	rpsGunV : 3,

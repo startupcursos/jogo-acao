@@ -1,7 +1,7 @@
 var NaveSeguidora = cc.Sprite.extend({
 	active : true,
 	healthPoints : 1,
-	speedX : GAME.SCROLLING.SPEED_X * 2,
+	speedX : GAME.SCROLLING.SPEED_X,
 	speedY : 0,
 	zOrder : 1,
 
@@ -11,7 +11,7 @@ var NaveSeguidora = cc.Sprite.extend({
 		this.setPosition(x, y);
 
 		cc.SpriteFrameCache.getInstance().addSpriteFrames(s_hover_ship_plist);
-		//Montar um Array com cada quadro da Animação
+		//Montar um Array com cada quadro da Animaï¿½ï¿½o
 		var animFrames = [];
 		for (var i = 1; i <= 6; i++) {
 			var str = "hover_ship-" + i + ".png";

@@ -1,7 +1,7 @@
 var Roda = cc.Sprite.extend({
 	active : true,
 	healthPoints : 1,
-	speedX : GAME.SCROLLING.SPEED_X,
+	speedX : 0,
 	speedY : 0,
 	zOrder : 2,
 	dy0:30, 

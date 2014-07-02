@@ -1,7 +1,7 @@
 var Ground = cc.Sprite.extend({
 	active : true,
 	zOrder : 0,
-	speedX : 0,
+	speedX : -GAME.SCROLLING.SPEED_X,
 	speedY : 0,
 	_scroll: 0,
 	canvas: null,
@@ -13,12 +13,15 @@ var Ground = cc.Sprite.extend({
 		this.canvas = cc.Director.getInstance().getWinSize();
 	},
 	update : function(dt) {
-		this._scroll += dt * this.getParent().player.speedX;
+		var p0 = this.getPosition();
+		var dx = this.speedX * dt;
+		var dy = this.speedY * dt;
+		var finalP = cc.p(p0.x + dx, p0.y + dy);
+		this.setPosition(finalP);
 		this.infiniteScrolling(dt);
 	},
 	infiniteScrolling : function(dt) {
-		if (this._scroll > this.canvas.width) {
-			this._scroll -= this.canvas.width;
+		if (this.getPosition().x <= -this.canvas.width) {
 			this.setPosition(cc.p(this.getPosition().x + this.canvas.width,0));
 		}
 	}

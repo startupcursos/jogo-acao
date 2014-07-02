@@ -76,9 +76,6 @@ var GameLayer = cc.Layer.extend({
 		GAME.SCROLLING.TOTAL += ds;
 		if (GAME.SCROLLING.TOTAL > 10000)
 			this.getParent().levelFinished();
-		var layerPos = this.getPosition();
-		var scrolledPos = cc.p((layerPos.x - ds), layerPos.y);
-		this.setPosition(scrolledPos);
 	},
 	detectCollision : function() {
 		
@@ -153,8 +150,8 @@ var GameLayer = cc.Layer.extend({
 		}
 	},
 	update : function(dt) {
-		this.updateActiveUnits(dt);
 		this.scrolling(dt);
+		this.updateActiveUnits(dt);
 		this.detectCollision();
 	},
 

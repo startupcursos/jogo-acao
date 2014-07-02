@@ -1,7 +1,7 @@
 var UfoA = cc.Sprite.extend({
 	active : true,
 	healthPoints : 1,
-	speedX : GAME.SCROLLING.SPEED_X / 3,
+	speedX : -GAME.SCROLLING.SPEED_X / 3,
 	speedY : -5,
 	zOrder : 1,
 	rpsGunV : 1,

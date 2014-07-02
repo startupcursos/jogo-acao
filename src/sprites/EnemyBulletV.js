@@ -4,7 +4,7 @@
 var EnemyBulletV = cc.Sprite.extend({
 	active : true,
 	healthPoints : 1,
-	speedX : GAME.SCROLLING.SPEED_X,
+	speedX : 0,
 	speedY : -GAME.SCROLLING.SPEED_X * 2,
 	zOrder : 0,
 	initialPosition: null,
