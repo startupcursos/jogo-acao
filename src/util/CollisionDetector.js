@@ -44,8 +44,5 @@ CollisionDetector.prototype = {
 			}
 			return false;
 		}
-	},
-	setPosition : function(position) {
-		this.rt.setPosition(position);
 	}
 };

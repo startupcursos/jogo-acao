@@ -79,7 +79,6 @@ var GameLayer = cc.Layer.extend({
 		var layerPos = this.getPosition();
 		var scrolledPos = cc.p((layerPos.x - ds), layerPos.y);
 		this.setPosition(scrolledPos);
-		this.collisionDetector.setPosition(cc.p(this.getPosition().x * -1, this.getPosition().y * -1));
 	},
 	detectCollision : function() {
 		
