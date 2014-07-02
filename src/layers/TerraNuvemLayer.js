@@ -27,7 +27,7 @@
 var TerraNuvemLayer = cc.Layer.extend({
 	canvas : null,
 	zOrder : -3,
-	_scrollSpeed : null,
+	_scrollSpeed : GAME.SCROLLING.SPEED_X / 8,
 	init : function() {
 		// 1. super init first
 		this._super();
@@ -39,7 +39,6 @@ var TerraNuvemLayer = cc.Layer.extend({
 		this.scheduleUpdate();
 	},
 	update : function(dt) {
-		this._scrollSpeed = this.getParent().player.speedX / 8;
 		this.scrolling(dt);
 		
 	},

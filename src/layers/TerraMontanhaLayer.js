@@ -27,7 +27,7 @@
 var TerraMontanhaLayer = cc.Layer.extend({
 	canvas : null,
 	zOrder : -2,
-	_scrollSpeed : null,
+	_scrollSpeed : GAME.SCROLLING.SPEED_X / 4,
 	init : function() {
 		// 1. super init first
 		this._super();
@@ -39,7 +39,6 @@ var TerraMontanhaLayer = cc.Layer.extend({
 		this.scheduleUpdate();
 	},
 	update : function(dt) {
-		this._scrollSpeed = this.getParent().player.speedX / 4;
 		this.scrolling(dt);
 		
 	},
