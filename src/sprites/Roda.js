@@ -17,10 +17,10 @@ var Roda = cc.Sprite.extend({
 		var dx = this.speedX * dt;
 		var dy = this.speedY * dt;
 		var finalP = cc.p(p0.x + dx, p0.y + dy);
-		if (this.getParent().player.getPosition().y - finalP.y > this.dy0 * 1.05) 
-			finalP = cc.p(p0.x + dx, this.getParent().player.getPosition().y - (this.dy0 * 1.05));
-		if (this.getParent().player.getPosition().y - finalP.y < this.dy0 * 0.5) 
-			finalP = cc.p(p0.x + dx, this.getParent().player.getPosition().y - (this.dy0 * 0.5));
+		if (this.getParent().player.getPosition().y - finalP.y > this.dy0 * 1.02) 
+			finalP = cc.p(p0.x + dx, this.getParent().player.getPosition().y - (this.dy0 * 1.02));
+		if (this.getParent().player.getPosition().y - finalP.y < this.dy0 * 0.6) 
+			finalP = cc.p(p0.x + dx, this.getParent().player.getPosition().y - (this.dy0 * 0.6));
 		this.setPosition(finalP);
 	},
 	destroy : function() {

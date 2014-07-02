@@ -11,7 +11,7 @@ var NaveSeguidora = cc.Sprite.extend({
 		this.setPosition(x, y);
 
 		cc.SpriteFrameCache.getInstance().addSpriteFrames(s_hover_ship_plist);
-		//Montar um Array com cada quadro da Anima��o
+		//Montar um Array com cada quadro da Animacao
 		var animFrames = [];
 		for (var i = 1; i <= 6; i++) {
 			var str = "hover_ship-" + i + ".png";
@@ -42,7 +42,7 @@ var NaveSeguidora = cc.Sprite.extend({
 		var temp = 0;
 		var finalP = cc.p(p0.x + dx, p0.y + dy);
 		
-		if (finalP.x - GAME.SCROLLING.TOTAL < canvas.width && this._dtOnScreen === null) {
+		if (finalP.x > 0 && finalP.x < canvas.width && this._dtOnScreen === null) {
 			this._dtOnScreen = 0;
 		}
 		if (this._dtOnScreen != null) {
@@ -54,17 +54,12 @@ var NaveSeguidora = cc.Sprite.extend({
 	},
 
 	updateSpeed : function() {
-
-		if (this._dtOnScreen < 50) {
-			if (this.getPosition().x - GAME.SCROLLING.TOTAL > 25) {
-				this.speedX = GAME.SCROLLING.SPEED_X;
-				this.speedY = 0;
-			} else if (this.getPosition().x - GAME.SCROLLING.TOTAL > 600 && this.speedX > 60) {
-				this.speedX = GAME.SCROLLING.SPEED_X * 2;
-				this.speedY = 0;
-			}
+		if (typeof this._dtOnScreen =='undefined' || this._dtOnScreen < 0.2) {
+			this.speedX = GAME.SCROLLING.SPEED_X * 1.5;
+		} else if(this._dtOnScreen > 0.2 && this._dtOnScreen < 10) {
+			this.speedX = 0;
 		} else {
-			this.speedX = GAME.SCROLLING.SPEED_X * 2;
+			this.speedX = GAME.SCROLLING.SPEED_X;
 		}
 	},
 	destroy : function() {
