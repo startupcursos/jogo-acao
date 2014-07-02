@@ -59,9 +59,9 @@ var GameLayer = cc.Layer.extend({
 		this.roda3 = new Roda(this.player.getPosition().x - 50, this.player.getPosition().y - 25);
 		this.addChild(this.roda3, this.roda3.zOrder);
 		
-		this.ground = new Ground(0, 0);
-		this.addChild(this.ground, this.ground.zOrder);
-		this.scheduleUpdate();
+		//this.ground = new Ground(0, 0);
+		//this.addChild(this.ground, this.ground.zOrder);
+		//this.scheduleUpdate();
 		if (GAME.SOUND) {
 			cc.AudioEngine.getInstance().playMusic(s_bgm_1, true);
 		}

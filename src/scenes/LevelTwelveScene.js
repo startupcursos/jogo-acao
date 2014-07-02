@@ -6,14 +6,23 @@ var LevelTwelveScene = cc.Scene.extend({
 		this._super();
 		this.canvas = cc.Director.getInstance().getWinSize();
 
-		var layerLandscape2 = new Landscape2Layer();
-		this.addChild(layerLandscape2, layerLandscape2.zOrder);
-		layerLandscape2.init();
-		
-		var layerLandscape1 = new Landscape1Layer();
+		var layerLandscape1 = new Neptune_Layer1();
 		this.addChild(layerLandscape1, layerLandscape1.zOrder);
 		layerLandscape1.init();
 		
+		var layerLandscape2 = new Neptune_Layer2();
+		this.addChild(layerLandscape2, layerLandscape2.zOrder);
+		layerLandscape2.init();
+		
+		var layerSky = new Neptune_Sky();
+		this.addChild(layerSky, layerSky.zOrder);
+		layerSky.init();
+		
+		var layerGround = new Neptune_Ground();
+		this.addChild(layerGround, layerGround.zOrder);
+		layerGround.init();
+		
+				
 		this.gamelayer = new GameLayer();
 		this.addChild(this.gamelayer, this.gamelayer.zOrder);
 		this.gamelayer.init();
@@ -30,7 +39,7 @@ var LevelTwelveScene = cc.Scene.extend({
 	
 	},
 	levelFinished : function() {
-		cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new LeveThirteenScene()));
+		cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new LevelTwelveScene()));
 	}
 
 });

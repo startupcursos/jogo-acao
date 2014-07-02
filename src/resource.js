@@ -46,6 +46,14 @@ var s_tank = "tank.png";
 var s_carro = "carro.png";
 var s_roda = "roda.png";
 
+//cenário netuno
+var s_neptune_alien_city = "Neptune/alien_city.png";
+var s_neptune_alien_city1 = "Neptune/alien_city1.png";
+var s_neptune_alien_city2 = "Neptune/alien_city2.png";
+var s_neptune_mountain = "Neptune/mountain_background.png";
+var s_neptune_sky = "Neptune/sky_background.png";
+var s_neptune_snow_ground = "/Neptune/snow_ice_ground.png";
+
 
 //plist
 var s_spritesheet = "spritesheet.png";
@@ -113,6 +121,14 @@ var g_resources = [
 	{src:s_tank},
 	{src:s_carro},
 	{src:s_roda},
+	//Netuno
+	{src:s_neptune_alien_city},
+	{src:s_neptune_alien_city1},
+	{src:s_neptune_alien_city2},
+	{src:s_neptune_mountain},
+	{src:s_neptune_sky},
+	{src:s_neptune_snow_ground},
+	
 	
 	//plist
     {src:s_spritesheet},
