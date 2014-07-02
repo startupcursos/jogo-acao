@@ -72,16 +72,14 @@ var GameLayer = cc.Layer.extend({
 	},
 
 	scrolling : function(dt) {
-		var ds = this.player.speedX * dt;
+		var ds = GAME.SCROLLING.SPEED_X * dt;
 		GAME.SCROLLING.TOTAL += ds;
 		if (GAME.SCROLLING.TOTAL > 10000)
 			this.getParent().levelFinished();
 	},
 	detectCollision : function() {
-		
-		//Player Collisions com inimigos
+		//Colisão do avatar com inimigos
 		for (var i in GAME.CONTAINER.ENEMIES) {
-			
 			var selEnemy = GAME.CONTAINER.ENEMIES[i];
 			if (!selEnemy.active)
 				continue;
@@ -89,14 +87,14 @@ var GameLayer = cc.Layer.extend({
 			if (this.collisionDetector.areTheSpritesColliding(this.player, selEnemy)) {
 				this.player.hurt();
 			}
-			//Testa a colisão com as rodas
+			//Testa a colisão das rodas com inimigos
 			for (var j in this.rodas) {
 				var selRoda = this.rodas[j];
 				if (this.collisionDetector.areTheSpritesColliding(selRoda, selEnemy)) {
 					this.player.hurt();
 				}
 			}
-
+			//Testa das colisão dos projeteis do avatar com os inimigos
 			for (var j in GAME.CONTAINER.PLAYER_BULLETS) {
 				var selPlayerBullet = GAME.CONTAINER.PLAYER_BULLETS[j];
 				if (!selPlayerBullet.active)
@@ -108,7 +106,7 @@ var GameLayer = cc.Layer.extend({
 			}
 		}
 		
-
+		//Testa das colisão dos projeteis do inimigo com o avatar
 		for (var i in GAME.CONTAINER.ENEMIES_BULLETS) {
 			var selEnemyBullet = GAME.CONTAINER.ENEMIES_BULLETS[i];
 			if (!selEnemyBullet.active)
@@ -118,19 +116,20 @@ var GameLayer = cc.Layer.extend({
 				selEnemyBullet.hurt();
 			}
 
-			//Testa a colisão com as rodas
+			//Testa das colisão dos projeteis do inimigo com as rodas
 			for (var j in this.rodas) {
 				var selRoda = this.rodas[j];
 				if (this.collisionDetector.areTheSpritesColliding(selRoda, selEnemyBullet)) {
 					this.player.hurt();
 				}
 			}
-
+			//Testa das colisão dos projeteis do inimigo com o chão
 			if (this.collisionDetector.areTheSpritesColliding(this.ground, selEnemyBullet)) {
 				selEnemyBullet.hurt();
 			}
 		}
 		
+		//Testa das colisão das rodas com o chão
 		for (var i in this.rodas) {
 			var selRoda = this.rodas[i];
 			var p0 = selRoda.getPosition();
