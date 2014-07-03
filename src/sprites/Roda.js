@@ -1,13 +1,13 @@
 var Roda = cc.Sprite.extend({
 	active : true,
 	healthPoints : 1,
-	speedX : GAME.SCROLLING.SPEED_X,
+	speedX : 0,
 	speedY : 0,
 	zOrder : 2,
-	dy0:30, 
 	ctor : function(x, yBuggy) {
 		this._super();
-		this.setPosition(x, yBuggy - this.dy0);
+		this.setAnchorPoint(0.5, 0.5);
+		this.setPosition(x, yBuggy);
 		this.init(s_roda);
 		var actionRotate = cc.RotateBy.create(2, 360);
 		this.runAction(cc.RepeatForever.create(actionRotate));
@@ -17,16 +17,16 @@ var Roda = cc.Sprite.extend({
 		var dx = this.speedX * dt;
 		var dy = this.speedY * dt;
 		var finalP = cc.p(p0.x + dx, p0.y + dy);
-		if (this.getParent().player.getPosition().y - finalP.y > this.dy0 * 1.05) 
-			finalP = cc.p(p0.x + dx, this.getParent().player.getPosition().y - (this.dy0 * 1.05));
-		if (this.getParent().player.getPosition().y - finalP.y < this.dy0 * 0.5) 
-			finalP = cc.p(p0.x + dx, this.getParent().player.getPosition().y - (this.dy0 * 0.5));
+		if (this.getParent().player.getPosition().y - finalP.y > this.getContentSize().height / 3) 
+			finalP = cc.p(p0.x + dx, this.getParent().player.getPosition().y - this.getContentSize().height / 3);
+		if (finalP.y - this.getParent().player.getPosition().y > this.getContentSize().height / 3) 
+			finalP = cc.p(p0.x + dx, this.getParent().player.getPosition().y + this.getContentSize().height / 3);
 		this.setPosition(finalP);
 	},
 	destroy : function() {
 		// this.setVisible(false);
 		this.speedX = 0;
-		this.active = false;
+		this.speedY = 0;
 		this.stopAllActions();
 	},
 	hurt : function() {

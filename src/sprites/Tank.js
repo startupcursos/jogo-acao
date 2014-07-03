@@ -1,7 +1,7 @@
 var Tank = cc.Sprite.extend({
 	active : true,
 	healthPoints : 1,
-	speedX : 0,
+	speedX : -GAME.SCROLLING.SPEED_X,
 	speedY : 0,
 	zOrder : 1,
 	rpsGunH : 1,
@@ -9,8 +9,9 @@ var Tank = cc.Sprite.extend({
 	_dtOnScreen : null,
 	ctor : function(x, y) {
 		this._super();
-		this.setPosition(x, y);
 		this.init(s_tank);
+		this.setAnchorPoint(0.5,0.5);
+		this.setPosition(x, y);
 		GAME.CONTAINER.ENEMIES.push(this);
 	},
 	update : function(dt) {

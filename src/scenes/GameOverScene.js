@@ -1,4 +1,4 @@
-var EndGameScene = cc.Scene.extend({
+var GameOverScene = cc.Scene.extend({
 	onEnter : function() {
 		this._super();
 		
@@ -16,24 +16,10 @@ var EndGameScene = cc.Scene.extend({
 		var menu = cc.Menu.create(title1, back);
 		menu.alignItemsInColumns(1, 1);
 		this.addChild(menu);
-
 		back.setPositionY(back.getPositionY() - 50);
 	},
 	onMainMenuCallback : function(pSender) {
 		GAME.LIFES = 3;
 		cc.Director.getInstance().popScene();
-	},
-
-        
-		/*cc.MenuItemFont.setFontName("Algerian");
-		cc.MenuItemFont.setFontSize(48);
-		cc.MenuItemFont.setPosition(this.canvas.width - 60, this.canvas.height - 30);
-		var itemMenuPlay = cc.MenuItemFont.create("Click here to Try Again!", this.onMainMenu);*/
-        
-		/*this.labelScore = cc.LabelTTF.create("Click here to go Menu", "Impact", 14);
-        this.labelScore.setPosition(this.canvas.width - 60, this.canvas.height - 30);
-        this.addChild(this.labelScore);*/
-	
-
-
+	}
 });

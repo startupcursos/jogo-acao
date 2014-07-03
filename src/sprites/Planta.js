@@ -1,16 +1,11 @@
-var Planta1 = cc.Sprite.extend({
+var Planta = cc.Sprite.extend({
 	active : true,
 	healthPoints : 1,
-	speedX : 0,
+	speedX : -GAME.SCROLLING.SPEED_X,
 	speedY : 0,
 	zOrder : 0,
 	ctor : function(x, y) {
 		this._super();
-		this.setPosition(x, y);
-		this.setAnchorPoint(cc.p(0,0));
-		//this.init(s_planta_1);
-		//this.initialPosition = cc.p(x,y);
-		
 		//Carrega no Cache as Imagens
 		cc.SpriteFrameCache.getInstance().addSpriteFrames(s_spritesheet_plist);
 		//Montar um Array com cada quadro da Animação
@@ -25,6 +20,8 @@ var Planta1 = cc.Sprite.extend({
 		var action = cc.RepeatForever.create(cc.Animate.create(animation));
 		this.runAction(action);
 		GAME.CONTAINER.ENEMIES.push(this);
+		this.setAnchorPoint(0.5,0);
+		this.setPosition(x, y);
 		
 	},
 	update : function(dt) {

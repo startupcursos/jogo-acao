@@ -1,4 +1,4 @@
-var LevelOneScene = cc.Scene.extend({
+var Level1TerraScene = cc.Scene.extend({
 	player: null,
 	gamelayer: null,
 	canvas: null,
@@ -25,10 +25,12 @@ var LevelOneScene = cc.Scene.extend({
 		var desertoLayer = new TerraDesertoLayer();
 		this.addChild(desertoLayer, desertoLayer.zOrder);
 		desertoLayer.init();
-			
+		
 		this.gamelayer = new GameLayer();
 		this.addChild(this.gamelayer, this.gamelayer.zOrder);
-		this.gamelayer.init();
+		var spriteGround = new Ground(0, 0, s_terra_chao);
+		this.gamelayer.init(spriteGround);
+
 		this.enemyPlacement();
 		this.player = this.gamelayer.player;
 		
@@ -38,9 +40,10 @@ var LevelOneScene = cc.Scene.extend({
 		GAME.SCORE = 0;
 		
 		//Armazeno a última fase carregada
-		GAME.LASTLEVEL = new LevelOneScene();
+		GAME.LASTLEVEL = new Level1TerraScene();
 	},
 	enemyPlacement : function() {
+		this.gamelayer.addChild(new Tank(6000, this.canvas.height / 4));
 		this.gamelayer.addChild(new NaveSeguidora(-500, this.canvas.height / 3.5));
 		this.gamelayer.addChild(new UfoA(800,  5 / 6 * this.canvas.height));
 		this.gamelayer.addChild(new UfoB(1200,  5 / 6 * this.canvas.height));
@@ -51,10 +54,10 @@ var LevelOneScene = cc.Scene.extend({
 		this.gamelayer.addChild(new RollingStone(11000, this.canvas.height / 3.5));
 		this.gamelayer.addChild(new HoleSmall(4000, this.canvas.height / 6.5));
 		this.gamelayer.addChild(new HoleBig(4800, this.canvas.height / 6.5));
-		this.gamelayer.addChild(new Mina1(5600, this.canvas.height / 4.5));
-		//this.gamelayer.addChild(new Planta1(6400, this.canvas.height / 6.5));
+		this.gamelayer.addChild(new Mina(5600, this.canvas.height / 4.5));
+		this.gamelayer.addChild(new Planta(6400, this.canvas.height / 6.5));
 	},
 	levelFinished : function() {
-		cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new LevelTwoScene()));
+		cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new Level1TerraScene()));
 	}
 });

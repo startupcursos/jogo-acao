@@ -24,24 +24,22 @@
  THE SOFTWARE.
  ****************************************************************************/
 
-var Landscape1Layer = cc.Layer.extend({
+var UranoMontanhaLongeLayer = cc.Layer.extend({
 	canvas : null,
-	zOrder : 1,
-	_scrollSpeed : null,
+	zOrder : -1,
+	_scrollSpeed : GAME.SCROLLING.SPEED_X / 4,
 	init : function() {
 		// 1. super init first
 		this._super();
 		this.canvas = cc.Director.getInstance().getWinSize();
-		var spriteMountain = cc.Sprite.create(s_landscape_1);
-		spriteMountain.setAnchorPoint(0,0);
-		spriteMountain.setPosition(cc.p(0,this.canvas.height / 5));
-		this.addChild(spriteMountain);
+		var spriteMontanha = cc.Sprite.create(s_urano_montanha_longe);
+		spriteMontanha.setAnchorPoint(0,0);
+		spriteMontanha.setPosition(cc.p(0,0));
+		this.addChild(spriteMontanha);
 		this.scheduleUpdate();
 	},
 	update : function(dt) {
-		this._scrollSpeed = this.getParent().player.speedX / 2;
 		this.scrolling(dt);
-		
 	},
 	scrolling : function(dt) {
 		var ds = this._scrollSpeed * dt;
@@ -51,7 +49,6 @@ var Landscape1Layer = cc.Layer.extend({
 		if (scrolledPos.x < -this.canvas.width) {
 			this.setPosition(cc.p(scrolledPos.x + this.canvas.width, 0));
 		}
-
 	}
 });
 

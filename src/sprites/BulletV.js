@@ -4,7 +4,7 @@
 var BulletV = cc.Sprite.extend({
 	active : true,
 	healthPoints : 1,
-	speedX : GAME.SCROLLING.SPEED_X,
+	speedX : 0,
 	speedY : GAME.SCROLLING.SPEED_X * 3,
 	zOrder : 0,
 	ctor : function(x,y) {

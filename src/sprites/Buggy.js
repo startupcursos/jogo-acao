@@ -4,7 +4,7 @@
 var Buggy = cc.Sprite.extend({
 	active : true,
 	healthPoints : 1,
-	speedX : GAME.SCROLLING.SPEED_X,
+	speedX : 0,
 	speedY : 0,
 	zOrder : 1,
 	rpsGunV : 3,
@@ -14,6 +14,7 @@ var Buggy = cc.Sprite.extend({
 	ctor : function(x, y) {
 		this._super();
 		this.init(s_carro);
+		this.setAnchorPoint(0.5,0);
 		this.setPosition(x, y);
 	},
 	update : function(dt) {
@@ -49,7 +50,7 @@ var Buggy = cc.Sprite.extend({
         if(GAME.LIFES <= 0){        	
         	cc.AudioEngine.getInstance().stopMusic(s_bgm_1); 
         	cc.AudioEngine.getInstance().playEffect(s_end_game);
-        	cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new EndGameScene()));        	
+        	cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new GameOverScene()));        	
 			return;	
         }
         cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, GAME.LASTLEVEL)); 

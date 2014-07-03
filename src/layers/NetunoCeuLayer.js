@@ -24,23 +24,23 @@
  THE SOFTWARE.
  ****************************************************************************/
 
-var Landscape2Layer = cc.Layer.extend({
+var NetunoCeuLayer = cc.Layer.extend({
 	canvas : null,
-	zOrder : 0,
-	_scrollSpeed : null,
+	zOrder : -2,
+	_scrollSpeed : GAME.SCROLLING.SPEED_X / 8,
 	init : function() {
 		// 1. super init first
 		this._super();
 		this.canvas = cc.Director.getInstance().getWinSize();
-		var spriteMountain = cc.Sprite.create(s_landscape_2);
-		spriteMountain.setAnchorPoint(0,0);
-		spriteMountain.setPosition(cc.p(0,this.canvas.height / 3));
-		this.addChild(spriteMountain);
+		var spriteCeu = cc.Sprite.create(s_netuno_ceu);
+		spriteCeu.setAnchorPoint(0,0);
+		spriteCeu.setPosition(cc.p(0,0));
+		this.addChild(spriteCeu);
 		this.scheduleUpdate();
 	},
 	update : function(dt) {
-		this._scrollSpeed = this.getParent().player.speedX / 4;
 		this.scrolling(dt);
+		
 	},
 	scrolling : function(dt) {
 		var ds = this._scrollSpeed * dt;
@@ -50,6 +50,7 @@ var Landscape2Layer = cc.Layer.extend({
 		if (scrolledPos.x < -this.canvas.width) {
 			this.setPosition(cc.p(scrolledPos.x + this.canvas.width, 0));
 		}
+
 	}
 });
 

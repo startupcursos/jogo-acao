@@ -4,7 +4,7 @@
 var BulletH = cc.Sprite.extend({
 	active : true,
 	healthPoints : 1,
-	speedX : GAME.SCROLLING.SPEED_X * 3,
+	speedX : GAME.SCROLLING.SPEED_X * 2,
 	speedY : 0,
 	zOrder : 0,
 	initialPosition: null,

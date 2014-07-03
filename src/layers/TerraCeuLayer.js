@@ -27,7 +27,7 @@
 var TerraCeuLayer = cc.Layer.extend({
 	canvas : null,
 	zOrder : -5,
-	_scrollSpeed : null,
+	_scrollSpeed : GAME.SCROLLING.SPEED_X / 64,
 	init : function() {
 		// 1. super init first
 		this._super();
@@ -39,7 +39,6 @@ var TerraCeuLayer = cc.Layer.extend({
 		this.scheduleUpdate();
 	},
 	update : function(dt) {
-		this._scrollSpeed = this.getParent().player.speedX / 64;
 		this.scrolling(dt);
 		
 	},
