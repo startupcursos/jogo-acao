@@ -70,15 +70,18 @@
             'src/layers/TerraMontanhaLayer.js',
             'src/layers/TerraNuvemLayer.js',
             'src/layers/TerraSolLayer.js',
-            'src/layers/LandscapeMarteCeu.js',
-            'src/layers/LandscapeMarteMontanha.js',
-            'src/layers/LandscapeMarteEstalagnite.js',            
+            'src/layers/MarteCeuLayer.js',
+            'src/layers/MarteMontanhaLayer.js',
+            'src/layers/MarteEstalagniteLayer.js',            
             'src/layers/JupiterCeuLayer.js',
             'src/layers/JupiterMontanhaLongeLayer.js',
             'src/layers/JupiterMontanhaPertoLayer.js',
             'src/layers/UranoCeuLayer.js',
             'src/layers/UranoMontanhaLongeLayer.js',
             'src/layers/UranoMontanhaPertoLayer.js',            
+            'src/layers/NetunoCeuLayer.js',
+            'src/layers/NetunoMontanhaLayer.js',
+            'src/layers/NetunoCityLayer.js',            
             'src/sprites/LittleStone.js',
             'src/scenes/Level1TerraScene.js',
             'src/scenes/Level2LuaScene.js',
@@ -89,7 +92,7 @@
             'src/scenes/Level7NetunoScene.js',
             'src/scenes/MainmenuScene.js',
             'src/scenes/SettingsScene.js',
-            'src/scenes/EndGameScene.js'
+            'src/scenes/GameOverScene.js'
         ]
     };
 

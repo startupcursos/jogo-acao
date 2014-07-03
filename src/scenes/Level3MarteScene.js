@@ -19,12 +19,10 @@ var Level3MarteScene = cc.Scene.extend({
 		landscapeMarteEstalagnite.init();
 				
 		this.gamelayer = new GameLayer();
-		var spriteGround = new Ground(0, 0, s_marte_chao);
-		this.gamelayer.ground = spriteGround; 
-		this.gamelayer.addChild(spriteGround, spriteGround.zOrder);
 		this.addChild(this.gamelayer, this.gamelayer.zOrder);
-		
-		this.gamelayer.init();
+		var spriteGround = new Ground(0, 0, s_marte_chao);
+		this.gamelayer.init(spriteGround);
+
 		this.enemyPlacement();
 		this.player = this.gamelayer.player;
 		
@@ -40,7 +38,7 @@ var Level3MarteScene = cc.Scene.extend({
 		this.gamelayer.addChild(new HoleBig(8500, this.canvas.height / 6.5));				
 	},
 	levelFinished : function() {
-		cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new LevelSixScene()));
+		cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new Level4JupiterScene()));
 	}
 
 });

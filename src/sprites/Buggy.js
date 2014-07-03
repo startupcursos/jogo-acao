@@ -50,7 +50,7 @@ var Buggy = cc.Sprite.extend({
         if(GAME.LIFES <= 0){        	
         	cc.AudioEngine.getInstance().stopMusic(s_bgm_1); 
         	cc.AudioEngine.getInstance().playEffect(s_end_game);
-        	cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new EndGameScene()));        	
+        	cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new GameOverScene()));        	
 			return;	
         }
         cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, GAME.LASTLEVEL)); 

@@ -37,10 +37,10 @@ var s_urano_montanha_perto = "urano-montanha.png";
 var s_urano_montanha_longe = "urano-montanha-longe.png";
 var s_urano_chao = "urano-chao.png";
 
-
-var s_landscape_1 = "landscape1.png";
-var s_landscape_2 = "landscape2.png";
-
+var s_netuno_ceu = "netuno-ceu.png";
+var s_netuno_city = "netuno-city.png";
+var s_netuno_montanha = "netuno-montanha.png";
+var s_netuno_chao = "netuno-chao.png";
 
 var s_little_stone = "little-stone.png";
 var s_little_stone = "little-stone.png";
@@ -109,8 +109,6 @@ var g_resources = [
     {src:s_enemy_bullet_v2},
     {src:s_fire},
     {src:s_ground},
-    {src:s_landscape_1},
-    {src:s_landscape_2},
     
     {src:s_marte_ceu},
 	{src:s_marte_chao},    
@@ -133,6 +131,11 @@ var g_resources = [
     {src:s_urano_montanha_longe},
     {src:s_urano_montanha_perto},
     {src:s_urano_chao},
+
+    {src:s_netuno_ceu},
+    {src:s_netuno_city},
+    {src:s_netuno_montanha},
+    {src:s_netuno_chao},
 
     
     {src:s_little_stone},
