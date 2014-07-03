@@ -53,7 +53,7 @@ var GameLayer = cc.Layer.extend({
 		this.ground = spriteGround; 
 		this.addChild(spriteGround, spriteGround.zOrder);
 		
-		this.player = new Buggy(this.canvas.width / 3, this.canvas.height * (GAME.GROUND_HEIGHT_PERC + 0.05));
+		this.player = new Buggy(this.canvas.width / 3, this.canvas.height * (GAME.GROUND_HEIGHT_PERC + 0.03));
 		this.addChild(this.player, this.player.zOrder);
 
 		this.rodas = [];
