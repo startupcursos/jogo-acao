@@ -24,22 +24,23 @@
  THE SOFTWARE.
  ****************************************************************************/
 
-var LandscapeMarteMontanha = cc.Layer.extend({
+var MarteCeuLayer = cc.Layer.extend({
 	canvas : null,
-	zOrder : -1,
-	_scrollSpeed : GAME.SCROLLING.SPEED_X / 4,
+	zOrder : -2,
+	_scrollSpeed : GAME.SCROLLING.SPEED_X / 8,
 	init : function() {
 		// 1. super init first
 		this._super();
 		this.canvas = cc.Director.getInstance().getWinSize();
-		var spriteMontanha = cc.Sprite.create(s_marte_montanha);
-		spriteMontanha.setAnchorPoint(0,0);
-		spriteMontanha.setPosition(cc.p(0,0));
-		this.addChild(spriteMontanha);
+		var spriteCeu = cc.Sprite.create(s_marte_ceu);
+		spriteCeu.setAnchorPoint(0,0);
+		spriteCeu.setPosition(cc.p(0,0));
+		this.addChild(spriteCeu);
 		this.scheduleUpdate();
 	},
 	update : function(dt) {
 		this.scrolling(dt);
+		
 	},
 	scrolling : function(dt) {
 		var ds = this._scrollSpeed * dt;
@@ -49,6 +50,7 @@ var LandscapeMarteMontanha = cc.Layer.extend({
 		if (scrolledPos.x < -this.canvas.width) {
 			this.setPosition(cc.p(scrolledPos.x + this.canvas.width, 0));
 		}
+
 	}
 });
 

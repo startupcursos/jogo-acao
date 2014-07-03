@@ -6,15 +6,15 @@ var Level3MarteScene = cc.Scene.extend({
 		this._super();
 		this.canvas = cc.Director.getInstance().getWinSize();
 
-		var landscapeMarteCeu = new LandscapeMarteCeu();
+		var landscapeMarteCeu = new MarteCeuLayer();
 		this.addChild(landscapeMarteCeu, landscapeMarteCeu.zOrder);
 		landscapeMarteCeu.init();
 		
-		var landscapeMarteMontanha = new LandscapeMarteMontanha();
+		var landscapeMarteMontanha = new MarteMontanhaLayer();
 		this.addChild(landscapeMarteMontanha, landscapeMarteMontanha.zOrder);
 		landscapeMarteMontanha.init();
 		
-		var landscapeMarteEstalagnite = new LandscapeMarteEstalagnite();
+		var landscapeMarteEstalagnite = new MarteEstalagniteLayer();
 		this.addChild(landscapeMarteEstalagnite, landscapeMarteEstalagnite.zOrder);
 		landscapeMarteEstalagnite.init();
 				

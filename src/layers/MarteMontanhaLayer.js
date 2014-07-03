@@ -24,18 +24,18 @@
  THE SOFTWARE.
  ****************************************************************************/
 
-var LandscapeMarteEstalagnite = cc.Layer.extend({
+var MarteMontanhaLayer = cc.Layer.extend({
 	canvas : null,
-	zOrder : 0,
-	_scrollSpeed : GAME.SCROLLING.SPEED_X / 2,
+	zOrder : -1,
+	_scrollSpeed : GAME.SCROLLING.SPEED_X / 4,
 	init : function() {
 		// 1. super init first
 		this._super();
 		this.canvas = cc.Director.getInstance().getWinSize();
-		var spriteEstalagnite = cc.Sprite.create(s_marte_estalagnite);
-		spriteEstalagnite.setAnchorPoint(0,0);
-		spriteEstalagnite.setPosition(cc.p(0,0));
-		this.addChild(spriteEstalagnite);
+		var spriteMontanha = cc.Sprite.create(s_marte_montanha);
+		spriteMontanha.setAnchorPoint(0,0);
+		spriteMontanha.setPosition(cc.p(0,0));
+		this.addChild(spriteMontanha);
 		this.scheduleUpdate();
 	},
 	update : function(dt) {
