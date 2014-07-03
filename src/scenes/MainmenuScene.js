@@ -14,7 +14,7 @@ var MainmenuScene = cc.Scene.extend({
 	},
 	onPlay : function() {
 		cc.log("Play pressed");
-		cc.Director.getInstance().pushScene(cc.TransitionFade.create(1, new LevelTwoScene())); //LevelOneScene LevelTwoScene LevelElevenScene LevelTwelveScene
+		cc.Director.getInstance().pushScene(cc.TransitionFade.create(1, new Level6UranoScene())); //LevelOneScene LevelTwoScene LevelElevenScene LevelTwelveScene
 	},
 	onHighScore : function() {
 		cc.log("HighScore pressed");

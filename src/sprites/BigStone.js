@@ -6,8 +6,9 @@ var BigStone = cc.Sprite.extend({
 	zOrder : 0,
 	ctor : function(x, y) {
 		this._super();
-		this.setPosition(x, y);
 		this.init(s_big_stone);
+		this.setAnchorPoint(0.5,0.5);
+		this.setPosition(x, y);
 		GAME.CONTAINER.ENEMIES.push(this);
 	},
 	update : function(dt) {

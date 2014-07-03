@@ -19,12 +19,10 @@ var Level6UranoScene = cc.Scene.extend({
 		layerMontanhaPerto.init();
 
 		this.gamelayer = new GameLayer();
-		var spriteGround = new Ground(0, 0, s_urano_chao);
-		this.gamelayer.ground = spriteGround; 
-		this.gamelayer.addChild(spriteGround, spriteGround.zOrder);
-
 		this.addChild(this.gamelayer, this.gamelayer.zOrder);
-		this.gamelayer.init();
+		var spriteGround = new Ground(0, 0, s_urano_chao);
+		this.gamelayer.init(spriteGround);
+
 		this.enemyPlacement();
 		this.player = this.gamelayer.player;
 		
@@ -34,15 +32,15 @@ var Level6UranoScene = cc.Scene.extend({
 		GAME.LASTLEVEL = new Level6UranoScene();
 	},
 	enemyPlacement : function() {
-		this.gamelayer.addChild(new RollingStone(2000, this.canvas.height / 3.5));
-		this.gamelayer.addChild(new RollingStone(3000, this.canvas.height / 3.5));
-		this.gamelayer.addChild(new RollingStone(4000, this.canvas.height / 3.5));
-		this.gamelayer.addChild(new RollingStone(6000, this.canvas.height / 3.5));
-		this.gamelayer.addChild(new RollingStone(7000, this.canvas.height / 3.5));
-		this.gamelayer.addChild(new RollingStone(8000, this.canvas.height / 3.5));
+		this.gamelayer.addChild(new RollingStone(2000, this.canvas.height * (GAME.GROUND_HEIGHT_PERC + 0.05)));
+		this.gamelayer.addChild(new RollingStone(3000, this.canvas.height * (GAME.GROUND_HEIGHT_PERC + 0.05)));
+		this.gamelayer.addChild(new RollingStone(4000, this.canvas.height * (GAME.GROUND_HEIGHT_PERC + 0.05)));
+		this.gamelayer.addChild(new Mina(2500, this.canvas.height * GAME.GROUND_HEIGHT_PERC));
+		this.gamelayer.addChild(new Mina(3500, this.canvas.height * GAME.GROUND_HEIGHT_PERC));
+		this.gamelayer.addChild(new Mina(4500, this.canvas.height * GAME.GROUND_HEIGHT_PERC));
 	},
 	levelFinished : function() {
-		cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new LevelThreeScene()));
+		cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new Level7NetunoScene()));
 	}
 
 });

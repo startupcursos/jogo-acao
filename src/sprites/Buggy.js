@@ -14,6 +14,7 @@ var Buggy = cc.Sprite.extend({
 	ctor : function(x, y) {
 		this._super();
 		this.init(s_carro);
+		this.setAnchorPoint(0.5,0);
 		this.setPosition(x, y);
 	},
 	update : function(dt) {

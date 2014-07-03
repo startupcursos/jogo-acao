@@ -6,8 +6,9 @@ var RollingStone = cc.Sprite.extend({
 	zOrder : 10,
 	ctor : function(x, y) {
 		this._super();
-		this.setPosition(x, y);
 		this.init(s_rolling_stone);
+		this.setAnchorPoint(0.5,0.5);
+		this.setPosition(x, y);
 		GAME.CONTAINER.ENEMIES.push(this);
 		var actionRotate = cc.RotateBy.create(2, -360);
 		this.runAction(cc.RepeatForever.create(actionRotate));

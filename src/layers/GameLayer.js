@@ -33,11 +33,12 @@ var GameLayer = cc.Layer.extend({
 	zOrder : 1,
 	collisionDetector: null,
 
-	init : function() {
+	init : function(spriteGround) {
 		GAME.CONTAINER.ENEMIES = [];
 		GAME.CONTAINER.PLAYER_BULLETS = [];
 		GAME.CONTAINER.ENEMIES_BULLETS = [];
 		GAME.SCROLLING.TOTAL = 0;
+		 
 
 		// 1. super init first
 		this._super();
@@ -48,7 +49,11 @@ var GameLayer = cc.Layer.extend({
 		}
 
 		this.canvas = cc.Director.getInstance().getWinSize();
-		this.player = new Buggy(this.canvas.width / 3, this.canvas.height / 3.5);
+		
+		this.ground = spriteGround; 
+		this.addChild(spriteGround, spriteGround.zOrder);
+		
+		this.player = new Buggy(this.canvas.width / 3, this.canvas.height * (GAME.GROUND_HEIGHT_PERC + 0.05));
 		this.addChild(this.player, this.player.zOrder);
 
 		this.rodas = [];
@@ -134,7 +139,7 @@ var GameLayer = cc.Layer.extend({
 			if (this.collisionDetector.areTheSpritesColliding(selRoda, this.ground, true)) {
 				selRoda.setPosition(cc.p(p0.x, p0.y + 1));
 			} else {
-				selRoda.setPosition(cc.p(p0.x, p0.y - 1));
+				selRoda.setPosition(cc.p(p0.x, p0.y - 2));
 			}
 		}
 	},

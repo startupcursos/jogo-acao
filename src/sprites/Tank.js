@@ -9,8 +9,9 @@ var Tank = cc.Sprite.extend({
 	_dtOnScreen : null,
 	ctor : function(x, y) {
 		this._super();
-		this.setPosition(x, y);
 		this.init(s_tank);
+		this.setAnchorPoint(0.5,0.5);
+		this.setPosition(x, y);
 		GAME.CONTAINER.ENEMIES.push(this);
 	},
 	update : function(dt) {
