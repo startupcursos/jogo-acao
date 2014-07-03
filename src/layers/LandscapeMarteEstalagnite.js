@@ -32,7 +32,7 @@ var LandscapeMarteEstalagnite = cc.Layer.extend({
 		// 1. super init first
 		this._super();
 		this.canvas = cc.Director.getInstance().getWinSize();
-		var spriteEstalagnite = cc.Sprite.create(s_landscape_marte_estalagnite);
+		var spriteEstalagnite = cc.Sprite.create(s_marte_estalagnite);
 		spriteEstalagnite.setAnchorPoint(0,0);
 		spriteEstalagnite.setPosition(cc.p(0,0));
 		this.addChild(spriteEstalagnite);

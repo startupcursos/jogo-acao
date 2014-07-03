@@ -14,22 +14,34 @@ var s_hole_big = "hole-big.png";
 var s_hole_ufo_c = "hole-ufo-c.png";
 var s_ground = "groundAcidentado.png";
 
-var s_jupiter_ceu = "jupiter-ceu.png";
-var s_jupiter_montanha_perto = "jupiter-montanha-perto.png";
-var s_jupiter_montanha_longe = "jupiter-montanha-longe.png";
 
 var s_terra_ceu = "terra-ceu.png";
 var s_terra_deserto = "terra-deserto.png";
 var s_terra_montanha = "terra-montanha.png";
 var s_terra_nuvem = "terra-nuvem.png";
 var s_terra_sol = "terra-sol.png";
+var s_terra_chao = "terra-chao.png";
+
+var s_marte_ceu = "marte-ceu.png";
+var s_marte_chao = "marte-chao.png";
+var s_marte_estalagnite = "marte-estalagnite.png";
+var s_marte_montanha = "marte-montanha.png";
+
+var s_jupiter_ceu = "jupiter-ceu.png";
+var s_jupiter_montanha_perto = "jupiter-montanha-perto.png";
+var s_jupiter_montanha_longe = "jupiter-montanha-longe.png";
+var s_jupiter_chao = "jupiter-chao.png";
+
+var s_urano_ceu = "urano-ceu.png";
+var s_urano_montanha_perto = "urano-montanha.png";
+var s_urano_montanha_longe = "urano-montanha-longe.png";
+var s_urano_chao = "urano-chao.png";
+
 
 var s_landscape_1 = "landscape1.png";
 var s_landscape_2 = "landscape2.png";
-var s_landscape_marte_ceu = "marte-ceu.png";
-var s_landscape_marte_chao = "marte-chao.png";
-var s_landscape_marte_estalagnite = "marte-estalagnite.png";
-var s_landscape_marte_montanha = "marte-montanha.png";
+
+
 var s_little_stone = "little-stone.png";
 var s_little_stone = "little-stone.png";
 var s_rolling_stone = "rolling-stone.png";
@@ -100,20 +112,29 @@ var g_resources = [
     {src:s_landscape_1},
     {src:s_landscape_2},
     
-    {src:s_landscape_marte_ceu},
-	{src:s_landscape_marte_chao},    
-    {src:s_landscape_marte_estalagnite},
-	{src:s_landscape_marte_montanha},
+    {src:s_marte_ceu},
+	{src:s_marte_chao},    
+    {src:s_marte_estalagnite},
+	{src:s_marte_montanha},
 
     {src:s_terra_ceu},
 	{src:s_terra_deserto},
 	{src:s_terra_montanha},
 	{src:s_terra_nuvem},
 	{src:s_terra_sol},
+	{src:s_terra_chao},
 	
     {src:s_jupiter_ceu},
     {src:s_jupiter_montanha_longe},
     {src:s_jupiter_montanha_perto},
+    {src:s_jupiter_chao},
+	
+    {src:s_urano_ceu},
+    {src:s_urano_montanha_longe},
+    {src:s_urano_montanha_perto},
+    {src:s_urano_chao},
+
+    
     {src:s_little_stone},
     {src:s_hole_small},
     {src:s_hole_big},

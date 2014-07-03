@@ -1,4 +1,4 @@
-var LevelFiveScene = cc.Scene.extend({
+var Level3MarteScene = cc.Scene.extend({
 	player: null,
 	gamelayer: null,
 	canvas: null,
@@ -19,7 +19,11 @@ var LevelFiveScene = cc.Scene.extend({
 		landscapeMarteEstalagnite.init();
 				
 		this.gamelayer = new GameLayer();
+		var spriteGround = new Ground(0, 0, s_marte_chao);
+		this.gamelayer.ground = spriteGround; 
+		this.gamelayer.addChild(spriteGround, spriteGround.zOrder);
 		this.addChild(this.gamelayer, this.gamelayer.zOrder);
+		
 		this.gamelayer.init();
 		this.enemyPlacement();
 		this.player = this.gamelayer.player;
@@ -27,7 +31,7 @@ var LevelFiveScene = cc.Scene.extend({
 		var hudLayer = new HudLayer();
 		hudLayer.init();
 		this.addChild(hudLayer, hudLayer.zOrder);
-		GAME.LASTLEVEL = new LevelFiveScene();
+		GAME.LASTLEVEL = new Level3MarteScene();
 	},
 	enemyPlacement : function() {
 		this.gamelayer.addChild(new UfoA(2000, 5 / 6 * this.canvas.height));

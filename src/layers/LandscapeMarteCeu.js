@@ -32,7 +32,7 @@ var LandscapeMarteCeu = cc.Layer.extend({
 		// 1. super init first
 		this._super();
 		this.canvas = cc.Director.getInstance().getWinSize();
-		var spriteCeu = cc.Sprite.create(s_landscape_marte_ceu);
+		var spriteCeu = cc.Sprite.create(s_marte_ceu);
 		spriteCeu.setAnchorPoint(0,0);
 		spriteCeu.setPosition(cc.p(0,0));
 		this.addChild(spriteCeu);

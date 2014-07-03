@@ -24,23 +24,22 @@
  THE SOFTWARE.
  ****************************************************************************/
 
-var LandscapeMarteChao = cc.Layer.extend({
+var UranoMontanhaPertoLayer = cc.Layer.extend({
 	canvas : null,
-	zOrder : 3,
-	_scrollSpeed : GAME.SCROLLING.SPEED_X,
+	zOrder : 0,
+	_scrollSpeed : GAME.SCROLLING.SPEED_X / 2,
 	init : function() {
 		// 1. super init first
 		this._super();
 		this.canvas = cc.Director.getInstance().getWinSize();
-		var spriteChao = cc.Sprite.create(s_landscape_marte_chao);
-		spriteChao.setAnchorPoint(0,0);
-		spriteChao.setPosition(cc.p(0,0));
-		this.addChild(spriteChao);
+		var spriteEstalagnite = cc.Sprite.create(s_urano_montanha_perto);
+		spriteEstalagnite.setAnchorPoint(0,0);
+		spriteEstalagnite.setPosition(cc.p(0,0));
+		this.addChild(spriteEstalagnite);
 		this.scheduleUpdate();
 	},
 	update : function(dt) {
 		this.scrolling(dt);
-		
 	},
 	scrolling : function(dt) {
 		var ds = this._scrollSpeed * dt;
@@ -50,7 +49,6 @@ var LandscapeMarteChao = cc.Layer.extend({
 		if (scrolledPos.x < -this.canvas.width) {
 			this.setPosition(cc.p(scrolledPos.x + this.canvas.width, 0));
 		}
-
 	}
 });
 

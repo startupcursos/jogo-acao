@@ -1,4 +1,4 @@
-var LevelNineScene = cc.Scene.extend({
+var Level4JupiterScene = cc.Scene.extend({
 	player: null,
 	gamelayer: null,
 	canvas: null,
@@ -19,11 +19,15 @@ var LevelNineScene = cc.Scene.extend({
 		layerMontanhaPerto.init();
 		
 		this.gamelayer = new GameLayer();
+		var spriteGround = new Ground(0, 0, s_jupiter_chao);
+		this.gamelayer.ground = spriteGround; 
+		this.gamelayer.addChild(spriteGround, spriteGround.zOrder);
 		this.addChild(this.gamelayer, this.gamelayer.zOrder);
+		
 		this.gamelayer.init();
 		this.enemyPlacement();
 		this.player = this.gamelayer.player;
-		GAME.LASTLEVEL = new LevelNineScene();
+		GAME.LASTLEVEL = new Level4JupiterScene();
 	},
 	enemyPlacement : function() {
 		

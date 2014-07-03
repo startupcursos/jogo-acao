@@ -5,10 +5,10 @@ var Ground = cc.Sprite.extend({
 	speedY : 0,
 	_scroll: 0,
 	canvas: null,
-	ctor : function(x, y) {
+	ctor : function(x, y, image) {
 		this._super();
 		this.setPosition(x, y);
-		this.init(s_ground);
+		this.init(image);
 		this.setAnchorPoint(cc.p(0,0));
 		this.canvas = cc.Director.getInstance().getWinSize();
 	},

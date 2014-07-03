@@ -62,8 +62,6 @@ var GameLayer = cc.Layer.extend({
 		this.rodas.push(roda);
 		this.addChild(roda, roda.zOrder);
 
-		this.ground = new Ground(0, 0);
-		this.addChild(this.ground, this.ground.zOrder);
 		this.scheduleUpdate();
 		if (GAME.SOUND) {
 			cc.AudioEngine.getInstance().playMusic(s_bgm_1, true);

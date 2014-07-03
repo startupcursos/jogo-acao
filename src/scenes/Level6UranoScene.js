@@ -1,4 +1,4 @@
-var LevelTwoScene = cc.Scene.extend({
+var Level6UranoScene = cc.Scene.extend({
 	player: null,
 	gamelayer: null,
 	canvas: null,
@@ -6,15 +6,23 @@ var LevelTwoScene = cc.Scene.extend({
 		this._super();
 		this.canvas = cc.Director.getInstance().getWinSize();
 
-		var layerLandscape2 = new Landscape2Layer();
-		this.addChild(layerLandscape2, layerLandscape2.zOrder);
-		layerLandscape2.init();
+		var layerCeu = new UranoCeuLayer();
+		this.addChild(layerCeu, layerCeu.zOrder);
+		layerCeu.init();
 		
-		var layerLandscape1 = new Landscape1Layer();
-		this.addChild(layerLandscape1, layerLandscape1.zOrder);
-		layerLandscape1.init();
-		
+		var layerMontanhaLonge = new UranoMontanhaLongeLayer();
+		this.addChild(layerMontanhaLonge, layerMontanhaLonge.zOrder);
+		layerMontanhaLonge.init();
+
+		var layerMontanhaPerto = new UranoMontanhaPertoLayer();
+		this.addChild(layerMontanhaPerto, layerMontanhaPerto.zOrder);
+		layerMontanhaPerto.init();
+
 		this.gamelayer = new GameLayer();
+		var spriteGround = new Ground(0, 0, s_urano_chao);
+		this.gamelayer.ground = spriteGround; 
+		this.gamelayer.addChild(spriteGround, spriteGround.zOrder);
+
 		this.addChild(this.gamelayer, this.gamelayer.zOrder);
 		this.gamelayer.init();
 		this.enemyPlacement();
@@ -23,8 +31,7 @@ var LevelTwoScene = cc.Scene.extend({
 		var hudLayer = new HudLayer();
 		hudLayer.init();
 		this.addChild(hudLayer, hudLayer.zOrder);
-		GAME.SCORE;
-		GAME.LASTLEVEL = new LevelTwoScene();
+		GAME.LASTLEVEL = new Level6UranoScene();
 	},
 	enemyPlacement : function() {
 		this.gamelayer.addChild(new RollingStone(2000, this.canvas.height / 3.5));

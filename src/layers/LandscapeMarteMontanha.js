@@ -32,7 +32,7 @@ var LandscapeMarteMontanha = cc.Layer.extend({
 		// 1. super init first
 		this._super();
 		this.canvas = cc.Director.getInstance().getWinSize();
-		var spriteMontanha = cc.Sprite.create(s_landscape_marte_montanha);
+		var spriteMontanha = cc.Sprite.create(s_marte_montanha);
 		spriteMontanha.setAnchorPoint(0,0);
 		spriteMontanha.setPosition(cc.p(0,0));
 		this.addChild(spriteMontanha);
