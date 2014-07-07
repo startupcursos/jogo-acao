@@ -1,7 +1,7 @@
 var HoleSmall = cc.Sprite.extend({
 	active : true,
 	healthPoints : 1,
-	speedX : 0,
+	speedX : -GAME.SCROLLING.SPEED_X,
 	speedY : 0,
 	zOrder : 0,
 	ctor : function(x, y) {
@@ -34,6 +34,6 @@ var HoleSmall = cc.Sprite.extend({
 		}
 	},
 	hurt : function() {
-		this.healthPoints--;
+		// this.healthPoints--;
 	}
 });

@@ -1,7 +1,7 @@
 var MainmenuScene = cc.Scene.extend({
 	onEnter : function() {
 		this._super();
-		cc.MenuItemFont.setFontName("Algerian");
+		cc.MenuItemFont.setFontName("Arial");
 		cc.MenuItemFont.setFontSize(48);
 		var itemMenuPlay = cc.MenuItemFont.create("Play", this.onPlay);
 		var itemMenuHS = cc.MenuItemFont.create("HighScore", this.onHighScore);
@@ -14,7 +14,7 @@ var MainmenuScene = cc.Scene.extend({
 	},
 	onPlay : function() {
 		cc.log("Play pressed");
-		cc.Director.getInstance().pushScene(cc.TransitionFade.create(1, new LevelOneScene())); //LevelOneScene LevelTwoScene LevelElevenScene LevelTwelveScene
+		cc.Director.getInstance().pushScene(cc.TransitionFade.create(1, new Level7NetunoScene())); 
 	},
 	onHighScore : function() {
 		cc.log("HighScore pressed");

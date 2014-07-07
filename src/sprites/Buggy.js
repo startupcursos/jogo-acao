@@ -4,7 +4,7 @@
 var Buggy = cc.Sprite.extend({
 	active : true,
 	healthPoints : 1,
-	speedX : GAME.SCROLLING.SPEED_X,
+	speedX : 0,
 	speedY : 0,
 	zOrder : 1,
 	rpsGunV : 3,
@@ -13,7 +13,8 @@ var Buggy = cc.Sprite.extend({
 	_dtLastFireH : 1,
 	ctor : function(x, y) {
 		this._super();
-		this.init(s_buggy);
+		this.init(s_carro);
+		this.setAnchorPoint(0.5,0);
 		this.setPosition(x, y);
 	},
 	update : function(dt) {
@@ -33,14 +34,26 @@ var Buggy = cc.Sprite.extend({
 		this._dtLastFireH += dt;
 	},
 	destroy : function() {
-		// this.setVisible(false);
+		//Para o carro e as rodas
+        this.speedX = 0;
+        for (var i in this.getParent().rodas) {
+        	this.getParent().rodas[i].destroy();
+        }
+
 		this.active = false;
 		this.stopAllActions();
 		var emitter = cc.ParticleFire.create();
 		emitter.setTexture(cc.TextureCache.getInstance().addImage(s_fire));
         emitter.setPosition(this.getPosition());
 		this.getParent().addChild(emitter, 10);
-        this.speedX = 0;
+        GAME.LIFES -= 1;        
+        if(GAME.LIFES <= 0){        	
+        	cc.AudioEngine.getInstance().stopMusic(s_bgm_1); 
+        	cc.AudioEngine.getInstance().playEffect(s_end_game);
+        	cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new GameOverScene()));        	
+			return;	
+        }
+        cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, GAME.LASTLEVEL)); 
  	},
 	hurt : function() {
 		this.healthPoints--;

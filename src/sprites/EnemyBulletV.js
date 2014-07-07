@@ -4,12 +4,13 @@
 var EnemyBulletV = cc.Sprite.extend({
 	active : true,
 	healthPoints : 1,
-	speedX : 250,
-	speedY : -GAME.SCROLLING.SPEED_X * 3,
+	speedX : 0,
+	speedY : -GAME.SCROLLING.SPEED_X * 2,
 	zOrder : 0,
 	initialPosition: null,
 	ctor : function(x,y) {
 		this._super();
+		this.setAnchorPoint(cc.p(0.5,0));
 		this.setPosition(x, y);
 		this.initialPosition = cc.p(x,y);
 		
@@ -55,8 +56,6 @@ var EnemyBulletV = cc.Sprite.extend({
 			var frame = cc.SpriteFrameCache.getInstance().getSpriteFrame(str);
 			animFrames.push(frame);
 		}
-		
-		
 		
 		this.initWithSpriteFrame(animFrames[0]);
 		var animation = cc.Animation.create(animFrames, 0.1/2);
