@@ -24,7 +24,7 @@ var BulletH = cc.Sprite.extend({
 			animFrames.push(frame);
 		}
 		this.initWithSpriteFrame(animFrames[0]);
-		var animation = cc.Animation.create(animFrames, 0.1);
+		var animation = cc.Animation.create(animFrames, 0.2);
 		var action = cc.Animate.create(animation);
 		this.runAction(action);
 		cc.RepeatForever(action);
