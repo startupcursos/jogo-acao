@@ -66,6 +66,8 @@ var s_explosion_9 = "explosion-9.png";
 var s_explosion_10 = "explosion-10.png";
 var s_rocket_1 = "rocket-1.png";
 var s_rocket_2 = "rocket-2.png";
+var s_rocket_3 = "rocket-3.png";
+var s_rocket_4 = "rocket-4.png";
 var s_roda = "roda.png";
 var s_mina1 = "Mina-1.png";
 var s_mina2 = "Mina-2.png";
@@ -86,6 +88,10 @@ var s_ufo_a_spritesheet = "ufo-a-spritesheet.png";
 var s_ufo_a_spritesheet_plist = "ufo-a-spritesheet.plist";
 var s_hover_ship = "hover_ship.png";
 var s_hover_ship_plist = "hover_ship.plist";
+var s_rocket_plist = "rocket.plist";
+var s_rocket = "rocket.png";
+
+
 
 
 //Sfx
@@ -181,6 +187,7 @@ var g_resources = [
 	{src:s_ufo_b_spritesheet},
     {src:s_ufo_b_spritesheet_plist},
     {src:s_hover_ship_plist},
+    {src:s_rocket_plist},
     
     //fnt
 
