@@ -14,7 +14,7 @@ var MainmenuScene = cc.Scene.extend({
 	},
 	onPlay : function() {
 		cc.log("Play pressed");
-		cc.Director.getInstance().pushScene(cc.TransitionFade.create(1, new Level1TerraScene)); 
+		cc.Director.getInstance().pushScene(cc.TransitionFade.create(1, new Cut4JupiterScene())); 
 	},
 	onHighScore : function() {
 		cc.log("HighScore pressed");
