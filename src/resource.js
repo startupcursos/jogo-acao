@@ -31,6 +31,7 @@ var s_jupiter_ceu = "jupiter-ceu.png";
 var s_jupiter_montanha_perto = "jupiter-montanha-perto.png";
 var s_jupiter_montanha_longe = "jupiter-montanha-longe.png";
 var s_jupiter_chao = "jupiter-chao.png";
+var s_jupiter_cut_image = "jupiter-cut-image.jpg";
 
 var s_urano_ceu = "urano-ceu.png";
 var s_urano_montanha_perto = "urano-montanha.png";
@@ -132,6 +133,7 @@ var g_resources = [
     {src:s_jupiter_montanha_longe},
     {src:s_jupiter_montanha_perto},
     {src:s_jupiter_chao},
+    {src:s_jupiter_cut_image},
 	
     {src:s_urano_ceu},
     {src:s_urano_montanha_longe},

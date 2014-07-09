@@ -38,7 +38,7 @@ var Level3MarteScene = cc.Scene.extend({
 		this.gamelayer.addChild(new HoleBig(8500, this.canvas.height / 6.5));				
 	},
 	levelFinished : function() {
-		cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new Level4JupiterScene()));
+		cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new Cut4JupiterScene()));
 	}
 
 });
