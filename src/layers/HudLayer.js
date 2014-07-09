@@ -45,4 +45,3 @@ var HudLayer = cc.Layer.extend({
 		this.labelLife.setString("LIFE: " + GAME.LIFES);
 	}
 });
-

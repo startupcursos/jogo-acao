@@ -27,14 +27,20 @@
 var NetunoCityLayer = cc.Layer.extend({
 	canvas : null,
 	zOrder : 0,
+	posRateX : 1,
+	posRateY : 1.05,
 	_scrollSpeed : GAME.SCROLLING.SPEED_X / 2,
 	init : function() {
 		// 1. super init first
 		this._super();
 		this.canvas = cc.Director.getInstance().getWinSize();
+		
+		var Px = this.posRateX*(this.canvas.width) - this.canvas.width ;
+		var Py = this.posRateY*(this.canvas.height) - this.canvas.height ;
+	
 		var spriteEstalagnite = cc.Sprite.create(s_netuno_city);
 		spriteEstalagnite.setAnchorPoint(0,0);
-		spriteEstalagnite.setPosition(cc.p(0,0));
+		spriteEstalagnite.setPosition(cc.p(Px,Py));
 		this.addChild(spriteEstalagnite);
 		this.scheduleUpdate();
 	},
@@ -51,4 +57,3 @@ var NetunoCityLayer = cc.Layer.extend({
 		}
 	}
 });
-
