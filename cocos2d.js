@@ -91,6 +91,7 @@
             'src/scenes/Level6UranoScene.js',
             'src/scenes/Level7NetunoScene.js',
             'src/scenes/Cut4JupiterScene.js',
+            'src/scenes/Cut7NetunoScene.js',
             'src/scenes/MainmenuScene.js',
             'src/scenes/SettingsScene.js',
             'src/scenes/GameOverScene.js'
