@@ -69,7 +69,7 @@ var GameLayer = cc.Layer.extend({
 
 		this.scheduleUpdate();
 		if (GAME.SOUND) {
-			cc.AudioEngine.getInstance().playMusic(s_bgm, true);
+			cc.AudioEngine.getInstance().playMusic(s_bgm, false);
 			cc.AudioEngine.getInstance().setMusicVolume(0.1);
 			cc.AudioEngine.getInstance().setEffectsVolume(1);
 		}
@@ -79,7 +79,7 @@ var GameLayer = cc.Layer.extend({
 	scrolling : function(dt) {
 		var ds = GAME.SCROLLING.SPEED_X * dt;
 		GAME.SCROLLING.TOTAL += ds;
-		if (GAME.SCROLLING.TOTAL > 10000)
+		if (!cc.AudioEngine.getInstance().isMusicPlaying())
 			this.getParent().levelFinished();
 	},
 	detectCollision : function() {
