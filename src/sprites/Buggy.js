@@ -8,7 +8,7 @@ var Buggy = cc.Sprite.extend({
 	speedY : 0,
 	zOrder : 1,
 	rpsGunV : 3,
-	rpsGunH : 1,
+	rpsGunH : 1.5,
 	_dtLastFireV : 1,
 	_dtLastFireH : 1,
 	ctor : function(x, y) {

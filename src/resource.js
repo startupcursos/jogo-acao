@@ -26,11 +26,13 @@ var s_marte_ceu = "marte-ceu.png";
 var s_marte_chao = "marte-chao.png";
 var s_marte_estalagnite = "marte-estalagnite.png";
 var s_marte_montanha = "marte-montanha.png";
+var s_marte_cut_image = "marte-cut-image.jpg";
 
 var s_jupiter_ceu = "jupiter-ceu.png";
 var s_jupiter_montanha_perto = "jupiter-montanha-perto.png";
 var s_jupiter_montanha_longe = "jupiter-montanha-longe.png";
 var s_jupiter_chao = "jupiter-chao.png";
+var s_jupiter_cut_image = "jupiter-cut-image.jpg";
 
 var s_urano_ceu = "urano-ceu.png";
 var s_urano_montanha_perto = "urano-montanha.png";
@@ -41,6 +43,7 @@ var s_netuno_ceu = "netuno-ceu.png";
 var s_netuno_city = "netuno-city.png";
 var s_netuno_montanha = "netuno-montanha.png";
 var s_netuno_chao = "netuno-chao.png";
+var s_netuno_cut_image = "netuno_planeta.png";
 
 var s_saturno_ceu = "saturno-ceu.png";
 var s_saturno_city = "saturno-city.png";
@@ -69,10 +72,6 @@ var s_explosion_7 = "explosion-7.png";
 var s_explosion_8 = "explosion-8.png";
 var s_explosion_9 = "explosion-9.png";
 var s_explosion_10 = "explosion-10.png";
-var s_rocket_1 = "rocket-1.png";
-var s_rocket_2 = "rocket-2.png";
-var s_rocket_3 = "rocket-3.png";
-var s_rocket_4 = "rocket-4.png";
 var s_roda = "roda.png";
 var s_mina1 = "Mina-1.png";
 var s_mina2 = "Mina-2.png";
@@ -125,6 +124,7 @@ var g_resources = [
 	{src:s_marte_chao},    
     {src:s_marte_estalagnite},
 	{src:s_marte_montanha},
+	{src:s_marte_cut_image},
 
     {src:s_terra_ceu},
 	{src:s_terra_deserto},
@@ -137,6 +137,7 @@ var g_resources = [
     {src:s_jupiter_montanha_longe},
     {src:s_jupiter_montanha_perto},
     {src:s_jupiter_chao},
+    {src:s_jupiter_cut_image},
 	
     {src:s_urano_ceu},
     {src:s_urano_montanha_longe},
@@ -147,12 +148,16 @@ var g_resources = [
     {src:s_netuno_city},
     {src:s_netuno_montanha},
     {src:s_netuno_chao},
+<<<<<<< HEAD
     
     {src:s_saturno_ceu},
     {src:s_saturno_city},
     {src:s_saturno_montanha},
     {src:s_saturno_chao},
 
+=======
+	{src:s_netuno_cut_image},
+>>>>>>> f1d99a96606e56b745aa730ffde15cc71f06e7bd
     
     {src:s_little_stone},
     {src:s_hole_small},

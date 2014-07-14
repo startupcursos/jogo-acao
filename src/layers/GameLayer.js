@@ -33,7 +33,7 @@ var GameLayer = cc.Layer.extend({
 	zOrder : 1,
 	collisionDetector: null,
 
-	init : function(spriteGround) {
+	init : function(spriteGround, s_bgm) {
 		GAME.CONTAINER.ENEMIES = [];
 		GAME.CONTAINER.PLAYER_BULLETS = [];
 		GAME.CONTAINER.ENEMIES_BULLETS = [];
@@ -69,7 +69,7 @@ var GameLayer = cc.Layer.extend({
 
 		this.scheduleUpdate();
 		if (GAME.SOUND) {
-			cc.AudioEngine.getInstance().playMusic(s_bgm_1, true);
+			cc.AudioEngine.getInstance().playMusic(s_bgm, true);
 		}
 		this.collisionDetector = new CollisionDetector();
 	},

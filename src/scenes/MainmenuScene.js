@@ -14,7 +14,11 @@ var MainmenuScene = cc.Scene.extend({
 	},
 	onPlay : function() {
 		cc.log("Play pressed");
+<<<<<<< HEAD
 		cc.Director.getInstance().pushScene(cc.TransitionFade.create(1, new Level5SaturnoScene)); 
+=======
+		cc.Director.getInstance().pushScene(cc.TransitionFade.create(1, new Cut3MarteScene())); 
+>>>>>>> f1d99a96606e56b745aa730ffde15cc71f06e7bd
 	},
 	onHighScore : function() {
 		cc.log("HighScore pressed");
