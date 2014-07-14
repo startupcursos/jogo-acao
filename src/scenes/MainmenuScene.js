@@ -14,7 +14,7 @@ var MainmenuScene = cc.Scene.extend({
 	},
 	onPlay : function() {
 		cc.log("Play pressed");
-		cc.Director.getInstance().pushScene(cc.TransitionFade.create(1, new Cut7NetunoScene())); 
+		cc.Director.getInstance().pushScene(cc.TransitionFade.create(1, new Cut3MarteScene())); 
 	},
 	onHighScore : function() {
 		cc.log("HighScore pressed");

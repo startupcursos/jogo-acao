@@ -26,6 +26,7 @@ var s_marte_ceu = "marte-ceu.png";
 var s_marte_chao = "marte-chao.png";
 var s_marte_estalagnite = "marte-estalagnite.png";
 var s_marte_montanha = "marte-montanha.png";
+var s_marte_cut_image = "marte-cut-image.jpg";
 
 var s_jupiter_ceu = "jupiter-ceu.png";
 var s_jupiter_montanha_perto = "jupiter-montanha-perto.png";
@@ -118,6 +119,7 @@ var g_resources = [
 	{src:s_marte_chao},    
     {src:s_marte_estalagnite},
 	{src:s_marte_montanha},
+	{src:s_marte_cut_image},
 
     {src:s_terra_ceu},
 	{src:s_terra_deserto},
