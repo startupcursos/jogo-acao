@@ -33,7 +33,7 @@ var GameLayer = cc.Layer.extend({
 	zOrder : 1,
 	collisionDetector: null,
 
-	init : function(spriteGround) {
+	init : function(spriteGround, s_bgm_1) {
 		GAME.CONTAINER.ENEMIES = [];
 		GAME.CONTAINER.PLAYER_BULLETS = [];
 		GAME.CONTAINER.ENEMIES_BULLETS = [];
