@@ -14,7 +14,6 @@ var s_hole_big = "hole-big.png";
 var s_hole_ufo_c = "hole-ufo-c.png";
 var s_ground = "groundAcidentado.png";
 
-
 var s_terra_ceu = "terra-ceu.png";
 var s_terra_deserto = "terra-deserto.png";
 var s_terra_montanha = "terra-montanha.png";
@@ -92,9 +91,6 @@ var s_hover_ship_plist = "hover_ship.plist";
 var s_rocket_plist = "rocket.plist";
 var s_rocket = "rocket.png";
 
-
-
-
 //Sfx
 var s_fire_sfx = "res/soundFx/fire.ogg";
 var s_jump_sfx = "res/soundFx/jump.ogg";
@@ -135,6 +131,7 @@ var g_resources = [
     {src:s_jupiter_montanha_perto},
     {src:s_jupiter_chao},
     {src:s_jupiter_cut_image},
+    {src:s_bgm_jupiter},
 	
     {src:s_urano_ceu},
     {src:s_urano_montanha_longe},

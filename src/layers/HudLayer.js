@@ -38,10 +38,15 @@ var HudLayer = cc.Layer.extend({
    		this.labelLife = cc.LabelTTF.create("LIFE: 0", "Impact", 14);        
         this.labelLife.setPosition(this.canvas.width - 150, this.canvas.height - 30);
         this.addChild(this.labelLife);
+   		this.labelDistance = cc.LabelTTF.create("DISTANCE: 0", "Impact", 14);        
+        this.labelDistance.setPosition(30, this.canvas.height - 30);
+        this.addChild(this.labelDistance);
+
 		this.scheduleUpdate();
 	},
 	update : function(dt) {
 		this.labelScore.setString("SCORE: " + GAME.SCORE);
 		this.labelLife.setString("LIFE: " + GAME.LIFES);
+		this.labelDistance.setString("DISTANCE: " + GAME.SCROLLING.TOTAL);
 	}
 });
