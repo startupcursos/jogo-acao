@@ -42,6 +42,11 @@ var s_netuno_city = "netuno-city.png";
 var s_netuno_montanha = "netuno-montanha.png";
 var s_netuno_chao = "netuno-chao.png";
 
+var s_saturno_ceu = "saturno-ceu.png";
+var s_saturno_city = "saturno-city.png";
+var s_saturno_montanha = "saturno-montanha.png";
+var s_saturno_chao = "saturno-chao.png";
+
 var s_little_stone = "little-stone.png";
 var s_little_stone = "little-stone.png";
 var s_rolling_stone = "rolling-stone.png";
@@ -142,6 +147,11 @@ var g_resources = [
     {src:s_netuno_city},
     {src:s_netuno_montanha},
     {src:s_netuno_chao},
+    
+    {src:s_saturno_ceu},
+    {src:s_saturno_city},
+    {src:s_saturno_montanha},
+    {src:s_saturno_chao},
 
     
     {src:s_little_stone},
