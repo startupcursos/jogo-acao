@@ -21,6 +21,7 @@ var s_terra_montanha = "terra-montanha.png";
 var s_terra_nuvem = "terra-nuvem.png";
 var s_terra_sol = "terra-sol.png";
 var s_terra_chao = "terra-chao.png";
+var s_bgm_terra = "res/music/bgm-terra.mp3";
 
 var s_marte_ceu = "marte-ceu.png";
 var s_marte_chao = "marte-chao.png";
@@ -33,6 +34,7 @@ var s_jupiter_montanha_perto = "jupiter-montanha-perto.png";
 var s_jupiter_montanha_longe = "jupiter-montanha-longe.png";
 var s_jupiter_chao = "jupiter-chao.png";
 var s_jupiter_cut_image = "jupiter-cut-image.jpg";
+var s_bgm_jupiter = "res/music/bgm-jupiter.mp3";
 
 var s_urano_ceu = "urano-ceu.png";
 var s_urano_montanha_perto = "urano-montanha.png";
@@ -98,9 +100,9 @@ var s_fire_sfx = "res/soundFx/fire.ogg";
 var s_jump_sfx = "res/soundFx/jump.ogg";
 var s_stone_explosion_sfx = "res/soundFx/stone-explosion-sfx.ogg";
 var s_end_game = "res/soundFx/davidbain__end-game-fail.wav";
+
 //Bgm
 var s_bgm_1 = "res/music/bg-music1.ogg";
-
 
 
 var g_resources = [
