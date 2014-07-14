@@ -25,6 +25,6 @@ var Cut5VenusScene = cc.Scene.extend({
 
 	},
 	onGo : function() {
-		cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new Level5JupiterScene()));
+		cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new Level8VenusScene()));
 	}
 });

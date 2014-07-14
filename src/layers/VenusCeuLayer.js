@@ -26,7 +26,7 @@
 
 var VenusCeuLayer = cc.Layer.extend({
 	canvas : null,
-	zOrder : -2,
+	zOrder : -3,
 	_scrollSpeed : GAME.SCROLLING.SPEED_X / 8,
 	init : function() {
 		// 1. super init first
