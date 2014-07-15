@@ -24,32 +24,31 @@
  THE SOFTWARE.
  ****************************************************************************/
 
-var HudLayer = cc.Layer.extend({
+var VenusMontanhaLongeLayer = cc.Layer.extend({
 	canvas : null,
-	zOrder : 10,
-	labelScore: null,
-	labelLife: null,
+	zOrder : -1,
+	_scrollSpeed : GAME.SCROLLING.SPEED_X / 4,
 	init : function() {
+		// 1. super init first
 		this._super();
 		this.canvas = cc.Director.getInstance().getWinSize();
-		this.labelScore = cc.LabelTTF.create("SCORE: 0",  "Courrier", 14);
-        this.labelScore.setPosition(this.canvas.width - 60, this.canvas.height - 30);
-        this.labelScore.setFontFillColor(new cc.Color3B(0,0,0));
-        this.addChild(this.labelScore);
-   		this.labelLife = cc.LabelTTF.create("LIFE: 0",  "Courrier", 14);        
-        this.labelLife.setPosition(this.canvas.width - 150, this.canvas.height - 30);
-        this.labelLife.setFontFillColor(new cc.Color3B(0,0,0));
-        this.addChild(this.labelLife);
-   		this.labelDistance = cc.LabelTTF.create("DISTANCE: 0", "Courrier", 20);        
-        this.labelDistance.setPosition(100, this.canvas.height - 30);
-        this.labelDistance.setFontFillColor(new cc.Color3B(0,0,0));
-        this.addChild(this.labelDistance);
-
+		var spriteMontanha = cc.Sprite.create(s_venus_montanha_longe);
+		spriteMontanha.setAnchorPoint(0,0);
+		spriteMontanha.setPosition(cc.p(0,0));
+		this.addChild(spriteMontanha);
 		this.scheduleUpdate();
 	},
 	update : function(dt) {
-		this.labelScore.setString("SCORE: " + GAME.SCORE);
-		this.labelLife.setString("LIFE: " + GAME.LIFES);
-		this.labelDistance.setString("DISTANCE: " + parseInt(GAME.SCROLLING.TOTAL));
+		this.scrolling(dt);
+	},
+	scrolling : function(dt) {
+		var ds = this._scrollSpeed * dt;
+		var layerPos = this.getPosition();
+		var scrolledPos = cc.p((layerPos.x - ds), layerPos.y);
+		this.setPosition(scrolledPos);
+		if (scrolledPos.x < -this.canvas.width) {
+			this.setPosition(cc.p(scrolledPos.x + this.canvas.width, 0));
+		}
 	}
 });
+
