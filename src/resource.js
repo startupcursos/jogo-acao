@@ -137,6 +137,7 @@ var g_resources = [
 	{src:s_terra_nuvem},
 	{src:s_terra_sol},
 	{src:s_terra_chao},
+	{src:s_bgm_terra},
 	
 	{src:s_lua_ceu},
 	{src:s_lua_chao},
