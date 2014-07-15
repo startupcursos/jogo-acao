@@ -15,16 +15,16 @@ var BulletH = cc.Sprite.extend({
 		this.initialPosition = cc.p(x,y);
 		
 		//Carrega no Cache as Imagens
-		cc.SpriteFrameCache.getInstance().addSpriteFrames(s_spritesheet_plist);
+		cc.SpriteFrameCache.getInstance().addSpriteFrames(s_rocket_plist);
 		//Montar um Array com cada quadro da Animação
 		var animFrames = [];
-		for (var i = 1; i <= 2; i++) {
+		for (var i = 1; i <= 4; i++) {
 			var str = "rocket-" + i + ".png";
 			var frame = cc.SpriteFrameCache.getInstance().getSpriteFrame(str);
 			animFrames.push(frame);
 		}
 		this.initWithSpriteFrame(animFrames[0]);
-		var animation = cc.Animation.create(animFrames, 0.1);
+		var animation = cc.Animation.create(animFrames, 0.2);
 		var action = cc.Animate.create(animation);
 		this.runAction(action);
 		cc.RepeatForever(action);
@@ -53,6 +53,8 @@ var BulletH = cc.Sprite.extend({
 	
 	
 	explode : function(){
+		
+		this.speedX *= -0.5;
 		cc.SpriteFrameCache.getInstance().addSpriteFrames(s_explosion_anim_plist);
 		//Montar um Array com cada quadro da Animação
 		var animFrames2 = [];
@@ -61,11 +63,12 @@ var BulletH = cc.Sprite.extend({
 			var frame2 = cc.SpriteFrameCache.getInstance().getSpriteFrame(str2);
 			animFrames2.push(frame2);
 		}
+		
 		this.initWithSpriteFrame(animFrames2[0]);
 		var animation2 = cc.Animation.create(animFrames2, 0.05);
 		var action2 = cc.Sequence.create(cc.Animate.create(animation2), cc.CallFunc.create(this.destroy, this));
 		this.runAction(action2);
-		this.speedX = 0;
+		
 	},
 	
 	destroy : function() {
@@ -79,6 +82,5 @@ var BulletH = cc.Sprite.extend({
 	},
 	hurt : function() {
 		this.healthPoints--;
-		
 	}
 });

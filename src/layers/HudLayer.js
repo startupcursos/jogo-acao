@@ -32,17 +32,24 @@ var HudLayer = cc.Layer.extend({
 	init : function() {
 		this._super();
 		this.canvas = cc.Director.getInstance().getWinSize();
-		this.labelScore = cc.LabelTTF.create("SCORE: 0", "Impact", 14);
+		this.labelScore = cc.LabelTTF.create("SCORE: 0",  "Courrier", 14);
         this.labelScore.setPosition(this.canvas.width - 60, this.canvas.height - 30);
+        this.labelScore.setFontFillColor(new cc.Color3B(0,0,0));
         this.addChild(this.labelScore);
-   		this.labelLife = cc.LabelTTF.create("LIFE: 0", "Impact", 14);        
+   		this.labelLife = cc.LabelTTF.create("LIFE: 0",  "Courrier", 14);        
         this.labelLife.setPosition(this.canvas.width - 150, this.canvas.height - 30);
+        this.labelLife.setFontFillColor(new cc.Color3B(0,0,0));
         this.addChild(this.labelLife);
+   		this.labelDistance = cc.LabelTTF.create("DISTANCE: 0", "Courrier", 20);        
+        this.labelDistance.setPosition(100, this.canvas.height - 30);
+        this.labelDistance.setFontFillColor(new cc.Color3B(0,0,0));
+        this.addChild(this.labelDistance);
+
 		this.scheduleUpdate();
 	},
 	update : function(dt) {
 		this.labelScore.setString("SCORE: " + GAME.SCORE);
 		this.labelLife.setString("LIFE: " + GAME.LIFES);
+		this.labelDistance.setString("DISTANCE: " + parseInt(GAME.SCROLLING.TOTAL));
 	}
 });
-

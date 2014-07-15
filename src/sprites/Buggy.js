@@ -8,7 +8,7 @@ var Buggy = cc.Sprite.extend({
 	speedY : 0,
 	zOrder : 1,
 	rpsGunV : 3,
-	rpsGunH : 1,
+	rpsGunH : 1.5,
 	_dtLastFireV : 1,
 	_dtLastFireH : 1,
 	ctor : function(x, y) {
@@ -60,7 +60,7 @@ var Buggy = cc.Sprite.extend({
 	},
 	jump : function() {
 		if (this.getNumberOfRunningActions() === 0 && this.active) {
-			var jumpUp = cc.JumpBy.create(2, cc.p(0, 0), 120, 1);
+			var jumpUp = cc.JumpBy.create(1, cc.p(0, 0), 120, 1);
 			this.runAction(jumpUp);
 			if (GAME.SOUND) {
 				cc.AudioEngine.getInstance().playEffect(s_jump_sfx);

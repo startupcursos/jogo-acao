@@ -52,8 +52,8 @@ var Level1TerraScene = cc.Scene.extend({
 		this.gamelayer.addChild(new BigStone(3200, this.canvas.height / 3.3));
 		this.gamelayer.addChild(new SmallRollingStone(10000, this.canvas.height / 4));
 		this.gamelayer.addChild(new RollingStone(11000, this.canvas.height / 3.5));
-		this.gamelayer.addChild(new HoleSmall(4000, this.canvas.height / 6.5));
-		this.gamelayer.addChild(new HoleBig(4800, this.canvas.height / 6.5));
+		// this.gamelayer.addChild(new HoleSmall(4000, this.canvas.height / 6.5));
+		// this.gamelayer.addChild(new HoleBig(4800, this.canvas.height / 6.5));
 		this.gamelayer.addChild(new Mina(5600, this.canvas.height / 4.5));
 		this.gamelayer.addChild(new Planta(6400, this.canvas.height / 6.5));
 	},
