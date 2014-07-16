@@ -14,24 +14,26 @@ var s_hole_big = "hole-big.png";
 var s_hole_ufo_c = "hole-ufo-c.png";
 var s_ground = "groundAcidentado.png";
 
-
 var s_terra_ceu = "terra-ceu.png";
 var s_terra_deserto = "terra-deserto.png";
 var s_terra_montanha = "terra-montanha.png";
 var s_terra_nuvem = "terra-nuvem.png";
 var s_terra_sol = "terra-sol.png";
 var s_terra_chao = "terra-chao.png";
+var s_bgm_terra = "res/music/bgm-terra.mp3";
 
 var s_marte_ceu = "marte-ceu.png";
 var s_marte_chao = "marte-chao.png";
 var s_marte_estalagnite = "marte-estalagnite.png";
 var s_marte_montanha = "marte-montanha.png";
+var s_marte_cut_image = "marte-cut-image.jpg";
 
 var s_jupiter_ceu = "jupiter-ceu.png";
 var s_jupiter_montanha_perto = "jupiter-montanha-perto.png";
 var s_jupiter_montanha_longe = "jupiter-montanha-longe.png";
 var s_jupiter_chao = "jupiter-chao.png";
 var s_jupiter_cut_image = "jupiter-cut-image.jpg";
+var s_bgm_jupiter = "res/music/bgm-jupiter.mp3";
 
 var s_urano_ceu = "urano-ceu.png";
 var s_urano_montanha_perto = "urano-montanha.png";
@@ -42,6 +44,7 @@ var s_netuno_ceu = "netuno-ceu.png";
 var s_netuno_city = "netuno-city.png";
 var s_netuno_montanha = "netuno-montanha.png";
 var s_netuno_chao = "netuno-chao.png";
+var s_netuno_cut_image = "netuno_planeta.png";
 
 var s_venus_ceu = "venus-ceu.png";
 var s_venus_montanha_perto = "venus-montanha-perto.png";
@@ -71,10 +74,6 @@ var s_explosion_7 = "explosion-7.png";
 var s_explosion_8 = "explosion-8.png";
 var s_explosion_9 = "explosion-9.png";
 var s_explosion_10 = "explosion-10.png";
-var s_rocket_1 = "rocket-1.png";
-var s_rocket_2 = "rocket-2.png";
-var s_rocket_3 = "rocket-3.png";
-var s_rocket_4 = "rocket-4.png";
 var s_roda = "roda.png";
 var s_mina1 = "Mina-1.png";
 var s_mina2 = "Mina-2.png";
@@ -98,17 +97,14 @@ var s_hover_ship_plist = "hover_ship.plist";
 var s_rocket_plist = "rocket.plist";
 var s_rocket = "rocket.png";
 
-
-
-
 //Sfx
 var s_fire_sfx = "res/soundFx/fire.ogg";
 var s_jump_sfx = "res/soundFx/jump.ogg";
 var s_stone_explosion_sfx = "res/soundFx/stone-explosion-sfx.ogg";
 var s_end_game = "res/soundFx/davidbain__end-game-fail.wav";
+
 //Bgm
 var s_bgm_1 = "res/music/bg-music1.ogg";
-
 
 
 var g_resources = [
@@ -127,6 +123,7 @@ var g_resources = [
 	{src:s_marte_chao},    
     {src:s_marte_estalagnite},
 	{src:s_marte_montanha},
+	{src:s_marte_cut_image},
 
     {src:s_terra_ceu},
 	{src:s_terra_deserto},
@@ -140,6 +137,7 @@ var g_resources = [
     {src:s_jupiter_montanha_perto},
     {src:s_jupiter_chao},
     {src:s_jupiter_cut_image},
+    {src:s_bgm_jupiter},
 	
     {src:s_urano_ceu},
     {src:s_urano_montanha_longe},
@@ -151,11 +149,14 @@ var g_resources = [
     {src:s_netuno_montanha},
     {src:s_netuno_chao},
 
+
  	{src:s_venus_ceu},
     {src:s_venus_montanha_longe},
     {src:s_venus_montanha_perto},
     {src:s_venus_chao},
-    
+
+	{src:s_netuno_cut_image},
+
     {src:s_little_stone},
     {src:s_hole_small},
     {src:s_hole_big},
