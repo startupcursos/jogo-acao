@@ -1,15 +1,14 @@
 var UfoA = cc.Sprite.extend({
 	active : true,
 	healthPoints : 1,
-	speedX : -GAME.SCROLLING.SPEED_X / 3,
-	speedY : -5,
+	speedX : -GAME.SCROLLING.SPEED_X,
+	speedY : 0,
 	zOrder : 1,
 	rpsGunV : 1,
 	_dtLastFireV : 1,
 	_dtOnScreen : null,
 	ctor : function(x, y) {
 		this._super();
-		this.setPosition(x, y);
 		
 		//Carrega no Cache as Imagens
 		cc.SpriteFrameCache.getInstance().addSpriteFrames(s_ufo_a_spritesheet_plist);
@@ -24,7 +23,8 @@ var UfoA = cc.Sprite.extend({
 		var animation = cc.Animation.create(animFrames, 0.1);
 		var action =(cc.Animate.create(animation));
 		this.runAction(cc.RepeatForever.create(action));
-
+		this.setAnchorPoint(0.5,0);
+		this.setPosition(x, y);
 		GAME.CONTAINER.ENEMIES.push(this);
 	},
 	update : function(dt) {
@@ -41,6 +41,8 @@ var UfoA = cc.Sprite.extend({
 		}
 		if (finalP.x > 0 && finalP.x < canvas.width && this._dtOnScreen === null) {
 			this._dtOnScreen = 0;
+			this.speedX = -GAME.SCROLLING.SPEED_X / 3;
+			this.speedY = -5;
 		}
 		if (this._dtOnScreen != null) {
 			this._dtOnScreen += dt;
@@ -54,10 +56,7 @@ var UfoA = cc.Sprite.extend({
 		if (this._dtOnScreen > 1 && this._dtOnScreen < 2) {
 			this.fireV();
 		}
-		else if (this._dtOnScreen > 5 && this._dtOnScreen < 6) {
-			this.fireV();
-		}
-		else if (this._dtOnScreen > 10 && this._dtOnScreen < 11) {
+		else if (this._dtOnScreen > 6 && this._dtOnScreen < 7) {
 			this.fireV();
 		}
 		else if (this._dtOnScreen > 15 && this._dtOnScreen < 16) {
@@ -69,8 +68,8 @@ var UfoA = cc.Sprite.extend({
 		if (this.getPosition().x < 150) {
 			this.speedX = GAME.SCROLLING.SPEED_X * 2;
 			this.speedY = 10;
-		} else if (this.getPosition().x > 600 && this.speedX > 60) {
-			this.speedX = GAME.SCROLLING.SPEED_X / 3;
+		} else if (this.getPosition().x > 500 && this.speedX > 60) {
+			this.speedX = -GAME.SCROLLING.SPEED_X / 3;
 			this.speedY = -5;
 		}
 	},

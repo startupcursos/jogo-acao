@@ -79,7 +79,7 @@ var GameLayer = cc.Layer.extend({
 	scrolling : function(dt) {
 		var ds = GAME.SCROLLING.SPEED_X * dt;
 		GAME.SCROLLING.TOTAL += ds;
-		if (!cc.AudioEngine.getInstance().isMusicPlaying())
+		if (GAME.SCROLLING.TOTAL > 60 * GAME.SCROLLING.SPEED_X && !cc.AudioEngine.getInstance().isMusicPlaying())
 			this.getParent().levelFinished();
 	},
 	detectCollision : function() {
