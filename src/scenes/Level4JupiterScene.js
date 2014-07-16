@@ -26,12 +26,31 @@ var Level4JupiterScene = cc.Scene.extend({
 		var hudLayer = new HudLayer();
 		hudLayer.init();
 		this.addChild(hudLayer, hudLayer.zOrder);
-		
-		this.enemyPlacement();
 		this.player = this.gamelayer.player;
+		this.enemyPlacement();
 		GAME.LASTLEVEL = new Level4JupiterScene();
 	},
 	enemyPlacement : function() {
+		//Introdução da Mina (Surpresa)
+		//Encurtando a distância (Skill: Pulo)
+		this.gamelayer.addChild(new Mina(1000, this.canvas.height / 9.5));
+		this.gamelayer.addChild(new Mina(1700, this.canvas.height / 9.5));
+		this.gamelayer.addChild(new Mina(2400, this.canvas.height / 9.5));
+		this.gamelayer.addChild(new Mina(3100, this.canvas.height / 9.5));
+		this.gamelayer.addChild(new Mina(4100, this.canvas.height / 9.5));
+		this.gamelayer.addChild(new Mina(4600, this.canvas.height / 9.5));
+		this.gamelayer.addChild(new Mina(5100, this.canvas.height / 9.5));
+		this.gamelayer.addChild(new Mina(5600, this.canvas.height / 9.5));
+		this.gamelayer.addChild(new Mina(6000, this.canvas.height / 9.5));
+		this.gamelayer.addChild(new Mina(6400, this.canvas.height / 9.5));
+		this.gamelayer.addChild(new Mina(6700, this.canvas.height / 9.5));
+		this.gamelayer.addChild(new Mina(7200, this.canvas.height / 9.5));
+		this.gamelayer.addChild(new Mina(7400, this.canvas.height / 9.5));
+		this.gamelayer.addChild(new Mina(7700, this.canvas.height / 9.5));
+		this.gamelayer.addChild(new Mina(8000, this.canvas.height / 9.5));
+		//Introdução da Pedra (Surpresa)
+		//Encurtando a distância (Skill: Pulo, Tiro)
+
 		// this.gamelayer.addChild(new UfoA(800,  5 / 6 * this.canvas.height));
 		// this.gamelayer.addChild(new UfoB(1200,  5 / 6 * this.canvas.height));
 		// this.gamelayer.addChild(new UfoA(2800,  5 / 6 * this.canvas.height));

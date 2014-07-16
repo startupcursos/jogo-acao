@@ -8,7 +8,7 @@ var BulletH = cc.Sprite.extend({
 	speedY : 0,
 	zOrder : 0,
 	initialPosition: null,
-	timerExplosao: 1,
+	timerExplosao: 0.5,
 	ctor : function(x,y) {
 		this._super();
 		this.setPosition(x, y);

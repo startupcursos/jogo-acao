@@ -37,7 +37,7 @@ var Level3MarteScene = cc.Scene.extend({
 		this.gamelayer.addChild(new UfoA(1100, 4 / 6 * this.canvas.height));
 		this.gamelayer.addChild(new Stone(2500, this.canvas.height / 7.5));
 		this.gamelayer.addChild(new UfoB(4500, 5 / 6 * this.canvas.height));
-		this.gamelayer.addChild(new Stone(6000, this.canvas.height / 3.5));
+		this.gamelayer.addChild(new Stone(6000, this.canvas.height / 7.5));
 						
 	},
 	levelFinished : function() {
