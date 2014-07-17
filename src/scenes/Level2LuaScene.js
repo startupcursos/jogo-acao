@@ -19,14 +19,13 @@ var Level2LuaScene = cc.Scene.extend({
 		layerMontanhaPerto.init();
 
 		this.gamelayer = new GameLayer();
-		var spriteGround = new Ground(0, 0, s_lua_chao);
-		this.gamelayer.ground = spriteGround; 
-		this.gamelayer.addChild(spriteGround, spriteGround.zOrder);
 		this.addChild(this.gamelayer, this.gamelayer.zOrder);
-
-		this.gamelayer.init();
+		var spriteGround = new Ground(0, 0, s_lua_chao);
+		this.gamelayer.init(spriteGround);
+	
 		this.enemyPlacement();
 		this.player = this.gamelayer.player;
+		GAME.LASTLEVEL = new Level2LuaScene();
 		
 		var hudLayer = new HudLayer();
 		hudLayer.init();
@@ -34,14 +33,22 @@ var Level2LuaScene = cc.Scene.extend({
 		GAME.LASTLEVEL = new Level2LuaScene();
 	},
 	enemyPlacement : function() {
-		this.gamelayer.addChild(new HoleSmall(1000, this.canvas.height / 6.5));
-		this.gamelayer.addChild(new Stone(2000, this.canvas.height / 3.8));
+		this.gamelayer.addChild(new Tank(6000, this.canvas.height / 4));
+		this.gamelayer.addChild(new NaveSeguidora(-500, this.canvas.height / 3.5));
 		this.gamelayer.addChild(new UfoA(800,  5 / 6 * this.canvas.height));
 		this.gamelayer.addChild(new UfoB(1200,  5 / 6 * this.canvas.height));
-	
+		this.gamelayer.addChild(new Stone(1600, this.canvas.height / 3.5));
+		this.gamelayer.addChild(new LittleStone(2400, this.canvas.height / 4));
+		this.gamelayer.addChild(new BigStone(3200, this.canvas.height / 3.3));
+		this.gamelayer.addChild(new SmallRollingStone(10000, this.canvas.height / 4));
+		this.gamelayer.addChild(new RollingStone(11000, this.canvas.height / 3.5));
+		this.gamelayer.addChild(new HoleSmall(4000, this.canvas.height / 6.5));
+		this.gamelayer.addChild(new HoleBig(4800, this.canvas.height / 6.5));
+		this.gamelayer.addChild(new Mina(5600, this.canvas.height / 4.5));
+		this.gamelayer.addChild(new Planta(6400, this.canvas.height / 6.5));
 	},
 	levelFinished : function() {
-		cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new LevelNineScene()));
+		cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new Level3MarteScene()));
 	}
 
 });

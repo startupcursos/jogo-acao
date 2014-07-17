@@ -22,6 +22,11 @@ var s_terra_sol = "terra-sol.png";
 var s_terra_chao = "terra-chao.png";
 var s_bgm_terra = "res/music/bgm-terra.mp3";
 
+var s_lua_ceu = "lua-ceu.png";
+var s_lua_chao = "lua-chao.png";
+var s_lua_montanha = "lua-montanha.png";
+var s_lua_montanha_longe = "lua-montanha-longe.png";
+
 var s_marte_ceu = "marte-ceu.png";
 var s_marte_chao = "marte-chao.png";
 var s_marte_estalagnite = "marte-estalagnite.png";
@@ -105,6 +110,7 @@ var s_end_game = "res/soundFx/davidbain__end-game-fail.wav";
 
 //Bgm
 var s_bgm_1 = "res/music/bg-music1.ogg";
+var s_bgm_marte = "res/music/bgm-marte.mp3";
 
 
 var g_resources = [
@@ -131,6 +137,12 @@ var g_resources = [
 	{src:s_terra_nuvem},
 	{src:s_terra_sol},
 	{src:s_terra_chao},
+	{src:s_bgm_terra},
+	
+	{src:s_lua_ceu},
+	{src:s_lua_chao},
+	{src:s_lua_montanha},
+	{src:s_lua_montanha_longe},
 	
     {src:s_jupiter_ceu},
     {src:s_jupiter_montanha_longe},
@@ -208,6 +220,7 @@ var g_resources = [
 
     //bgm
     {src:s_bgm_1},
+    {src:s_bgm_marte},
 
     //effect
     {src:s_jump_sfx},

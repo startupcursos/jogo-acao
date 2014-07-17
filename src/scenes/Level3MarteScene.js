@@ -21,7 +21,7 @@ var Level3MarteScene = cc.Scene.extend({
 		this.gamelayer = new GameLayer();
 		this.addChild(this.gamelayer, this.gamelayer.zOrder);
 		var spriteGround = new Ground(0, 0, s_marte_chao);
-		this.gamelayer.init(spriteGround);
+		this.gamelayer.init(spriteGround, s_bgm_marte);
 
 		this.enemyPlacement();
 		this.player = this.gamelayer.player;
@@ -32,10 +32,13 @@ var Level3MarteScene = cc.Scene.extend({
 		GAME.LASTLEVEL = new Level3MarteScene();
 	},
 	enemyPlacement : function() {
-		this.gamelayer.addChild(new UfoA(2000, 5 / 6 * this.canvas.height));
-		this.gamelayer.addChild(new UfoA(2400, 5 / 6 * this.canvas.height));
-		this.gamelayer.addChild(new Stone(5500, this.canvas.height / 3.5));
-		this.gamelayer.addChild(new HoleBig(8500, this.canvas.height / 6.5));				
+		this.gamelayer.addChild(new UfoA(500, 2 / 6 * this.canvas.height));
+		this.gamelayer.addChild(new UfoB(800, 5 / 6 * this.canvas.height));
+		this.gamelayer.addChild(new UfoA(1100, 4 / 6 * this.canvas.height));
+		this.gamelayer.addChild(new Stone(2500, this.canvas.height / 7.5));
+		this.gamelayer.addChild(new UfoB(4500, 5 / 6 * this.canvas.height));
+		this.gamelayer.addChild(new Stone(6000, this.canvas.height / 7.5));
+						
 	},
 	levelFinished : function() {
 		cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new Cut4JupiterScene()));
