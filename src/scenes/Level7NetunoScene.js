@@ -38,7 +38,7 @@ var Level7NetunoScene = cc.Scene.extend({
 		this.gamelayer.addChild(new UfoC(8500, 5 / 6 * this.canvas.height));			
 	},
 	levelFinished : function() {
-		cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new TheEndScene()));
+		cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new GameOverScene()));
 	}
 
 });

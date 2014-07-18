@@ -26,7 +26,7 @@
 
 var VenusMontanhaLongeLayer = cc.Layer.extend({
 	canvas : null,
-	zOrder : -1,
+	zOrder : -2,
 	_scrollSpeed : GAME.SCROLLING.SPEED_X / 4,
 	init : function() {
 		// 1. super init first
@@ -51,4 +51,3 @@ var VenusMontanhaLongeLayer = cc.Layer.extend({
 		}
 	}
 });
-
