@@ -2,7 +2,7 @@ var PlanetmenuScene = cc.Scene.extend({
 	onEnter : function() {
 		this._super();
 		cc.MenuItemFont.setFontName("Arial");
-		cc.MenuItemFont.setFontSize(48);
+		cc.MenuItemFont.setFontSize(24);
 		var itemMenuTerra = cc.MenuItemFont.create("Earth", this.onEarth);
 		var itemMenuLua = cc.MenuItemFont.create("Moon", this.onMoon);
 		var itemMenuMarte = cc.MenuItemFont.create("Mars", this.onMars);
