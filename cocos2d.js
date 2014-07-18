@@ -96,9 +96,14 @@
             'src/scenes/Level5SaturnoScene.js',
             'src/scenes/Level6UranoScene.js',
             'src/scenes/Level7NetunoScene.js',
+
+            'src/scenes/Level8VenusScene.js',
+            'src/scenes/Cut5VenusScene.js',
+
             'src/scenes/Cut3MarteScene.js',
             'src/scenes/Cut4JupiterScene.js',
             'src/scenes/Cut7NetunoScene.js',
+
             'src/scenes/MainmenuScene.js',
             'src/scenes/SettingsScene.js',
             'src/scenes/GameOverScene.js'
