@@ -14,13 +14,18 @@ var s_hole_big = "hole-big.png";
 var s_hole_ufo_c = "hole-ufo-c.png";
 var s_ground = "groundAcidentado.png";
 
-
 var s_terra_ceu = "terra-ceu.png";
 var s_terra_deserto = "terra-deserto.png";
 var s_terra_montanha = "terra-montanha.png";
 var s_terra_nuvem = "terra-nuvem.png";
 var s_terra_sol = "terra-sol.png";
 var s_terra_chao = "terra-chao.png";
+var s_bgm_terra = "res/music/bgm-terra.mp3";
+
+var s_lua_ceu = "lua-ceu.png";
+var s_lua_chao = "lua-chao.png";
+var s_lua_montanha = "lua-montanha.png";
+var s_lua_montanha_longe = "lua-montanha-longe.png";
 
 var s_marte_ceu = "marte-ceu.png";
 var s_marte_chao = "marte-chao.png";
@@ -33,6 +38,7 @@ var s_jupiter_montanha_perto = "jupiter-montanha-perto.png";
 var s_jupiter_montanha_longe = "jupiter-montanha-longe.png";
 var s_jupiter_chao = "jupiter-chao.png";
 var s_jupiter_cut_image = "jupiter-cut-image.jpg";
+var s_bgm_jupiter = "res/music/bgm-jupiter.mp3";
 
 var s_urano_ceu = "urano-ceu.png";
 var s_urano_montanha_perto = "urano-montanha.png";
@@ -102,17 +108,15 @@ var s_hover_ship_plist = "hover_ship.plist";
 var s_rocket_plist = "rocket.plist";
 var s_rocket = "rocket.png";
 
-
-
-
 //Sfx
 var s_fire_sfx = "res/soundFx/fire.ogg";
 var s_jump_sfx = "res/soundFx/jump.ogg";
 var s_stone_explosion_sfx = "res/soundFx/stone-explosion-sfx.ogg";
 var s_end_game = "res/soundFx/davidbain__end-game-fail.wav";
+
 //Bgm
 var s_bgm_1 = "res/music/bg-music1.ogg";
-
+var s_bgm_marte = "res/music/bgm-marte.mp3";
 
 
 var g_resources = [
@@ -139,12 +143,19 @@ var g_resources = [
 	{src:s_terra_nuvem},
 	{src:s_terra_sol},
 	{src:s_terra_chao},
+	{src:s_bgm_terra},
+	
+	{src:s_lua_ceu},
+	{src:s_lua_chao},
+	{src:s_lua_montanha},
+	{src:s_lua_montanha_longe},
 	
     {src:s_jupiter_ceu},
     {src:s_jupiter_montanha_longe},
     {src:s_jupiter_montanha_perto},
     {src:s_jupiter_chao},
     {src:s_jupiter_cut_image},
+    {src:s_bgm_jupiter},
 	
     {src:s_urano_ceu},
     {src:s_urano_montanha_longe},
@@ -229,6 +240,7 @@ var g_resources = [
 
     //bgm
     {src:s_bgm_1},
+    {src:s_bgm_marte},
 
     //effect
     {src:s_jump_sfx},
