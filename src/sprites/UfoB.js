@@ -53,16 +53,12 @@ var UfoB = cc.Sprite.extend({
 		if (this._dtOnScreen > 1 && this._dtOnScreen < 2) {
 			this.fireV();
 		}
-		else if (this._dtOnScreen > 5 && this._dtOnScreen < 6) {
-			this.fireV();
-		}
-		else if (this._dtOnScreen > 10 && this._dtOnScreen < 11) {
+		else if (this._dtOnScreen > 6 && this._dtOnScreen < 7) {
 			this.fireV();
 		}
 		else if (this._dtOnScreen > 15 && this._dtOnScreen < 16) {
 			this.fireV();
-		}
-		
+		}		
 	},
 	updateSpeed : function() {
 		if (this.getPosition().x < 150) {

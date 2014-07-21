@@ -41,7 +41,7 @@ var BigStone = cc.Sprite.extend({
 		this.healthPoints--;
 		GAME.SCORE += 100;
 		if (this.healthPoints == 1) {
-			this.init(s_stone);
+			this.init(s_stone);			
 		}
 	}
 });
