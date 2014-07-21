@@ -56,6 +56,8 @@ var s_saturno_ceu = "saturno-ceu.png";
 var s_saturno_city = "saturno-city.png";
 var s_saturno_montanha = "saturno-montanha.png";
 var s_saturno_chao = "saturno-chao.png";
+var s_saturno_cut_image = "saturno-cut-image.png";
+var s_bgm_saturno = "res/music/bgm-saturno.mp3";
 
 var s_venus_ceu = "venus-ceu.png";
 var s_venus_montanha_perto = "venus-montanha-perto.png";
@@ -173,6 +175,9 @@ var g_resources = [
     {src:s_saturno_city},
     {src:s_saturno_montanha},
     {src:s_saturno_chao},
+    {src:s_saturno_cut_image},
+    {src:s_bgm_saturno},
+    
 
 
 	{src:s_netuno_cut_image},
