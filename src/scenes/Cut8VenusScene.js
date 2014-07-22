@@ -1,4 +1,4 @@
-var Cut5VenusScene = cc.Scene.extend({
+var Cut8VenusScene = cc.Scene.extend({
 	onEnter : function() {
 		this._super();
 		var size = cc.Director.getInstance().getWinSize();

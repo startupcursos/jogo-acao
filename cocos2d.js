@@ -95,7 +95,7 @@
             'src/scenes/Level7NetunoScene.js',
 
             'src/scenes/Level8VenusScene.js',
-            'src/scenes/Cut5VenusScene.js',
+            'src/scenes/Cut8VenusScene.js',
 
             'src/scenes/Cut3MarteScene.js',
             'src/scenes/Cut4JupiterScene.js',
