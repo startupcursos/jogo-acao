@@ -21,12 +21,18 @@ var Level7NetunoScene = cc.Scene.extend({
 		this.gamelayer = new GameLayer();
 		this.addChild(this.gamelayer, this.gamelayer.zOrder);
 		var spriteGround = new Ground(0, 0, s_netuno_chao);
-		this.gamelayer.init(spriteGround);
-		
+		this.gamelayer.init(spriteGround, s_bgm_netuno);
+	
 		this.enemyPlacement();
 		this.player = this.gamelayer.player;
+		
+		var hudLayer = new HudLayer();
+		hudLayer.init();
+		this.addChild(hudLayer, hudLayer.zOrder);
+		
 		GAME.LASTLEVEL = new Level7NetunoScene();
 	},
+	
 	enemyPlacement : function() {
 		// this.gamelayer.addChild(new HoleSmall(1000, this.canvas.height / 6.5));
 		// this.gamelayer.addChild(new HoleBig(2000, this.canvas.height / 6.5));
