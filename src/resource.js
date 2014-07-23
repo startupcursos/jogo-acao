@@ -14,13 +14,13 @@ var s_hole_big = "hole-big.png";
 var s_hole_ufo_c = "hole-ufo-c.png";
 var s_ground = "groundAcidentado.png";
 
-var s_terra_ceu = "terra-ceu.png";
-var s_terra_deserto = "terra-deserto.png";
-var s_terra_montanha = "terra-montanha.png";
-var s_terra_nuvem = "terra-nuvem.png";
-var s_terra_sol = "terra-sol.png";
-var s_terra_chao = "terra-chao.png";
-var s_bgm_terra = "res/music/bgm-terra.mp3";
+//var s_terra_ceu = "terra-ceu.png";
+//var s_terra_deserto = "terra-deserto.png";
+//var s_terra_montanha = "terra-montanha.png";
+//var s_terra_nuvem = "terra-nuvem.png";
+//var s_terra_sol = "terra-sol.png";
+//var s_terra_chao = "terra-chao.png";
+//var s_bgm_terra = "res/music/bgm-terra.mp3";
 
 var s_lua_ceu = "lua-ceu.png";
 var s_lua_chao = "lua-chao.png";
@@ -32,6 +32,7 @@ var s_marte_chao = "marte-chao.png";
 var s_marte_estalagnite = "marte-estalagnite.png";
 var s_marte_montanha = "marte-montanha.png";
 var s_marte_cut_image = "marte-cut-image.jpg";
+
 
 var s_jupiter_ceu = "jupiter-ceu.png";
 var s_jupiter_montanha_perto = "jupiter-montanha-perto.png";
@@ -56,6 +57,7 @@ var s_venus_montanha_perto = "venus-montanha-perto.png";
 var s_venus_montanha_longe = "venus-montanha-longe.png";
 var s_venus_chao = "venus-chao.png";
 var s_venus_cut_image = "venus-cut-image.jpg";
+var s_bgm_venus = "res/music/bgm-venus.mp3";
 
 var s_little_stone = "little-stone.png";
 var s_little_stone = "little-stone.png";
@@ -166,6 +168,7 @@ var g_resources = [
     {src:s_venus_montanha_longe},
     {src:s_venus_montanha_perto},
     {src:s_venus_chao},
+    {src:s_bgm_venus},
 
 	{src:s_netuno_cut_image},
 
