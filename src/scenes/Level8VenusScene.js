@@ -22,7 +22,8 @@ var Level8VenusScene = cc.Scene.extend({
 		this.gamelayer = new GameLayer();
 		this.addChild(this.gamelayer, this.gamelayer.zOrder);
 		var spriteGround = new Ground(0, 0, s_venus_chao);
-		this.gamelayer.init(spriteGround);
+		this.gamelayer.init(spriteGround, s_bgm_venus);
+		
 
 		this.enemyPlacement();
 		this.player = this.gamelayer.player;
@@ -41,7 +42,7 @@ var Level8VenusScene = cc.Scene.extend({
 		this.gamelayer.addChild(new Mina(4500, this.canvas.height * GAME.GROUND_HEIGHT_PERC));
 	},
 	levelFinished : function() {
-		cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new Level7NetunoScene()));
+		cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new Cut4JupiterScene()));
 	}
 
 });
