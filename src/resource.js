@@ -51,6 +51,14 @@ var s_netuno_montanha = "netuno-montanha.png";
 var s_netuno_chao = "netuno-chao.png";
 var s_netuno_cut_image = "netuno_planeta.png";
 
+
+var s_saturno_ceu = "saturno-ceu.png";
+var s_saturno_city = "saturno-city.png";
+var s_saturno_montanha = "saturno-montanha.png";
+var s_saturno_chao = "saturno-chao.png";
+var s_saturno_cut_image = "saturno-cut-image.png";
+var s_bgm_saturno = "res/music/bgm-saturno.mp3";
+
 var s_venus_ceu = "venus-ceu.png";
 var s_venus_montanha_perto = "venus-montanha-perto.png";
 var s_venus_montanha_longe = "venus-montanha-longe.png";
@@ -162,12 +170,29 @@ var g_resources = [
     {src:s_netuno_chao},
 
 
+    
+    {src:s_saturno_ceu},
+    {src:s_saturno_city},
+    {src:s_saturno_montanha},
+    {src:s_saturno_chao},
+    {src:s_saturno_cut_image},
+    {src:s_bgm_saturno},
+    
+
+
+	{src:s_netuno_cut_image},
+
+    
+
+
+
  	{src:s_venus_ceu},
     {src:s_venus_montanha_longe},
     {src:s_venus_montanha_perto},
     {src:s_venus_chao},
 
 	{src:s_netuno_cut_image},
+
 
     {src:s_little_stone},
     {src:s_hole_small},
