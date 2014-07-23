@@ -9,6 +9,7 @@ GAME.GROUND_HEIGHT_PERC=0.11;
 GAME.SCROLLING = {
 	SPEED_X: 300,
 	TOTAL: 0,
+	TIME: 0,
 };
 
 //container

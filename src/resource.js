@@ -111,6 +111,7 @@ var s_end_game = "res/soundFx/davidbain__end-game-fail.wav";
 //Bgm
 var s_bgm_1 = "res/music/bg-music1.ogg";
 var s_bgm_marte = "res/music/bgm-marte.mp3";
+var s_bgm_netuno = "res/music/bgm-netuno.mp3";
 
 
 var g_resources = [
@@ -221,7 +222,8 @@ var g_resources = [
     //bgm
     {src:s_bgm_1},
     {src:s_bgm_marte},
-
+	{src:s_bgm_netuno},
+	
     //effect
     {src:s_jump_sfx},
     {src:s_fire_sfx},

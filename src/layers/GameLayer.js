@@ -38,6 +38,7 @@ var GameLayer = cc.Layer.extend({
 		GAME.CONTAINER.PLAYER_BULLETS = [];
 		GAME.CONTAINER.ENEMIES_BULLETS = [];
 		GAME.SCROLLING.TOTAL = 0;
+		GAME.SCROLLING.TIME = 0;
 		 
 
 		// 1. super init first
@@ -79,6 +80,7 @@ var GameLayer = cc.Layer.extend({
 	scrolling : function(dt) {
 		var ds = GAME.SCROLLING.SPEED_X * dt;
 		GAME.SCROLLING.TOTAL += ds;
+		GAME.SCROLLING.TIME += dt;
 		if (GAME.SCROLLING.TOTAL > 60 * GAME.SCROLLING.SPEED_X && !cc.AudioEngine.getInstance().isMusicPlaying())
 			this.getParent().levelFinished();
 	},
