@@ -24,22 +24,23 @@
  THE SOFTWARE.
  ****************************************************************************/
 
-var VenusMontanhaLongeLayer = cc.Layer.extend({
+var SaturnoCeuLayer = cc.Layer.extend({
 	canvas : null,
 	zOrder : -2,
-	_scrollSpeed : GAME.SCROLLING.SPEED_X / 4,
+	
 	init : function() {
 		// 1. super init first
 		this._super();
 		this.canvas = cc.Director.getInstance().getWinSize();
-		var spriteMontanha = cc.Sprite.create(s_venus_montanha_longe);
-		spriteMontanha.setAnchorPoint(0,0);
-		spriteMontanha.setPosition(cc.p(0,0));
-		this.addChild(spriteMontanha);
+		var spriteCeu = cc.Sprite.create(s_saturno_ceu);
+		spriteCeu.setAnchorPoint(0,0);
+		spriteCeu.setPosition(cc.p(0,0));
+		this.addChild(spriteCeu);
 		this.scheduleUpdate();
 	},
 	update : function(dt) {
 		this.scrolling(dt);
+		
 	},
 	scrolling : function(dt) {
 		var ds = this._scrollSpeed * dt;
@@ -49,5 +50,7 @@ var VenusMontanhaLongeLayer = cc.Layer.extend({
 		if (scrolledPos.x < -this.canvas.width) {
 			this.setPosition(cc.p(scrolledPos.x + this.canvas.width, 0));
 		}
+
 	}
 });
+
