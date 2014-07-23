@@ -14,13 +14,13 @@ var s_hole_big = "hole-big.png";
 var s_hole_ufo_c = "hole-ufo-c.png";
 var s_ground = "groundAcidentado.png";
 
-//var s_terra_ceu = "terra-ceu.png";
-//var s_terra_deserto = "terra-deserto.png";
-//var s_terra_montanha = "terra-montanha.png";
-//var s_terra_nuvem = "terra-nuvem.png";
-//var s_terra_sol = "terra-sol.png";
-//var s_terra_chao = "terra-chao.png";
-//var s_bgm_terra = "res/music/bgm-terra.mp3";
+var s_terra_ceu = "terra-ceu.png";
+var s_terra_deserto = "terra-deserto.png";
+var s_terra_montanha = "terra-montanha.png";
+var s_terra_nuvem = "terra-nuvem.png";
+var s_terra_sol = "terra-sol.png";
+var s_terra_chao = "terra-chao.png";
+var s_bgm_terra = "res/music/bgm-terra.mp3";
 
 var s_lua_ceu = "lua-ceu.png";
 var s_lua_chao = "lua-chao.png";
