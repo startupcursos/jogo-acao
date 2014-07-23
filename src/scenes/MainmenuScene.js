@@ -23,7 +23,6 @@ var MainmenuScene = cc.Scene.extend({
 		cc.log("Settings pressed");
 		var transition = cc.TransitionFade.create(1, new SettingsScene());
 		cc.Director.getInstance().pushScene(transition);
-
 	},
 	onCredits : function() {
 		cc.log("Credits pressed");
