@@ -70,18 +70,19 @@ var GameLayer = cc.Layer.extend({
 		this.scheduleUpdate();
 		if (GAME.SOUND) {
 			cc.AudioEngine.getInstance().playMusic(s_bgm, false);
-			cc.AudioEngine.getInstance().setMusicVolume(0.3);
+			cc.AudioEngine.getInstance().setMusicVolume(0.5);
 			cc.AudioEngine.getInstance().setEffectsVolume(1);
 		}
 		this.collisionDetector = new CollisionDetector();
 	},
 
 	scrolling : function(dt) {
-		var ds = GAME.SCROLLING.SPEED_X * dt;
-		GAME.SCROLLING.TOTAL += ds;
-		if (!cc.AudioEngine.getInstance().isMusicPlaying())
-			this.getParent().levelFinished();
-	},
+ 	var ds = GAME.SCROLLING.SPEED_X * dt;
+ 	GAME.SCROLLING.TOTAL += ds;
+ 	if (GAME.SCROLLING.TOTAL > 60 * GAME.SCROLLING.SPEED_X && !cc.AudioEngine.getInstance().isMusicPlaying())
+ 	this.getParent().levelFinished();
+ 	},
+ 
 	detectCollision : function() {
 		//Colisão do avatar com inimigos
 		for (var i in GAME.CONTAINER.ENEMIES) {
