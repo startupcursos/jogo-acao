@@ -48,11 +48,29 @@ var Level3MarteScene = cc.Scene.extend({
 		this.gamelayer.addChild(new Mina(5300, this.canvas.height / 9.5));
 		this.gamelayer.addChild(new Stone(5500, this.canvas.height / 11));		
 		this.gamelayer.addChild(new Tank(7000, this.canvas.height / 7));
-		this.gamelayer.addChild(new Mina(7400, this.canvas.height / 9.5));				
+		this.gamelayer.addChild(new Mina(7400, this.canvas.height / 9.5));
 		this.gamelayer.addChild(new Mina(7800, this.canvas.height / 9.5));
 		this.gamelayer.addChild(new Mina(8200, this.canvas.height / 9.5));
 		this.gamelayer.addChild(new Mina(8500, this.canvas.height / 9.5));
 		this.gamelayer.addChild(new Mina(8800, this.canvas.height / 9.5));
+		this.gamelayer.addChild(new Mina(9100, this.canvas.height / 9.5));
+		this.gamelayer.addChild(new Mina(9400, this.canvas.height / 9.5));
+		this.gamelayer.addChild(new Stone(9800, this.canvas.height / 11));
+		this.gamelayer.addChild(new UfoA(10500, 4 / 6 * this.canvas.height));
+		this.gamelayer.addChild(new UfoC(10700, 5 / 6 * this.canvas.height));
+		this.gamelayer.addChild(new UfoA(11900, 3 / 6 * this.canvas.height));
+		this.gamelayer.addChild(new Stone(12400, this.canvas.height / 11));
+		this.gamelayer.addChild(new SmallRollingStone(12900, this.canvas.height / 7));
+		this.gamelayer.addChild(new UfoC(13500, 5 / 6 * this.canvas.height));
+		this.gamelayer.addChild(new UfoC(13900, 3 / 6 * this.canvas.height));
+		this.gamelayer.addChild(new UfoC(14300, 3 / 6 * this.canvas.height));
+		this.gamelayer.addChild(new Mina(14700, this.canvas.height / 9.5));
+		this.gamelayer.addChild(new Mina(15100, this.canvas.height / 9.5));
+		this.gamelayer.addChild(new Mina(15500, this.canvas.height / 9.5));
+		this.gamelayer.addChild(new Mina(15900, this.canvas.height / 9.5));
+		this.gamelayer.addChild(new SmallRollingStone(17200, this.canvas.height / 7));
+		this.gamelayer.addChild(new Stone(17600, this.canvas.height / 11));
+		this.gamelayer.addChild(new Stone(18000, this.canvas.height / 11));
 	},
 	levelFinished : function() {
 		cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new Cut4JupiterScene()));
