@@ -18,3 +18,19 @@ GAME.CONTAINER = {
     ENEMIES_BULLETS:[],
     PLAYER_BULLETS:[]
 };
+
+
+
+//Clock Function
+
+
+toSeconds = function(number){
+	
+	var seconds = number;
+	var time = seconds;
+	
+	while(seconds > 1 && seconds < 10)  {return time.toPrecision(2);}
+	while(seconds > 10 && seconds <100) {return time.toPrecision(3);}
+	while(seconds > 100)				{return time.toPrecision(4);}
+	
+};
