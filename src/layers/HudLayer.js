@@ -29,28 +29,28 @@ var HudLayer = cc.Layer.extend({
 	zOrder : 10,
 	labelScore: null,
 	labelLife: null,
-	init : function() {
+	init : function(Red,Blue,Green) {
 		this._super();
 		this.canvas = cc.Director.getInstance().getWinSize();
 		
 		this.labelScore = cc.LabelTTF.create("SCORE: 0",  "Courrier", 14);
         this.labelScore.setPosition(this.canvas.width - 60, this.canvas.height - 30);
-        this.labelScore.setFontFillColor(new cc.Color3B(0,0,0));
+        this.labelScore.setFontFillColor(new cc.Color3B(Red,Blue,Green));
         this.addChild(this.labelScore);
         
    		this.labelLife = cc.LabelTTF.create("LIFE: 0",  "Courrier", 14);        
         this.labelLife.setPosition(this.canvas.width - 150, this.canvas.height - 30);
-        this.labelLife.setFontFillColor(new cc.Color3B(0,0,0));
+        this.labelLife.setFontFillColor(new cc.Color3B(Red,Blue,Green));
         this.addChild(this.labelLife);
    		
    		this.labelDistance = cc.LabelTTF.create("DISTANCE: 0", "Courrier", 20);        
         this.labelDistance.setPosition(100, this.canvas.height - 30);
-        this.labelDistance.setFontFillColor(new cc.Color3B(0,0,0));
+        this.labelDistance.setFontFillColor(new cc.Color3B(Red,Blue,Green));
         this.addChild(this.labelDistance);
 
 		this.labelTime = cc.LabelTTF.create("TIME: 0", "Courrier", 20);        
         this.labelTime.setPosition(this.canvas.width /2 , this.canvas.height - 30);
-        this.labelTime.setFontFillColor(new cc.Color3B(0,0,0));
+        this.labelTime.setFontFillColor(new cc.Color3B(Red,Blue,Green));
         this.addChild(this.labelTime);
 
 		this.scheduleUpdate();
