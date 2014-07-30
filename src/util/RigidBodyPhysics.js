@@ -82,6 +82,7 @@ function RigidBodyPhysics(meterToPixelRatio) {
 				//Synchronize the AtlasSprites position and rotation with the corresponding body
 				var myActor = b.GetUserData();
 				if (myActor.setPosition) {
+					//TODO: Testar com diferentes pontos de ancoragens
 					myActor.setPosition(b.GetPosition().x / this.MTP_RATIO, b.GetPosition().y / this.MTP_RATIO);
 					myActor.setRotation(-1 * cc.RADIANS_TO_DEGREES(b.GetAngle()));
 				}
