@@ -14,13 +14,18 @@ var s_hole_big = "hole-big.png";
 var s_hole_ufo_c = "hole-ufo-c.png";
 var s_ground = "groundAcidentado.png";
 
-//var s_terra_ceu = "terra-ceu.png";
-//var s_terra_deserto = "terra-deserto.png";
-//var s_terra_montanha = "terra-montanha.png";
-//var s_terra_nuvem = "terra-nuvem.png";
-//var s_terra_sol = "terra-sol.png";
-//var s_terra_chao = "terra-chao.png";
-//var s_bgm_terra = "res/music/bgm-terra.mp3";
+var s_terra_ceu = "terra-ceu.png";
+var s_terra_deserto = "terra-deserto.png";
+var s_terra_montanha = "terra-montanha.png";
+var s_terra_nuvem = "terra-nuvem.png";
+var s_terra_sol = "terra-sol.png";
+var s_terra_chao = "terra-chao.png";
+var s_bgm_terra = "res/music/bgm-terra.mp3";
+
+var s_lua_ceu = "lua-ceu.png";
+var s_lua_chao = "lua-chao.png";
+var s_lua_montanha = "lua-montanha.png";
+var s_lua_montanha_longe = "lua-montanha-longe.png";
 
 var s_marte_ceu = "marte-ceu.png";
 var s_marte_chao = "marte-chao.png";
@@ -46,6 +51,14 @@ var s_netuno_city = "netuno-city.png";
 var s_netuno_montanha = "netuno-montanha.png";
 var s_netuno_chao = "netuno-chao.png";
 var s_netuno_cut_image = "netuno_planeta.png";
+
+
+var s_saturno_ceu = "saturno-ceu.png";
+var s_saturno_city = "saturno-city.png";
+var s_saturno_montanha = "saturno-montanha.png";
+var s_saturno_chao = "saturno-chao.png";
+var s_saturno_cut_image = "saturno-cut-image.png";
+var s_bgm_saturno = "res/music/bgm-saturno.mp3";
 
 var s_venus_ceu = "venus-ceu.png";
 var s_venus_montanha_perto = "venus-montanha-perto.png";
@@ -107,6 +120,8 @@ var s_end_game = "res/soundFx/davidbain__end-game-fail.wav";
 
 //Bgm
 var s_bgm_1 = "res/music/bg-music1.ogg";
+var s_bgm_marte = "res/music/bgm-marte.mp3";
+var s_bgm_netuno = "res/music/bgm-netuno.mp3";
 
 
 var g_resources = [
@@ -126,14 +141,19 @@ var g_resources = [
     {src:s_marte_estalagnite},
 	{src:s_marte_montanha},
 	{src:s_marte_cut_image},
-	 
 
-//    {src:s_terra_ceu},
-//	{src:s_terra_deserto},
-//	{src:s_terra_montanha},
-//	{src:s_terra_nuvem},
-//	{src:s_terra_sol},
-//	{src:s_terra_chao},
+    {src:s_terra_ceu},
+	{src:s_terra_deserto},
+	{src:s_terra_montanha},
+	{src:s_terra_nuvem},
+	{src:s_terra_sol},
+	{src:s_terra_chao},
+	{src:s_bgm_terra},
+	
+	{src:s_lua_ceu},
+	{src:s_lua_chao},
+	{src:s_lua_montanha},
+	{src:s_lua_montanha_longe},
 	
     {src:s_jupiter_ceu},
     {src:s_jupiter_montanha_longe},
@@ -153,6 +173,22 @@ var g_resources = [
     {src:s_netuno_chao},
 
 
+    
+    {src:s_saturno_ceu},
+    {src:s_saturno_city},
+    {src:s_saturno_montanha},
+    {src:s_saturno_chao},
+    {src:s_saturno_cut_image},
+    {src:s_bgm_saturno},
+    
+
+
+	{src:s_netuno_cut_image},
+
+    
+
+
+
  	{src:s_venus_ceu},
     {src:s_venus_montanha_longe},
     {src:s_venus_montanha_perto},
@@ -160,6 +196,7 @@ var g_resources = [
     {src:s_bgm_venus},
 
 	{src:s_netuno_cut_image},
+
 
     {src:s_little_stone},
     {src:s_hole_small},
@@ -212,7 +249,9 @@ var g_resources = [
 
     //bgm
     {src:s_bgm_1},
-
+    {src:s_bgm_marte},
+	{src:s_bgm_netuno},
+	
     //effect
     {src:s_jump_sfx},
     {src:s_fire_sfx},

@@ -51,4 +51,3 @@ var VenusMontanhaPertoLayer = cc.Layer.extend({
 		}
 	}
 });
-

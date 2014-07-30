@@ -14,7 +14,7 @@ var MainmenuScene = cc.Scene.extend({
 	},
 	onPlay : function() {
 		cc.log("Play pressed");
-		cc.Director.getInstance().pushScene(cc.TransitionFade.create(1, new Cut8VenusScene())); 
+		cc.Director.getInstance().pushScene(cc.TransitionFade.create(1, new PlanetmenuScene())); 
 	},
 	onHighScore : function() {
 		cc.log("HighScore pressed");
@@ -23,7 +23,6 @@ var MainmenuScene = cc.Scene.extend({
 		cc.log("Settings pressed");
 		var transition = cc.TransitionFade.create(1, new SettingsScene());
 		cc.Director.getInstance().pushScene(transition);
-
 	},
 	onCredits : function() {
 		cc.log("Credits pressed");

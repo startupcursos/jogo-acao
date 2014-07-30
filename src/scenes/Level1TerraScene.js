@@ -29,7 +29,7 @@ var Level1TerraScene = cc.Scene.extend({
 		this.gamelayer = new GameLayer();
 		this.addChild(this.gamelayer, this.gamelayer.zOrder);
 		var spriteGround = new Ground(0, 0, s_terra_chao);
-		this.gamelayer.init(spriteGround);
+		this.gamelayer.init(spriteGround, s_bgm_terra);
 
 		this.enemyPlacement();
 		this.player = this.gamelayer.player;
