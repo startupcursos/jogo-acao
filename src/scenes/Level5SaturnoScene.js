@@ -29,7 +29,7 @@ var Level5SaturnoScene = cc.Scene.extend({
 		this.player = this.gamelayer.player;
 		
 			var hudLayer = new HudLayer();
-		hudLayer.init();
+		hudLayer.init(230,176,46);
 		this.addChild(hudLayer, hudLayer.zOrder);
 		GAME.LASTLEVEL = new Level5SaturnoScene();
 	},
@@ -38,6 +38,12 @@ var Level5SaturnoScene = cc.Scene.extend({
 		this.gamelayer.addChild(new Mina(1250, this.canvas.height / 9.5));
 		this.gamelayer.addChild(new Mina(1800, this.canvas.height / 9.5));
 		this.gamelayer.addChild(new Mina(1850, this.canvas.height / 9.5));
+		this.gamelayer.addChild(new Mina(2500, this.canvas.height / 9.5));
+		this.gamelayer.addChild(new Mina(2450, this.canvas.height / 9.5));
+		this.gamelayer.addChild(new Mina(1500, this.canvas.height / 9.5));
+		this.gamelayer.addChild(new Mina(1900, this.canvas.height / 9.5));
+		this.gamelayer.addChild(new Mina(3200, this.canvas.height / 9.5));
+		this.gamelayer.addChild(new Mina(3600, this.canvas.height / 9.5));
 		this.gamelayer.addChild(new Mina(2500, this.canvas.height / 9.5));
 		this.gamelayer.addChild(new UfoA(3500, this.canvas.height * 5 / 6));
 		this.gamelayer.addChild(new Stone(4000, this.canvas.height / 9.5));
@@ -50,9 +56,13 @@ var Level5SaturnoScene = cc.Scene.extend({
 		this.gamelayer.addChild(new Stone(9000, this.canvas.height / 9.5));
 		this.gamelayer.addChild(new Stone(9500, this.canvas.height / 9.5));
 		this.gamelayer.addChild(new Stone(10000, this.canvas.height / 9.5));
-		this.gamelayer.addChild(new Stone(10050, this.canvas.height / 9.5));
-		this.gamelayer.addChild(new Stone(10100, this.canvas.height / 9.5));
-		this.gamelayer.addChild(new Stone(10150, this.canvas.height / 9.5));
+		this.gamelayer.addChild(new Tank(7000, this.canvas.height / 7));
+		this.gamelayer.addChild(new SmallRollingStone(17000, this.canvas.height / 7));
+		this.gamelayer.addChild(new SmallRollingStone(22000, this.canvas.height / 7));
+		this.gamelayer.addChild(new SmallRollingStone(24000, this.canvas.height / 7));
+		this.gamelayer.addChild(new SmallRollingStone(19000, this.canvas.height / 7));
+		this.gamelayer.addChild(new SmallRollingStone(26000, this.canvas.height / 7));
+		this.gamelayer.addChild(new SmallRollingStone(28000, this.canvas.height / 7));
 	
 	},
 	levelFinished : function() {

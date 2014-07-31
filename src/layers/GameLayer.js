@@ -71,7 +71,7 @@ var GameLayer = cc.Layer.extend({
 		this.scheduleUpdate();
 		if (GAME.SOUND) {
 			cc.AudioEngine.getInstance().playMusic(s_bgm, false);
-			cc.AudioEngine.getInstance().setMusicVolume(0.3);
+			cc.AudioEngine.getInstance().setMusicVolume(0.5);
 			cc.AudioEngine.getInstance().setEffectsVolume(1);
 		}
 		this.collisionDetector = new CollisionDetector();
