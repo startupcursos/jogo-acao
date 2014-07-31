@@ -60,7 +60,7 @@ var Buggy = cc.Sprite.extend({
 	},
 	jump : function() {
 		if (this.getNumberOfRunningActions() === 0 && this.active) {
-			var jumpUp = cc.JumpBy.create(1.0, cc.p(0, 0), 160, 1);
+			var jumpUp = cc.JumpBy.create(1.0, cc.p(0, 0), 100, 1);
 			this.runAction(jumpUp);
 			if (GAME.SOUND) {
 				cc.AudioEngine.getInstance().playEffect(s_jump_sfx);
