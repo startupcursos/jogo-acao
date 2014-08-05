@@ -25,7 +25,6 @@ var SmallRollingStone = cc.Sprite.extend({
 		if (this.active) {
 			var dx = this.speedX * dt;
 			var dy = this.speedY * dt;
-			this.fireTimes();
 		} else {
 			var dx = -GAME.SCROLLING.SPEED_X * dt;
 			var dy = -GAME.SCROLLING.SPEED_Y * dt;
