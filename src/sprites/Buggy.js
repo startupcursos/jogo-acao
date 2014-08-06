@@ -38,6 +38,7 @@ var Buggy = cc.Sprite.extend({
         this.speedX = 0;
         for (var i in this.getParent().rodas) {
         	this.getParent().rodas[i].destroy();
+        	cc.AudioEngine.getInstance().playEffect(s_explosion_car);
         }
 
 		this.active = false;
