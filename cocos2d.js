@@ -103,6 +103,7 @@
             'src/scenes/Level8VenusScene.js',
             'src/scenes/Cut8VenusScene.js',
 
+            'src/scenes/Cut2LuaScene.js',
             'src/scenes/Cut3MarteScene.js',
             'src/scenes/Cut4JupiterScene.js',
             'src/scenes/Cut7NetunoScene.js',
