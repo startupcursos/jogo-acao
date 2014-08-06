@@ -34,12 +34,12 @@ var Level8VenusScene = cc.Scene.extend({
 	},
 	enemyPlacement : function() {
 		
-		this.gamelayer.addChild(new NaveSeguidora(-500, this.canvas.height * (GAME.GROUND_HEIGHT_PERC + 0.05)));
-		this.gamelayer.addChild(new Tank(1000, this.canvas.height / 6));
-		this.gamelayer.addChild(new Stone(2000, this.canvas.height * (GAME.GROUND_HEIGHT_PERC - 0.05)));
-		this.gamelayer.addChild(new Planta(2300, this.canvas.width / 60, this.canvas.height / 2));
-		this.gamelayer.addChild(new Planta(2800, this.canvas.width / 60, this.canvas.height / 2));
-		this.gamelayer.addChild(new BigStone(3000, this.canvas.height * (GAME.GROUND_HEIGHT_PERC - 0.05)));
+		//this.gamelayer.addChild(new NaveSeguidora(-500, this.canvas.height * (GAME.GROUND_HEIGHT_PERC + 0.05)));
+		//this.gamelayer.addChild(new Tank(1000, this.canvas.height / 6));
+		//this.gamelayer.addChild(new Stone(2000, this.canvas.height * (GAME.GROUND_HEIGHT_PERC - 0.05)));
+		//this.gamelayer.addChild(new Planta(2300, this.canvas.width / 60, this.canvas.height / 2));
+		//this.gamelayer.addChild(new Planta(2800, this.canvas.width / 60, this.canvas.height / 2));
+		//this.gamelayer.addChild(new BigStone(3000, this.canvas.height * (GAME.GROUND_HEIGHT_PERC - 0.05)));
 		this.gamelayer.addChild(new UfoA(3200,  5 / 6 * this.canvas.height));
 		this.gamelayer.addChild(new UfoB(3500,  5 / 6 * this.canvas.height));
 		this.gamelayer.addChild(new UfoA(4000,  5 / 6 * this.canvas.height));
