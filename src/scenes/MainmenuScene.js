@@ -1,9 +1,15 @@
 var MainmenuScene = cc.Scene.extend({
 	onEnter : function() {
 		this._super();
+		var size = cc.Director.getInstance().getWinSize();
+		var bgMainMenu = cc.Sprite.create(s_bg_mainmenu);
+		bgMainMenu.setPosition(size.width / 2, size.height / 2);
+		this.addChild(bgMainMenu, -1);
+
 		cc.MenuItemFont.setFontName("Arial");
 		cc.MenuItemFont.setFontSize(48);
-		var itemMenuPlay = cc.MenuItemFont.create("Play", this.onPlay);
+		// ItemImage
+	 	var itemMenuPlay = cc.MenuItemImage.create(s_bplay, s_bplay, this.onPlay, this);
 		var itemMenuHS = cc.MenuItemFont.create("HighScore", this.onHighScore);
 		var itemMenuSettings = cc.MenuItemFont.create("Settings", this.onSettings);
 		var itemMenuCredits = cc.MenuItemFont.create("Credits", this.onCredits);

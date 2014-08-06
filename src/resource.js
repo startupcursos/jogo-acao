@@ -97,6 +97,8 @@ var s_tank = "tank.png";
 var s_carro = "carro.png";
 var s_roda = "roda.png";
 
+var s_bg_mainmenu = "bg_01.png";
+var s_bplay = "button_play.png";
 
 //plist
 var s_spritesheet = "spritesheet.png";
@@ -120,7 +122,6 @@ var s_stone_explosion_sfx = "res/soundFx/stone-explosion-sfx.ogg";
 var s_end_game = "res/soundFx/davidbain__end-game-fail.wav";
 
 //Bgm
-var s_bgm_1 = "res/music/bg-music1.ogg";
 var s_bgm_lua = "res/music/bgm-moon.mp3";
 var s_bgm_marte = "res/music/bgm-marte.mp3";
 var s_bgm_netuno = "res/music/bgm-netuno.mp3";
@@ -128,6 +129,8 @@ var s_bgm_netuno = "res/music/bgm-netuno.mp3";
 
 var g_resources = [
     //image
+    {src:s_bg_mainmenu},
+    {src:s_bplay},
     {src:s_big_stone},
     {src:s_buggy},
     {src:s_bullet_v},
@@ -251,7 +254,6 @@ var g_resources = [
     //tmx
 
     //bgm
-    {src:s_bgm_1},
     {src:s_bgm_lua},
     {src:s_bgm_marte},
 	{src:s_bgm_netuno},
