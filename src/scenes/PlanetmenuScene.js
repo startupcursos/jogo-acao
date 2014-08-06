@@ -37,7 +37,7 @@ var PlanetmenuScene = cc.Scene.extend({
 		cc.Director.getInstance().pushScene(cc.TransitionFade.create(1, new Cut7NetunoScene()));
 	},
 	onVenus : function() {
-		cc.Director.getInstance().pushScene(cc.TransitionFade.create(1, new Cut5VenusScene()));
+		cc.Director.getInstance().pushScene(cc.TransitionFade.create(1, new Cut8VenusScene()));
 	}
 	
 });
