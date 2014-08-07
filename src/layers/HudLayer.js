@@ -48,17 +48,18 @@ var HudLayer = cc.Layer.extend({
         this.labelDistance.setFontFillColor(new cc.Color3B(Red,Blue,Green));
         this.addChild(this.labelDistance);
 
-		this.labelTime = cc.LabelTTF.create("TIME: 0", "Courrier", 20);        
-        this.labelTime.setPosition(this.canvas.width /2 , this.canvas.height - 30);
+		this.labelTime = cc.LabelTTF.create("TIME: 0", "Courrier", 20*2);        
+        this.labelTime.setPosition(this.canvas.width *0.5 , this.canvas.height - 30);
         this.labelTime.setFontFillColor(new cc.Color3B(Red,Blue,Green));
         this.addChild(this.labelTime);
 
 		this.scheduleUpdate();
 	},
 	update : function(dt) {
+		GAME.SCROLLING.TIME += dt;
 		this.labelScore.setString("SCORE: " + GAME.SCORE);
 		this.labelLife.setString("LIFE: " + GAME.LIFES);
 		this.labelDistance.setString("DISTANCE: " + parseInt(GAME.SCROLLING.TOTAL));
-		this.labelTime.setString("TIME: " + parseInt(GAME.SCROLLING.TIME));
+		this.labelTime.setString(toSeconds(GAME.SCROLLING.TIME));
 	}
 });

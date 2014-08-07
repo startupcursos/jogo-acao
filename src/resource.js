@@ -26,6 +26,7 @@ var s_lua_ceu = "lua-ceu.png";
 var s_lua_chao = "lua-chao.png";
 var s_lua_montanha = "lua-montanha.png";
 var s_lua_montanha_longe = "lua-montanha-longe.png";
+var s_lua_cut_image = "lua-cutscene.png";
 
 var s_marte_ceu = "marte-ceu.png";
 var s_marte_chao = "marte-chao.png";
@@ -96,6 +97,8 @@ var s_tank = "tank.png";
 var s_carro = "carro.png";
 var s_roda = "roda.png";
 
+var s_bg_mainmenu = "bg_01.png";
+var s_bplay = "button_play.png";
 
 //plist
 var s_spritesheet = "spritesheet.png";
@@ -122,13 +125,15 @@ var s_explosion_nave = "res/soundFx/explosion_nave.wav";
 
 
 //Bgm
-var s_bgm_1 = "res/music/bg-music1.ogg";
+var s_bgm_lua = "res/music/bgm-moon.mp3";
 var s_bgm_marte = "res/music/bgm-marte.mp3";
 var s_bgm_netuno = "res/music/bgm-netuno.mp3";
 
 
 var g_resources = [
     //image
+    {src:s_bg_mainmenu},
+    {src:s_bplay},
     {src:s_big_stone},
     {src:s_buggy},
     {src:s_bullet_v},
@@ -157,6 +162,7 @@ var g_resources = [
 	{src:s_lua_chao},
 	{src:s_lua_montanha},
 	{src:s_lua_montanha_longe},
+	{src:s_lua_cut_image},
 	
     {src:s_jupiter_ceu},
     {src:s_jupiter_montanha_longe},
@@ -251,7 +257,7 @@ var g_resources = [
     //tmx
 
     //bgm
-    {src:s_bgm_1},
+    {src:s_bgm_lua},
     {src:s_bgm_marte},
 	{src:s_bgm_netuno},
 	
