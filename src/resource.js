@@ -120,6 +120,9 @@ var s_fire_sfx = "res/soundFx/fire.ogg";
 var s_jump_sfx = "res/soundFx/jump.ogg";
 var s_stone_explosion_sfx = "res/soundFx/stone-explosion-sfx.ogg";
 var s_end_game = "res/soundFx/davidbain__end-game-fail.wav";
+var s_explosion_car = "res/soundFx/explosion_car.wav";
+var s_explosion_nave = "res/soundFx/explosion_nave.wav";
+
 
 //Bgm
 var s_bgm_lua = "res/music/bgm-moon.mp3";
