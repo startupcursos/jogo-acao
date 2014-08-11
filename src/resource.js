@@ -97,8 +97,14 @@ var s_tank = "tank.png";
 var s_carro = "carro.png";
 var s_roda = "roda.png";
 
+//Menu
 var s_bg_mainmenu = "bg_01.png";
 var s_bplay = "button_play.png";
+var s_bhighscore = "button_highscore.png";
+var s_bsettings = "button_settings.png";
+var s_bcredits = "button_credits.png";
+var s_bquit = "button_quit.png";
+var s_bgotomenu = "button_gotomenu.png";
 
 //plist
 var s_spritesheet = "spritesheet.png";
@@ -131,9 +137,17 @@ var s_bgm_netuno = "res/music/bgm-netuno.mp3";
 
 
 var g_resources = [
-    //image
+    
+    //menu
     {src:s_bg_mainmenu},
-    {src:s_bplay},
+    {src:s_bplay}, 
+    {src:s_bhighscore}, 
+    {src:s_bsettings}, 
+    {src:s_bcredits}, 
+    {src:s_bquit}, 
+    {src:s_bgotomenu}, 
+
+    //image
     {src:s_big_stone},
     {src:s_buggy},
     {src:s_bullet_v},
