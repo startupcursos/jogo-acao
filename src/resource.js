@@ -46,6 +46,7 @@ var s_urano_ceu = "urano-ceu.png";
 var s_urano_montanha_perto = "urano-montanha.png";
 var s_urano_montanha_longe = "urano-montanha-longe.png";
 var s_urano_chao = "urano-chao.png";
+var s_urano_cut_image = "urano.jpg";
 
 var s_netuno_ceu = "netuno-ceu.png";
 var s_netuno_city = "netuno-city.png";
@@ -128,6 +129,7 @@ var s_explosion_nave = "res/soundFx/explosion_nave.wav";
 var s_bgm_lua = "res/music/bgm-moon.mp3";
 var s_bgm_marte = "res/music/bgm-marte.mp3";
 var s_bgm_netuno = "res/music/bgm-netuno.mp3";
+var s_bgm_urano = "res/music/bgm-uranus.mp3";
 
 
 var g_resources = [
@@ -180,8 +182,7 @@ var g_resources = [
     {src:s_netuno_city},
     {src:s_netuno_montanha},
     {src:s_netuno_chao},
-
-
+	{src:s_urano_cut_image},
     
     {src:s_saturno_ceu},
     {src:s_saturno_city},
@@ -260,6 +261,7 @@ var g_resources = [
     {src:s_bgm_lua},
     {src:s_bgm_marte},
 	{src:s_bgm_netuno},
+	{src:s_bgm_urano},
 	
     //effect
     {src:s_jump_sfx},
