@@ -31,7 +31,7 @@ var PlanetmenuScene = cc.Scene.extend({
 		cc.Director.getInstance().pushScene(cc.TransitionFade.create(1, new Cut5SaturnoScene()));
 	},
 	onUranus : function() {
-		cc.Director.getInstance().pushScene(cc.TransitionFade.create(1, new Level6UranoScene()));
+		cc.Director.getInstance().pushScene(cc.TransitionFade.create(1, new Cut6UranoScene()));
 	},
 	onNeptune : function() {
 		cc.Director.getInstance().pushScene(cc.TransitionFade.create(1, new Cut7NetunoScene()));

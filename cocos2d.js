@@ -106,6 +106,7 @@
             'src/scenes/Cut2LuaScene.js',
             'src/scenes/Cut3MarteScene.js',
             'src/scenes/Cut4JupiterScene.js',
+            'src/scenes/Cut6UranoScene.js',
             'src/scenes/Cut7NetunoScene.js',
             'src/scenes/Cut5SaturnoScene.js',
 
