@@ -92,6 +92,7 @@
             'src/layers/SaturnoMontanhaLayer.js',
             'src/layers/SaturnoCityLayer.js',             
             'src/sprites/LittleStone.js',
+            'src/sprites/Particles.js',
             'src/scenes/Level1TerraScene.js',
             'src/scenes/Level2LuaScene.js',
             'src/scenes/Level3MarteScene.js',

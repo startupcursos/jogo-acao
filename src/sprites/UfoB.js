@@ -77,9 +77,19 @@ var UfoB = cc.Sprite.extend({
 		}
 	},
 	destroy : function() {
+                
+                //Remove from canvas
 		this.setVisible(false);
 		this.active = false;
 		this.stopAllActions();
+                
+                //Particle Explosion Call
+                var pos_x = this.getPosition().x;
+		var pos_y = this.getPosition().y;
+		var explode = new ParticleExplosion(pos_x, pos_y);
+		this.getParent().addChild(explode);
+                
+                //Remove from index
 		var index = GAME.CONTAINER.ENEMIES.indexOf(this);
 		if (index > -1) {
 			GAME.CONTAINER.ENEMIES.splice(index, 1);

@@ -7,6 +7,7 @@ var Tank = cc.Sprite.extend({
 	rpsGunH : 1,
 	_dtLastFireH : 1,
 	_dtOnScreen : null,
+	
 	ctor : function(x, y) {
 		this._super();
 		this.init(s_tank);
@@ -29,12 +30,14 @@ var Tank = cc.Sprite.extend({
 		if (finalP.x - GAME.SCROLLING.TOTAL < canvas.width && this._dtOnScreen === null) {
 			this._dtOnScreen = 0;
 		}
-		if (this._dtOnScreen != null) {
+		if (this._dtOnScreen !== null) {
 			this._dtOnScreen += dt;
 			//this.fireTimes();
 			this.Fogo();			
 		}
 		this.setPosition(finalP);
+		
+		
 		
 		this._dtLastFireH += dt;
 		this.time += dt;
@@ -57,14 +60,23 @@ var Tank = cc.Sprite.extend({
 			
 			this.fireV();
 		}
-		
-		
+			
 	},
 	
 	destroy : function() {
-		this.setVisible(false);
+		
+                //Remove sprite from canvas
+                this.setVisible(false);
 		this.active = false;
 		this.stopAllActions();
+		
+                //Create Particle Effect
+                var pos_x = this.getPosition().x;
+		var pos_y = this.getPosition().y;
+		var explode = new ParticleExplosion(pos_x, pos_y);
+		this.getParent().addChild(explode);
+		
+                //Remove from Enemy Index
 		var index = GAME.CONTAINER.ENEMIES.indexOf(this);
 		if (index > -1) {
 			GAME.CONTAINER.ENEMIES.splice(index, 1);
