@@ -1,7 +1,7 @@
 var Level6UranoScene = cc.Scene.extend({
-	player: null,
-	gamelayer: null,
-	canvas: null,
+	player : null,
+	gamelayer : null,
+	canvas : null,
 	onEnter : function() {
 		this._super();
 		this.canvas = cc.Director.getInstance().getWinSize();
@@ -9,7 +9,7 @@ var Level6UranoScene = cc.Scene.extend({
 		var layerCeu = new UranoCeuLayer();
 		this.addChild(layerCeu, layerCeu.zOrder);
 		layerCeu.init();
-		
+
 		var layerMontanhaLonge = new UranoMontanhaLongeLayer();
 		this.addChild(layerMontanhaLonge, layerMontanhaLonge.zOrder);
 		layerMontanhaLonge.init();
@@ -26,13 +26,11 @@ var Level6UranoScene = cc.Scene.extend({
 		var hudLayer = new HudLayer();
 		hudLayer.init();
 		this.addChild(hudLayer, hudLayer.zOrder);
-		this.player = this.gamelayer.player;
-		this.enemyPlacement();
 		GAME.LASTLEVEL = new Level6UranoScene();
-			},
-			
+		GAME.MUSICDURATIONINSEC = 76;
+	},
 	enemyPlacement : function() {
-		
+
 		this.gamelayer.addChild(new Stone(1200, this.canvas.height / 9.5));
 		this.gamelayer.addChild(new Stone(1250, this.canvas.height / 9.5));
 		this.gamelayer.addChild(new Mina(1800, this.canvas.height / 9.5));
@@ -56,10 +54,9 @@ var Level6UranoScene = cc.Scene.extend({
 		this.gamelayer.addChild(new Stone(9500, this.canvas.height / 9.5));
 		this.gamelayer.addChild(new Stone(10000, this.canvas.height / 9.5));
 		this.gamelayer.addChild(new Tank(7000, this.canvas.height / 7));
-		
-			},
+
+	},
 	levelFinished : function() {
 		cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new Cut7NetunoScene()));
 	}
-
 });

@@ -34,6 +34,7 @@ var Level7NetunoScene = cc.Scene.extend({
 		this.addChild(hudLayer, hudLayer.zOrder);
 		
 		GAME.LASTLEVEL = new Level7NetunoScene();
+		GAME.MUSICDURATIONINSEC = 64;
 	},
 	
 	enemyPlacement : function() {

@@ -13,6 +13,8 @@ var s_hole_small = "hole-small.png";
 var s_hole_big = "hole-big.png";
 var s_hole_ufo_c = "hole-ufo-c.png";
 var s_ground = "groundAcidentado.png";
+var s_progress_bar = "progressBar.png";
+var s_progress_bar_panel = "pbar.png";
 
 var s_terra_ceu = "terra-ceu.png";
 var s_terra_deserto = "terra-deserto.png";
@@ -161,12 +163,14 @@ var g_resources = [
     {src:s_big_stone},
     {src:s_buggy},
     {src:s_bullet_v},
-    {src:s_bullet_h},
+	{src:s_bullet_h},
     {src:s_carro},
     {src:s_enemy_bullet_v},
     {src:s_enemy_bullet_v2},
     {src:s_fire},
     {src:s_ground},
+    {src:s_progress_bar},
+    {src:s_progress_bar_panel},
     
 //Marte
     {src:s_marte_ceu},

@@ -29,7 +29,9 @@ var Level3MarteScene = cc.Scene.extend({
 		var hudLayer = new HudLayer();
 		hudLayer.init();
 		this.addChild(hudLayer, hudLayer.zOrder);
+		
 		GAME.LASTLEVEL = new Level3MarteScene();
+		GAME.MUSICDURATIONINSEC = 82;
 	},
 	enemyPlacement : function() {
 		this.gamelayer.addChild(new UfoA(600, 2 / 6 * this.canvas.height));
