@@ -20,7 +20,7 @@ var s_terra_montanha = "terra-montanha.png";
 var s_terra_nuvem = "terra-nuvem.png";
 var s_terra_sol = "terra-sol.png";
 var s_terra_chao = "terra-chao.png";
-var s_bgm_terra = "res/music/bgm-terra.mp3";
+var s_bgm_terra = "res/music/bgm-terra.ogg";
 
 var s_lua_ceu = "lua-ceu.png";
 var s_lua_chao = "lua-chao.png";
@@ -39,7 +39,7 @@ var s_jupiter_montanha_perto = "jupiter-montanha-perto.png";
 var s_jupiter_montanha_longe = "jupiter-montanha-longe.png";
 var s_jupiter_chao = "jupiter-chao.png";
 var s_jupiter_cut_image = "jupiter-cut-image.jpg";
-var s_bgm_jupiter = "res/music/bgm-jupiter.mp3";
+var s_bgm_jupiter = "res/music/bgm-jupiter.ogg";
 
 var s_urano_ceu = "urano-ceu.png";
 var s_urano_montanha_perto = "urano-montanha.png";
@@ -58,14 +58,14 @@ var s_saturno_city = "saturno-city.png";
 var s_saturno_montanha = "saturno-montanha.png";
 var s_saturno_chao = "saturno-chao.png";
 var s_saturno_cut_image = "saturno-cut-image.png";
-var s_bgm_saturno = "res/music/bgm-saturno.mp3";
+var s_bgm_saturno = "res/music/bgm-saturno.ogg";
 
 var s_venus_ceu = "venus-ceu.png";
 var s_venus_montanha_perto = "venus-montanha-perto.png";
 var s_venus_montanha_longe = "venus-montanha-longe.png";
 var s_venus_chao = "venus-chao.png";
 var s_venus_cut_image = "venus-cut-image.jpg";
-var s_bgm_venus = "res/music/bgm-venus.mp3";
+var s_bgm_venus = "res/music/bgm-venus.ogg";
 
 var s_little_stone = "little-stone.png";
 var s_little_stone = "little-stone.png";
@@ -116,15 +116,17 @@ var s_rocket = "rocket.png";
 var s_fire_sfx = "res/soundFx/fire.ogg";
 var s_jump_sfx = "res/soundFx/jump.ogg";
 var s_stone_explosion_sfx = "res/soundFx/stone-explosion-sfx.ogg";
-var s_end_game = "res/soundFx/davidbain__end-game-fail.wav";
-var s_explosion_car = "res/soundFx/explosion_car.wav";
-var s_explosion_nave = "res/soundFx/explosion_nave.wav";
+var s_end_game = "res/soundFx/end-game-fail.ogg";
+var s_explosion_car = "res/soundFx/explosion_car.ogg";
+var s_explosion_ufoA = "res/soundFx/explosion_ufoA.ogg";
+var s_explosion_ufoB = "res/soundFx/explosion_ufoB.ogg";
+var s_explosion_ufoC = "res/soundFx/explosion_ufoC.ogg";
 
 
 //Bgm
 var s_bgm_1 = "res/music/bg-music1.ogg";
-var s_bgm_marte = "res/music/bgm-marte.mp3";
-var s_bgm_netuno = "res/music/bgm-netuno.mp3";
+var s_bgm_marte = "res/music/bgm-marte.ogg";
+var s_bgm_netuno = "res/music/bgm-netuno.ogg";
 
 
 var g_resources = [
