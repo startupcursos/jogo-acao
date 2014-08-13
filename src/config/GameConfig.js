@@ -10,7 +10,7 @@ GAME.SCROLLING = {
 	SPEED_X: 300,
 	SPEED_Y: 0,
 	TOTAL: 0,
-	TIME: 0,
+	TIME: 0
 };
 
 //container
@@ -22,8 +22,8 @@ GAME.CONTAINER = {
 
 
 
-//Clock Function
 
+//Clock Function
 
 toSeconds = function(number){
 	

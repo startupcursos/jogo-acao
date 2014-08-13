@@ -98,6 +98,9 @@ var s_tank = "tank.png";
 var s_carro = "carro.png";
 var s_roda = "roda.png";
 
+//Particles
+var s_stars = "stars.png";
+
 //Menu
 var s_bg_mainmenu = "bg_01.png";
 var s_bplay = "button_play.png";
@@ -121,6 +124,9 @@ var s_hover_ship = "hover_ship.png";
 var s_hover_ship_plist = "hover_ship.plist";
 var s_rocket_plist = "rocket.plist";
 var s_rocket = "rocket.png";
+var s_exploding_ring_plist = "ExplodingRing.plist";
+var s_bullet_plist = "Bullet_H.plist";
+var s_bullet_png = "Bullet_H.png";
 
 //Sfx
 var s_fire_sfx = "res/soundFx/fire.ogg";
@@ -160,20 +166,20 @@ var g_resources = [
     {src:s_fire},
     {src:s_ground},
     
+//Marte
     {src:s_marte_ceu},
-	{src:s_marte_chao},    
+    {src:s_marte_chao},    
     {src:s_marte_estalagnite},
-	{src:s_marte_montanha},
-	{src:s_marte_cut_image},
-
+    {src:s_marte_montanha},
+    {src:s_marte_cut_image},
+//Terra
     {src:s_terra_ceu},
 	{src:s_terra_deserto},
 	{src:s_terra_montanha},
 	{src:s_terra_nuvem},
 	{src:s_terra_sol},
 	{src:s_terra_chao},
-	{src:s_bgm_terra},
-	
+//Lua
 	{src:s_lua_ceu},
 	{src:s_lua_chao},
 	{src:s_lua_montanha},
@@ -185,39 +191,29 @@ var g_resources = [
     {src:s_jupiter_montanha_perto},
     {src:s_jupiter_chao},
     {src:s_jupiter_cut_image},
-    {src:s_bgm_jupiter},
-	
+//Urano
     {src:s_urano_ceu},
     {src:s_urano_montanha_longe},
     {src:s_urano_montanha_perto},
     {src:s_urano_chao},
-
+//Netuno
     {src:s_netuno_ceu},
     {src:s_netuno_city},
     {src:s_netuno_montanha},
     {src:s_netuno_chao},
 	{src:s_urano_cut_image},
-    
     {src:s_saturno_ceu},
     {src:s_saturno_city},
     {src:s_saturno_montanha},
     {src:s_saturno_chao},
     {src:s_saturno_cut_image},
-    {src:s_bgm_saturno},
-    
-
-
 	{src:s_netuno_cut_image},
 
-    
-
-
-
+//Venus
  	{src:s_venus_ceu},
     {src:s_venus_montanha_longe},
     {src:s_venus_montanha_perto},
     {src:s_venus_chao},
-    {src:s_bgm_venus},
 
 	{src:s_netuno_cut_image},
 
@@ -255,6 +251,9 @@ var g_resources = [
 	{src:s_carro},
 	{src:s_roda},
 	
+	//Particle Effects
+	{src:s_stars},
+	
 	//plist
     {src:s_spritesheet},
     {src:s_spritesheet_plist},
@@ -266,6 +265,9 @@ var g_resources = [
     {src:s_ufo_b_spritesheet_plist},
     {src:s_hover_ship_plist},
     {src:s_rocket_plist},
+    {src:s_bullet_plist},
+    {src:s_bullet_png},
+    
     
     //fnt
 
@@ -276,8 +278,13 @@ var g_resources = [
     {src:s_bgm_marte},
 	{src:s_bgm_netuno},
 	{src:s_bgm_urano},
+    //{src:s_bgm_marte},
+	//{src:s_bgm_terra},
+    //{src:s_bgm_jupiter},
+    //{src:s_bgm_venus},
+    //{src:s_bgm_saturno},
 	
-    //effect
+    // sound effects
     {src:s_jump_sfx},
     {src:s_fire_sfx},
     {src:s_stone_explosion_sfx},
