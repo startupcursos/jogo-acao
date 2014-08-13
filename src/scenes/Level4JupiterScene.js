@@ -28,7 +28,9 @@ var Level4JupiterScene = cc.Scene.extend({
 		this.addChild(hudLayer, hudLayer.zOrder);
 		this.player = this.gamelayer.player;
 		this.enemyPlacement();
+		
 		GAME.LASTLEVEL = new Level4JupiterScene();
+		GAME.MUSICDURATIONINSEC = 83;
 	},
 	enemyPlacement : function() {
 		// Primeiro Segmento de 10K

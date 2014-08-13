@@ -30,7 +30,9 @@ var Level2LuaScene = cc.Scene.extend({
 		var hudLayer = new HudLayer();
 		hudLayer.init();
 		this.addChild(hudLayer, hudLayer.zOrder);
+		
 		GAME.LASTLEVEL = new Level2LuaScene();
+		GAME.MUSICDURATIONINSEC = 103;
 	},
 	enemyPlacement : function() {
 		this.gamelayer.addChild(new Tank(6000, this.canvas.height / 4));

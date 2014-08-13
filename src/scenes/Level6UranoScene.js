@@ -29,7 +29,9 @@ var Level6UranoScene = cc.Scene.extend({
 		var hudLayer = new HudLayer();
 		hudLayer.init();
 		this.addChild(hudLayer, hudLayer.zOrder);
+		
 		GAME.LASTLEVEL = new Level6UranoScene();
+		GAME.MUSICDURATIONINSEC = 76;
 	},
 	enemyPlacement : function() {
 		this.gamelayer.addChild(new RollingStone(2000, this.canvas.height * (GAME.GROUND_HEIGHT_PERC + 0.05)));

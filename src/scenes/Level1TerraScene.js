@@ -41,6 +41,7 @@ var Level1TerraScene = cc.Scene.extend({
 		
 		//Armazeno a última fase carregada
 		GAME.LASTLEVEL = new Level1TerraScene();
+		GAME.MUSICDURATIONINSEC = 86;
 	},
 	enemyPlacement : function() {
 		this.gamelayer.addChild(new Tank(6000, this.canvas.height / 4));

@@ -31,7 +31,9 @@ var Level5SaturnoScene = cc.Scene.extend({
 			var hudLayer = new HudLayer();
 		hudLayer.init(230,176,46);
 		this.addChild(hudLayer, hudLayer.zOrder);
+		
 		GAME.LASTLEVEL = new Level5SaturnoScene();
+		GAME.MUSICDURATIONINSEC = 87;
 	},
 	enemyPlacement : function() {
 		this.gamelayer.addChild(new Mina(1200, this.canvas.height / 9.5));

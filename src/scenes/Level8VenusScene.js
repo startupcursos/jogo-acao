@@ -30,7 +30,9 @@ var Level8VenusScene = cc.Scene.extend({
 		var hudLayer = new HudLayer();
 		hudLayer.init();
 		this.addChild(hudLayer, hudLayer.zOrder);
+		
 		GAME.LASTLEVEL = new Level8VenusScene();
+		GAME.MUSICDURATIONINSEC = 70;
 	},
 	enemyPlacement : function() {
 		
