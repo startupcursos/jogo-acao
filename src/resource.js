@@ -101,7 +101,7 @@ var s_roda = "roda.png";
 //Particles
 var s_stars = "stars.png";
 
-//Menu
+//MainMenu
 var s_bg_mainmenu = "bg_01.png";
 var s_bplay = "button_play.png";
 var s_bhighscore = "button_highscore.png";
@@ -109,6 +109,8 @@ var s_bsettings = "button_settings.png";
 var s_bcredits = "button_credits.png";
 var s_bquit = "button_quit.png";
 var s_bgotomenu = "button_gotomenu.png";
+
+//MenuPlanetas
 
 //plist
 var s_spritesheet = "spritesheet.png";
