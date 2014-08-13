@@ -19,7 +19,7 @@ var PlanetmenuScene = cc.Scene.extend({
 		cc.Director.getInstance().pushScene(cc.TransitionFade.create(1, new Level1TerraScene())); 
 	},
 	onMoon : function() {
-		cc.Director.getInstance().pushScene(cc.TransitionFade.create(1, new Level2LuaScene()));
+		cc.Director.getInstance().pushScene(cc.TransitionFade.create(1, new Cut2LuaScene()));
 	},
 	onMars : function() { 
 		cc.Director.getInstance().pushScene(cc.TransitionFade.create(1, new Cut3MarteScene()));
@@ -31,7 +31,7 @@ var PlanetmenuScene = cc.Scene.extend({
 		cc.Director.getInstance().pushScene(cc.TransitionFade.create(1, new Cut5SaturnoScene()));
 	},
 	onUranus : function() {
-		cc.Director.getInstance().pushScene(cc.TransitionFade.create(1, new Level6UranoScene()));
+		cc.Director.getInstance().pushScene(cc.TransitionFade.create(1, new Cut6UranoScene()));
 	},
 	onNeptune : function() {
 		cc.Director.getInstance().pushScene(cc.TransitionFade.create(1, new Cut7NetunoScene()));
