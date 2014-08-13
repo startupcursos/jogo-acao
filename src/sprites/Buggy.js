@@ -38,6 +38,7 @@ var Buggy = cc.Sprite.extend({
         this.speedX = 0;
         for (var i in this.getParent().rodas) {
         	this.getParent().rodas[i].destroy();
+        	cc.AudioEngine.getInstance().playEffect(s_explosion_car);
         }
 
 		this.active = false;
@@ -48,7 +49,7 @@ var Buggy = cc.Sprite.extend({
 		this.getParent().addChild(emitter, 10);
         GAME.LIFES -= 1;        
         if(GAME.LIFES <= 0){        	
-        	cc.AudioEngine.getInstance().stopMusic(s_bgm_1); 
+        	cc.AudioEngine.getInstance().stopMusic(true); 
         	cc.AudioEngine.getInstance().playEffect(s_end_game);
         	cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new GameOverScene()));        	
 			return;	

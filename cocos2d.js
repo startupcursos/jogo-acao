@@ -41,6 +41,7 @@
             'src/resource.js',
             'src/config/GameConfig.js',
             'src/util/CollisionDetector.js',
+
             'src/sprites/NaveSeguidora.js',
             'src/sprites/BigStone.js',
             'src/sprites/Buggy.js',
@@ -63,6 +64,9 @@
             'src/sprites/Planta.js',
             'src/sprites/UfoB.js',
             'src/sprites/UfoA.js',
+            'src/sprites/LittleStone.js',
+            'src/sprites/Particles.js',
+            
             'src/layers/GameLayer.js',
             'src/layers/HudLayer.js',
             'src/layers/TerraCeuLayer.js',
@@ -91,7 +95,7 @@
             'src/layers/SaturnoCeuLayer.js',
             'src/layers/SaturnoMontanhaLayer.js',
             'src/layers/SaturnoCityLayer.js',             
-            'src/sprites/LittleStone.js',
+            
             'src/scenes/Level1TerraScene.js',
             'src/scenes/Level2LuaScene.js',
             'src/scenes/Level3MarteScene.js',
@@ -99,14 +103,15 @@
             'src/scenes/Level5SaturnoScene.js',
             'src/scenes/Level6UranoScene.js',
             'src/scenes/Level7NetunoScene.js',
-
             'src/scenes/Level8VenusScene.js',
-            'src/scenes/Cut8VenusScene.js',
 
+            'src/scenes/Cut2LuaScene.js',
             'src/scenes/Cut3MarteScene.js',
             'src/scenes/Cut4JupiterScene.js',
-            'src/scenes/Cut7NetunoScene.js',
             'src/scenes/Cut5SaturnoScene.js',
+            'src/scenes/Cut6UranoScene.js',
+            'src/scenes/Cut7NetunoScene.js',
+            'src/scenes/Cut8VenusScene.js',
 
             'src/scenes/MainmenuScene.js',
             'src/scenes/PlanetmenuScene.js',

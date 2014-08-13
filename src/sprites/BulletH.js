@@ -15,11 +15,11 @@ var BulletH = cc.Sprite.extend({
 		this.initialPosition = cc.p(x,y);
 		
 		//Carrega no Cache as Imagens
-		cc.SpriteFrameCache.getInstance().addSpriteFrames(s_rocket_plist);
+		cc.SpriteFrameCache.getInstance().addSpriteFrames(s_bullet_plist);
 		//Montar um Array com cada quadro da Animação
 		var animFrames = [];
-		for (var i = 1; i <= 4; i++) {
-			var str = "rocket-" + i + ".png";
+		for (var i = 1; i <= 5; i++) {
+			var str = "Bullet_H-" + i + ".png";
 			var frame = cc.SpriteFrameCache.getInstance().getSpriteFrame(str);
 			animFrames.push(frame);
 		}
