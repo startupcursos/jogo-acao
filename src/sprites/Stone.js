@@ -1,4 +1,4 @@
-var Stone = cc.Sprite.extend({
+  var Stone = cc.Sprite.extend({
 	active : true,
 	healthPoints : 1,
 	speedX : -GAME.SCROLLING.SPEED_X,
@@ -7,7 +7,7 @@ var Stone = cc.Sprite.extend({
 	ctor : function(x, y) {
 		this._super();
 		this.init(s_stone);
-		this.setAnchorPoint( 0.5 , 0.5);//old Anchor Point (0.5, 0)
+		this.setAnchorPoint( 1.5 , 1.5);
 		this.setPosition(cc.p(x, y));
 		GAME.CONTAINER.ENEMIES.push(this);
 	},
