@@ -23,14 +23,15 @@ var Level4JupiterScene = cc.Scene.extend({
 		var spriteGround = new Ground(0, 0, s_jupiter_chao);
 		this.gamelayer.init(spriteGround, s_bgm_jupiter);
 
+		GAME.MUSICDURATIONINSEC = 83;
 		var hudLayer = new HudLayer();
 		hudLayer.init();
 		this.addChild(hudLayer, hudLayer.zOrder);
 		this.player = this.gamelayer.player;
 		this.enemyPlacement();
 		
-		GAME.LASTLEVEL = new Level4JupiterScene();
-		GAME.MUSICDURATIONINSEC = 83;
+		//Armazeno a última fase carregada
+		GAME.LASTLEVEL = new Level4JupiterScene();		
 	},
 	enemyPlacement : function() {
 		// Primeiro Segmento de 10K

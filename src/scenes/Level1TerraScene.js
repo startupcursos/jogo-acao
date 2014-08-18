@@ -2,7 +2,7 @@ var Level1TerraScene = cc.Scene.extend({
 	player: null,
 	gamelayer: null,
 	canvas: null,
-	onEnter : function() {
+	onEnter : function() {		
 		this._super();
 		this.canvas = cc.Director.getInstance().getWinSize();
 
@@ -34,6 +34,7 @@ var Level1TerraScene = cc.Scene.extend({
 		this.enemyPlacement();
 		this.player = this.gamelayer.player;
 		
+		GAME.MUSICDURATIONINSEC = 86;		
 		var hudLayer = new HudLayer();
 		hudLayer.init();
 		this.addChild(hudLayer, hudLayer.zOrder);
@@ -41,7 +42,7 @@ var Level1TerraScene = cc.Scene.extend({
 		
 		//Armazeno a última fase carregada
 		GAME.LASTLEVEL = new Level1TerraScene();
-		GAME.MUSICDURATIONINSEC = 86;
+			
 	},
 	enemyPlacement : function() {
 		this.gamelayer.addChild(new Tank(6000, this.canvas.height / 4));
