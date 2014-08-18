@@ -26,12 +26,13 @@ var Level3MarteScene = cc.Scene.extend({
 		this.enemyPlacement();
 		this.player = this.gamelayer.player;
 		
+		GAME.MUSICDURATIONINSEC = 82;
 		var hudLayer = new HudLayer();
 		hudLayer.init();
 		this.addChild(hudLayer, hudLayer.zOrder);
 		
-		GAME.LASTLEVEL = new Level3MarteScene();
-		GAME.MUSICDURATIONINSEC = 82;
+		//Armazeno a última fase carregada
+		GAME.LASTLEVEL = new Level3MarteScene();		
 	},
 	enemyPlacement : function() {
 		this.gamelayer.addChild(new UfoA(600, 2 / 6 * this.canvas.height));

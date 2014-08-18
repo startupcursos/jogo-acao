@@ -23,11 +23,13 @@ var Level6UranoScene = cc.Scene.extend({
 		var spriteGround = new Ground(0, 0, s_urano_chao);
 		this.gamelayer.init(spriteGround, s_bgm_urano);
 
+		GAME.MUSICDURATIONINSEC = 76;
 		var hudLayer = new HudLayer();
 		hudLayer.init();
 		this.addChild(hudLayer, hudLayer.zOrder);
-		GAME.LASTLEVEL = new Level6UranoScene();
-		GAME.MUSICDURATIONINSEC = 76;
+		
+		//Armazeno a última fase carregada
+		GAME.LASTLEVEL = new Level6UranoScene();		
 	},
 	enemyPlacement : function() {
 
