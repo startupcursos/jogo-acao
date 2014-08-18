@@ -21,7 +21,7 @@ var Mina = cc.Sprite.extend({
 		var animation = cc.Animation.create(animFrames, 0.1);
 		var action = cc.RepeatForever.create(cc.Animate.create(animation));
 		this.runAction(action);
-		this.setAnchorPoint(0.5,0.5);
+		this.setAnchorPoint(5.0,0);
 		this.setPosition(x, y);
 		this.initialPosition = cc.p(x,y);
 	},
