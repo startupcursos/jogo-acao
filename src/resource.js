@@ -101,7 +101,7 @@ var s_roda = "roda.png";
 //Particles
 var s_stars = "stars.png";
 
-//Menu
+//Mainmenu
 var s_bg_mainmenu = "bg_01.png";
 var s_bplay = "button_play.png";
 var s_bhighscore = "button_highscore.png";
@@ -109,6 +109,17 @@ var s_bsettings = "button_settings.png";
 var s_bcredits = "button_credits.png";
 var s_bquit = "button_quit.png";
 var s_bgotomenu = "button_gotomenu.png";
+
+//Planetmenu
+var s_bg_planetmenu = "bg_02.png";
+var s_button_p_earth = "button_p_earth.png";
+var s_button_p_mars = "button_p_mars.png";
+var s_button_p_moon = "button_p_moon.png";
+var s_button_p_neptune = "button_p_neptune.png";
+var s_button_p_saturn = "button_p_saturn.png";
+var s_button_p_uranus = "button_p_uranus.png";
+var s_button_p_venus = "button_p_venus.png";
+
 
 //plist
 var s_spritesheet = "spritesheet.png";
@@ -146,7 +157,7 @@ var s_bgm_urano = "res/music/bgm-uranus.mp3";
 
 var g_resources = [
     
-    //menu
+    //Mainmenu
     {src:s_bg_mainmenu},
     {src:s_bplay}, 
     {src:s_bhighscore}, 
@@ -154,6 +165,15 @@ var g_resources = [
     {src:s_bcredits}, 
     {src:s_bquit}, 
     {src:s_bgotomenu}, 
+    
+    //Planetmenu
+    {src:s_button_p_earth},
+    {src:s_button_p_mars},
+    {src:s_button_p_moon},
+    {src:s_button_p_neptune},
+    {src:s_button_p_saturn},
+    {src:s_button_p_uranus},
+    {src:s_button_p_venus},
 
     //image
     {src:s_big_stone},
