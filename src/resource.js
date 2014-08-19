@@ -13,6 +13,8 @@ var s_hole_small = "hole-small.png";
 var s_hole_big = "hole-big.png";
 var s_hole_ufo_c = "hole-ufo-c.png";
 var s_ground = "groundAcidentado.png";
+var s_progress_bar = "progressBar.png";
+var s_progress_bar_panel = "pbar.png";
 
 var s_terra_ceu = "terra-ceu.png";
 var s_terra_deserto = "terra-deserto.png";
@@ -101,7 +103,6 @@ var s_roda = "roda.png";
 //Particles
 var s_stars = "stars.png";
 
-//Mainmenu
 var s_bg_mainmenu = "bg_01.png";
 var s_bplay = "button_play.png";
 var s_bhighscore = "button_highscore.png";
@@ -119,7 +120,6 @@ var s_button_p_neptune = "button_p_neptune.png";
 var s_button_p_saturn = "button_p_saturn.png";
 var s_button_p_uranus = "button_p_uranus.png";
 var s_button_p_venus = "button_p_venus.png";
-
 
 //plist
 var s_spritesheet = "spritesheet.png";
@@ -179,12 +179,14 @@ var g_resources = [
     {src:s_big_stone},
     {src:s_buggy},
     {src:s_bullet_v},
-    {src:s_bullet_h},
+	{src:s_bullet_h},
     {src:s_carro},
     {src:s_enemy_bullet_v},
     {src:s_enemy_bullet_v2},
     {src:s_fire},
     {src:s_ground},
+    {src:s_progress_bar},
+    {src:s_progress_bar_panel},
     
 //Marte
     {src:s_marte_ceu},
@@ -236,7 +238,6 @@ var g_resources = [
     {src:s_venus_chao},
 
 	{src:s_netuno_cut_image},
-
 
     {src:s_little_stone},
     {src:s_hole_small},

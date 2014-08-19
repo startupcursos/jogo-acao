@@ -29,11 +29,13 @@ var Level7NetunoScene = cc.Scene.extend({
 		this.enemyPlacement();
 		this.player = this.gamelayer.player;
 		
+		GAME.MUSICDURATIONINSEC = 64;
 		var hudLayer = new HudLayer();
 		hudLayer.init();
 		this.addChild(hudLayer, hudLayer.zOrder);
 		
-		GAME.LASTLEVEL = new Level7NetunoScene();
+		//Armazeno a última fase carregada
+		GAME.LASTLEVEL = new Level7NetunoScene();		
 	},
 	
 	enemyPlacement : function() {
