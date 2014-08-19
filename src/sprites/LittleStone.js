@@ -7,7 +7,7 @@ var LittleStone = cc.Sprite.extend({
 	ctor : function(x, y) {
 		this._super();
 		this.init(s_little_stone);
-		this.setAnchorPoint(0.5,0.5);
+		this.setAnchorPoint(2.0,2.0);
 		this.setPosition(x, y);
 		GAME.CONTAINER.ENEMIES.push(this);
 	},
