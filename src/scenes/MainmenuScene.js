@@ -6,16 +6,16 @@ var MainmenuScene = cc.Scene.extend({
 		bgMainMenu.setPosition(size.width / 2, size.height / 2);
 		this.addChild(bgMainMenu, -1);
 
-		cc.MenuItemFont.setFontName("Arial");
-		cc.MenuItemFont.setFontSize(48);
 		// ItemImage
 	 	var itemMenuPlay = cc.MenuItemImage.create(s_bplay, s_bplay, this.onPlay, this);
-		var itemMenuHS = cc.MenuItemFont.create("HighScore", this.onHighScore);
-		var itemMenuSettings = cc.MenuItemFont.create("Settings", this.onSettings);
-		var itemMenuCredits = cc.MenuItemFont.create("Credits", this.onCredits);
-		var itemMenuQuit = cc.MenuItemFont.create("Quit", this.onQuit);
+		var itemMenuHS = cc.MenuItemImage.create(s_bhighscore, s_bhighscore, this.onHighScore, this);
+		var itemMenuSettings = cc.MenuItemImage.create(s_bsettings, s_bsettings, this.onSettings, this);
+		var itemMenuCredits = cc.MenuItemImage.create(s_bcredits, s_bcredits, this.onCredits, this);
+		var itemMenuQuit = cc.MenuItemImage.create(s_bquit, s_bquit, this.onQuit, this);
+		
 		var menu = cc.Menu.create(itemMenuPlay, itemMenuHS, itemMenuSettings, itemMenuCredits, itemMenuQuit);
-		menu.alignItemsVerticallyWithPadding(15);
+		menu.setPosition (400,190);
+		menu.alignItemsVerticallyWithPadding(10);
 		this.addChild(menu);
 	},
 	onPlay : function() {

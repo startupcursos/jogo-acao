@@ -7,8 +7,8 @@ var Stone = cc.Sprite.extend({
 	ctor : function(x, y) {
 		this._super();
 		this.init(s_stone);
-		this.setAnchorPoint(0.5,0);
-		this.setPosition(x, y);
+		this.setAnchorPoint( 0.5 , 0.5);//old Anchor Point (0.5, 0)
+		this.setPosition(cc.p(x, y));
 		GAME.CONTAINER.ENEMIES.push(this);
 	},
 	update : function(dt) {
@@ -26,10 +26,20 @@ var Stone = cc.Sprite.extend({
 		this.setPosition(finalP);
 	},
 	destroy : function() {
+            
+                //Remove from canvas
 		this.setVisible(false);
 		this.active = false;
 		this.stopAllActions();
-		var index = GAME.CONTAINER.ENEMIES.indexOf(this);
+                
+		//Particle Explosion
+                var pos_x = this.getPosition().x;
+		var pos_y = this.getPosition().y;
+		var explode = new ParticleGalaxy(pos_x, pos_y);
+		this.getParent().addChild(explode);
+            
+                //Enemy Index Remove
+                var index = GAME.CONTAINER.ENEMIES.indexOf(this);
 		if (index > -1) {
 			GAME.CONTAINER.ENEMIES.splice(index, 1);
 		}

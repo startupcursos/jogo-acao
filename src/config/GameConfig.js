@@ -5,12 +5,13 @@ GAME.SCORE=0;
 GAME.LIFES=3;
 GAME.SOUND=true;
 GAME.LASTLEVEL=null;
+GAME.MUSICDURATIONINSEC = null;
 GAME.GROUND_HEIGHT_PERC=0.11;
 GAME.SCROLLING = {
 	SPEED_X: 300,
 	SPEED_Y: 0,
 	TOTAL: 0,
-	TIME: 0,
+	TIME: 0
 };
 
 //container
@@ -22,8 +23,8 @@ GAME.CONTAINER = {
 
 
 
-//Clock Function
 
+//Clock Function
 
 toSeconds = function(number){
 	
