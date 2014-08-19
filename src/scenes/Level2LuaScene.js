@@ -35,7 +35,7 @@ var Level2LuaScene = cc.Scene.extend({
 		GAME.LASTLEVEL = new Level2LuaScene();		
 	},
 	enemyPlacement : function() {
-		this.gamelayer.addChild(new Tank(6000, this.canvas.height / 4));
+		this.gamelayer.addChild(new Tank(6000, this.canvas.height / 11));
 		this.gamelayer.addChild(new NaveSeguidora(-500, this.canvas.height / 3.5));
 		this.gamelayer.addChild(new UfoA(800,  5 / 6 * this.canvas.height));
 		this.gamelayer.addChild(new UfoB(1200,  5 / 6 * this.canvas.height));
@@ -44,8 +44,6 @@ var Level2LuaScene = cc.Scene.extend({
 		this.gamelayer.addChild(new BigStone(3200, this.canvas.height / 3.3));
 		this.gamelayer.addChild(new SmallRollingStone(10000, this.canvas.height / 4));
 		this.gamelayer.addChild(new RollingStone(11000, this.canvas.height / 3.5));
-		this.gamelayer.addChild(new HoleSmall(4000, this.canvas.height / 6.5));
-		this.gamelayer.addChild(new HoleBig(4800, this.canvas.height / 6.5));
 		this.gamelayer.addChild(new Mina(5600, this.canvas.height / 4.5));
 		this.gamelayer.addChild(new Planta(6400, this.canvas.height / 6.5));
 	},
