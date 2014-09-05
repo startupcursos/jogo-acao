@@ -23,17 +23,20 @@ var Level4JupiterScene = cc.Scene.extend({
 		var spriteGround = new Ground(0, 0, s_jupiter_chao);
 		this.gamelayer.init(spriteGround, s_bgm_jupiter);
 
+		GAME.MUSICDURATIONINSEC = 83;
 		var hudLayer = new HudLayer();
 		hudLayer.init();
 		this.addChild(hudLayer, hudLayer.zOrder);
 		this.player = this.gamelayer.player;
 		this.enemyPlacement();
-		GAME.LASTLEVEL = new Level4JupiterScene();
+		
+		//Armazeno a última fase carregada
+		GAME.LASTLEVEL = new Level4JupiterScene();		
 	},
 	enemyPlacement : function() {
 		// Primeiro Segmento de 10K
-		//Introdução da Mina (Surpresa)
-		//Encurtando a distância (Skill: Pulo)
+		//Surpresa: Mina 
+		//Skill: Pulo
 		this.gamelayer.addChild(new Mina(1200, this.canvas.height / 9.5));
 		this.gamelayer.addChild(new Mina(1700, this.canvas.height / 9.5));
 		this.gamelayer.addChild(new Mina(2200, this.canvas.height / 9.5));
@@ -44,8 +47,8 @@ var Level4JupiterScene = cc.Scene.extend({
 		this.gamelayer.addChild(new Mina(4000, this.canvas.height / 9.5));
 		this.gamelayer.addChild(new Mina(4300, this.canvas.height / 9.5));
 		this.gamelayer.addChild(new Mina(4600, this.canvas.height / 9.5));
-		//Introdução da Pedra (Surpresa)
-		//Encurtando a distância (Skill: Pulo, Tiro)
+		//Surpresa: Pedra, UfoA
+		//Skill: Pulo, Tiro
 		this.gamelayer.addChild(new Stone(5100, this.canvas.height / 9.5));
 		this.gamelayer.addChild(new Mina(5600, this.canvas.height / 9.5));
 		this.gamelayer.addChild(new Stone(5900, this.canvas.height / 9.5));
@@ -55,6 +58,40 @@ var Level4JupiterScene = cc.Scene.extend({
 		this.gamelayer.addChild(new UfoA(7800, this.canvas.height * 5 / 6));
 		this.gamelayer.addChild(new Stone(8200, this.canvas.height / 9.5));
 		this.gamelayer.addChild(new UfoA(8500, this.canvas.height * 5 / 6));
+
+		//Segundo Segmento de 10K
+		//Surpresa:RollingStone, SmallRollingStone
+		this.gamelayer.addChild(new RollingStone(10200, this.canvas.height / 9.0));
+		this.gamelayer.addChild(new RollingStone(10800, this.canvas.height / 9.0));
+		this.gamelayer.addChild(new UfoA(9000, this.canvas.height * 5 / 6));
+		this.gamelayer.addChild(new SmallRollingStone(11400, this.canvas.height / 9.0));
+		this.gamelayer.addChild(new SmallRollingStone(11900, this.canvas.height / 9.0));
+		this.gamelayer.addChild(new UfoA(11000, this.canvas.height * 5 / 6));
+		this.gamelayer.addChild(new Stone(12300, this.canvas.height / 9.5));
+		this.gamelayer.addChild(new SmallRollingStone(12800, this.canvas.height / 9.0));
+		this.gamelayer.addChild(new SmallRollingStone(12900, this.canvas.height / 9.0));
+		this.gamelayer.addChild(new SmallRollingStone(13000, this.canvas.height / 9.0));
+		this.gamelayer.addChild(new UfoA(12400, this.canvas.height * 5 / 6));
+		this.gamelayer.addChild(new Mina(13950, this.canvas.height / 9.5));
+		this.gamelayer.addChild(new Mina(14000, this.canvas.height / 9.5));
+		this.gamelayer.addChild(new Mina(14050, this.canvas.height / 9.5));
+		this.gamelayer.addChild(new UfoA(13500, this.canvas.height * 5 / 6));
+		this.gamelayer.addChild(new UfoA(13800, this.canvas.height * 4 / 6));
+		
+		//Surpresa:UfoB, Planta
+		this.gamelayer.addChild(new Planta(15000, this.canvas.height / 10));
+		this.gamelayer.addChild(new Stone(15600, this.canvas.height / 9.5));
+		this.gamelayer.addChild(new Mina(15900, this.canvas.height / 9.5));
+		this.gamelayer.addChild(new Planta(16400, this.canvas.height / 10));
+		this.gamelayer.addChild(new Mina(16800, this.canvas.height / 9.5));
+		this.gamelayer.addChild(new Planta(17300, this.canvas.height / 10));
+		this.gamelayer.addChild(new UfoA(17800, this.canvas.height * 5 / 6));
+		this.gamelayer.addChild(new Stone(18200, this.canvas.height / 9.5));
+		this.gamelayer.addChild(new UfoA(15500, this.canvas.height * 5 / 6));
+		this.gamelayer.addChild(new UfoB(16000, this.canvas.height * 4 / 6));
+		this.gamelayer.addChild(new UfoB(16300, this.canvas.height * 5 / 6));
+		this.gamelayer.addChild(new UfoB(16600, this.canvas.height * 4 / 6));
+		
 
 	},
 	levelFinished : function() {

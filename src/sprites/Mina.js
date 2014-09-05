@@ -21,7 +21,7 @@ var Mina = cc.Sprite.extend({
 		var animation = cc.Animation.create(animFrames, 0.1);
 		var action = cc.RepeatForever.create(cc.Animate.create(animation));
 		this.runAction(action);
-		this.setAnchorPoint(0.5,0);
+		this.setAnchorPoint(5.0,0);
 		this.setPosition(x, y);
 		this.initialPosition = cc.p(x,y);
 	},
@@ -44,10 +44,18 @@ var Mina = cc.Sprite.extend({
 	
 	destroy : function() {
 		
+                //Remove from canvas
 		this.setVisible(false);
 		this.active = false;
 		this.stopAllActions();
-	
+                
+                //Create Particle Effect
+                var pos_x = this.getPosition().x;
+		var pos_y = this.getPosition().y;
+		var explode = new ParticleBlueFire(pos_x, pos_y);
+		this.getParent().addChild(explode);
+                
+                //Remove from Enemy Index
 		var index = GAME.CONTAINER.ENEMIES.indexOf(this);
 		if (index > -1) {
 			GAME.CONTAINER.ENEMIES.splice(index, 1);

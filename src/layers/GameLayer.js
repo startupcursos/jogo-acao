@@ -146,6 +146,14 @@ var GameLayer = cc.Layer.extend({
 				selRoda.setPosition(cc.p(p0.x, p0.y - 2));
 			}
 		}
+		//Rotaciona o carrinho de acordo com a posição das rodas
+		if(this.rodas[0].getPosition().y > this.rodas[2].getPosition().y) {
+			this.player.setRotation(-1);
+		} else if (this.rodas[0].getPosition().y == this.rodas[2].getPosition().y) {
+			this.player.setRotation(0);
+		} else {
+			this.player.setRotation(1);
+		}
 	},
 	updateActiveUnits : function(dt) {
 		var selChild, children = this.getChildren();

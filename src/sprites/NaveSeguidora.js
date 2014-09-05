@@ -9,6 +9,7 @@ var NaveSeguidora = cc.Sprite.extend({
 	ctor : function(x, y) {
 		this._super();
 		this.setPosition(x, y);
+		this.setAnchorPoint(3.0,3.0);
 
 		cc.SpriteFrameCache.getInstance().addSpriteFrames(s_hover_ship_plist);
 		//Montar um Array com cada quadro da Animacao

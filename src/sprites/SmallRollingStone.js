@@ -7,7 +7,7 @@ var SmallRollingStone = cc.Sprite.extend({
 	ctor : function(x, y) {
 		this._super();
 		this.init(s_small_rolling_stone);
-		this.setAnchorPoint(0.5,0.5);
+		this.setAnchorPoint(1.5,1.5);
 		this.setPosition(x, y);
 		GAME.CONTAINER.ENEMIES.push(this);
 		var actionRotate = cc.RotateBy.create(2, 360).reverse();
@@ -17,11 +17,23 @@ var SmallRollingStone = cc.Sprite.extend({
 		if (this.healthPoints <= 0) {
 			this.destroy();
 		}
+		if (this._dtOnScreen != null) {
+			this._dtOnScreen += dt;
+		}
 		var canvas = cc.Director.getInstance().getWinSize();
 		var p0 = this.getPosition();
-		var dx = this.speedX * dt;
-		var dy = this.speedY * dt;
+		if (this.active) {
+			var dx = this.speedX * dt;
+			var dy = this.speedY * dt;
+		} else {
+			var dx = -GAME.SCROLLING.SPEED_X * dt;
+			var dy = -GAME.SCROLLING.SPEED_Y * dt;
+		}
 		var finalP = cc.p(p0.x + dx, p0.y + dy);
+		if (finalP.x > 0 && finalP.x < canvas.width && this._dtOnScreen === null) {
+			this._dtOnScreen = 0;
+			this.active = true;
+		}
 		if (finalP.x < 0) {
 			this.destroy();
 		}

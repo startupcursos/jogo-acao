@@ -43,22 +43,41 @@ var HudLayer = cc.Layer.extend({
         this.labelLife.setFontFillColor(new cc.Color3B(Red,Blue,Green));
         this.addChild(this.labelLife);
    		
-   		this.labelDistance = cc.LabelTTF.create("DISTANCE: 0", "Courrier", 20);        
+   		this.labelDistance = cc.LabelTTF.create("DISTANCE: 0", "Courrier", 20);
         this.labelDistance.setPosition(100, this.canvas.height - 30);
         this.labelDistance.setFontFillColor(new cc.Color3B(Red,Blue,Green));
         this.addChild(this.labelDistance);
+                
+        var imgPanelProgressBar = cc.Sprite.create(s_progress_bar_panel);
+        imgPanelProgressBar.setPosition(this.canvas.width *0.5 , this.canvas.height - 30);
+        this.addChild(imgPanelProgressBar);
+        
+        //cc.PROGRESS_TIMER_TYPE_BAR = 1;        
+		var to1 = cc.ProgressTo.create(GAME.MUSICDURATIONINSEC, 100);
 
-		this.labelTime = cc.LabelTTF.create("TIME: 0", "Courrier", 20);        
-        this.labelTime.setPosition(this.canvas.width /2 , this.canvas.height - 30);
+		var left = cc.ProgressTimer.create(cc.Sprite.create(s_progress_bar));
+		left.setType(cc.PROGRESS_TIMER_TYPE_BAR);
+		// Setup for a bar starting from the left since the midpoint is 0 for the x
+		left.setMidpoint(cc.p(0, 0));
+		// Setup for a horizontal bar since the bar change rate is 0 for y meaning no vertical change
+		left.setBarChangeRate(cc.p(1, 0));
+		
+		left.setPosition(this.canvas.width *0.5 , this.canvas.height - 30);
+		left.runAction(cc.RepeatForever.create(to1));
+		this.addChild(left);
+
+		/*this.labelTime = cc.LabelTTF.create("TIME: 0", "Courrier", 20*2);        
+        this.labelTime.setPosition(this.canvas.width *0.5 , this.canvas.height - 30);
         this.labelTime.setFontFillColor(new cc.Color3B(Red,Blue,Green));
-        this.addChild(this.labelTime);
+        this.addChild(this.labelTime);*/
 
 		this.scheduleUpdate();
 	},
 	update : function(dt) {
+		GAME.SCROLLING.TIME += dt;
 		this.labelScore.setString("SCORE: " + GAME.SCORE);
 		this.labelLife.setString("LIFE: " + GAME.LIFES);
 		this.labelDistance.setString("DISTANCE: " + parseInt(GAME.SCROLLING.TOTAL));
-		this.labelTime.setString("TIME: " + parseInt(GAME.SCROLLING.TIME));
+		/*this.labelTime.setString(toSeconds(GAME.SCROLLING.TIME));*/
 	}
 });

@@ -27,13 +27,13 @@
 (function () {
     var d = document;
     var c = {
-        COCOS2D_DEBUG:2, //0 to turn debug off, 1 for basic debug, and 2 for full debug
+        COCOS2D_DEBUG:0, //0 to turn debug off, 1 for basic debug, and 2 for full debug
         box2d:false,
         chipmunk:false,
         showFPS:true,
         loadExtension:false,
         frameRate:60,
-        renderMode:0,       //Choose of RenderMode: 0(default), 1(Canvas only), 2(WebGL only)
+        renderMode:2,       //Choose of RenderMode: 0(default), 1(Canvas only), 2(WebGL only)
         tag:'gameCanvas', //the dom element to run cocos2d on
         engineDir:'libs/cchtml5/cocos2d/',
         //SingleEngineFile:'',
@@ -41,6 +41,7 @@
             'src/resource.js',
             'src/config/GameConfig.js',
             'src/util/CollisionDetector.js',
+
             'src/sprites/NaveSeguidora.js',
             'src/sprites/BigStone.js',
             'src/sprites/Buggy.js',
@@ -63,6 +64,9 @@
             'src/sprites/Planta.js',
             'src/sprites/UfoB.js',
             'src/sprites/UfoA.js',
+            'src/sprites/LittleStone.js',
+            'src/sprites/Particles.js',
+            
             'src/layers/GameLayer.js',
             'src/layers/HudLayer.js',
             'src/layers/TerraCeuLayer.js',
@@ -91,7 +95,7 @@
             'src/layers/SaturnoCeuLayer.js',
             'src/layers/SaturnoMontanhaLayer.js',
             'src/layers/SaturnoCityLayer.js',             
-            'src/sprites/LittleStone.js',
+            
             'src/scenes/Level1TerraScene.js',
             'src/scenes/Level2LuaScene.js',
             'src/scenes/Level3MarteScene.js',
@@ -99,14 +103,15 @@
             'src/scenes/Level5SaturnoScene.js',
             'src/scenes/Level6UranoScene.js',
             'src/scenes/Level7NetunoScene.js',
-
             'src/scenes/Level8VenusScene.js',
-            'src/scenes/Cut8VenusScene.js',
 
+            'src/scenes/Cut2LuaScene.js',
             'src/scenes/Cut3MarteScene.js',
             'src/scenes/Cut4JupiterScene.js',
-            'src/scenes/Cut7NetunoScene.js',
             'src/scenes/Cut5SaturnoScene.js',
+            'src/scenes/Cut6UranoScene.js',
+            'src/scenes/Cut7NetunoScene.js',
+            'src/scenes/Cut8VenusScene.js',
 
             'src/scenes/MainmenuScene.js',
             'src/scenes/PlanetmenuScene.js',

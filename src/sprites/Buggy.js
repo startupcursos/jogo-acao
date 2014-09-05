@@ -49,7 +49,7 @@ var Buggy = cc.Sprite.extend({
 		this.getParent().addChild(emitter, 10);
         GAME.LIFES -= 1;        
         if(GAME.LIFES <= 0){        	
-        	cc.AudioEngine.getInstance().stopMusic(s_bgm_1); 
+        	cc.AudioEngine.getInstance().stopMusic(true); 
         	cc.AudioEngine.getInstance().playEffect(s_end_game);
         	cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1, new GameOverScene()));        	
 			return;	
@@ -61,7 +61,7 @@ var Buggy = cc.Sprite.extend({
 	},
 	jump : function() {
 		if (this.getNumberOfRunningActions() === 0 && this.active) {
-			var jumpUp = cc.JumpBy.create(1.0, cc.p(0, 0), 160, 1);
+			var jumpUp = cc.JumpBy.create(1.0, cc.p(0, 0), 100, 1);
 			this.runAction(jumpUp);
 			if (GAME.SOUND) {
 				cc.AudioEngine.getInstance().playEffect(s_jump_sfx);

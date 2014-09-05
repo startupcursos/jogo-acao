@@ -23,15 +23,16 @@ var Level5SaturnoScene = cc.Scene.extend({
 		var spriteGround = new Ground(0, 0, s_saturno_chao);
 		this.gamelayer.init(spriteGround,  s_bgm_saturno);
 		
-		
-		
 		this.enemyPlacement();
 		this.player = this.gamelayer.player;
 		
-			var hudLayer = new HudLayer();
+		GAME.MUSICDURATIONINSEC = 87;
+		var hudLayer = new HudLayer();
 		hudLayer.init(230,176,46);
 		this.addChild(hudLayer, hudLayer.zOrder);
-		GAME.LASTLEVEL = new Level5SaturnoScene();
+		
+		//Armazeno a última fase carregada
+		GAME.LASTLEVEL = new Level5SaturnoScene();		
 	},
 	enemyPlacement : function() {
 		this.gamelayer.addChild(new Mina(1200, this.canvas.height / 9.5));
