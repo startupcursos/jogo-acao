@@ -76,7 +76,7 @@ var UfoC = cc.Sprite.extend({
 		var index = GAME.CONTAINER.ENEMIES.indexOf(this);
 		if (index > -1) {
 			GAME.CONTAINER.ENEMIES.splice(index, 1);
-			cc.AudioEngine.getInstance().playEffect(s_explosion_nave);
+			
 		}
 	},
 	fireV : function() {

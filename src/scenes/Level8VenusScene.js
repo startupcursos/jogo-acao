@@ -43,27 +43,27 @@ var Level8VenusScene = cc.Scene.extend({
 		//this.gamelayer.addChild(new Planta(2800, this.canvas.width / 60, this.canvas.height / 2));
 		//this.gamelayer.addChild(new BigStone(3000, this.canvas.height * (GAME.GROUND_HEIGHT_PERC - 0.05)));
 		this.gamelayer.addChild(new UfoA(3200,  5 / 6 * this.canvas.height));
-		this.gamelayer.addChild(new UfoB(3500,  5 / 6 * this.canvas.height));
-		this.gamelayer.addChild(new UfoA(4000,  5 / 6 * this.canvas.height));
-		this.gamelayer.addChild(new UfoB(4400,  5 / 6 * this.canvas.height));
-		this.gamelayer.addChild(new RollingStone(5000, this.canvas.height * (GAME.GROUND_HEIGHT_PERC + 0.05)));
-		this.gamelayer.addChild(new RollingStone(6000, this.canvas.height * (GAME.GROUND_HEIGHT_PERC + 0.05)));
-		this.gamelayer.addChild(new RollingStone(7000, this.canvas.height * (GAME.GROUND_HEIGHT_PERC + 0.05)));
-		this.gamelayer.addChild(new RollingStone(7500, this.canvas.height * (GAME.GROUND_HEIGHT_PERC + 0.05)));
-		this.gamelayer.addChild(new RollingStone(7700, this.canvas.height * (GAME.GROUND_HEIGHT_PERC + 0.05)));
-		this.gamelayer.addChild(new Mina(7800, this.canvas.height * GAME.GROUND_HEIGHT_PERC));
-		this.gamelayer.addChild(new Mina(8100, this.canvas.height * GAME.GROUND_HEIGHT_PERC));
-		this.gamelayer.addChild(new Mina(9000, this.canvas.height * GAME.GROUND_HEIGHT_PERC));
-		this.gamelayer.addChild(new UfoC(10000,  5 / 6 * this.canvas.height));
-		this.gamelayer.addChild(new UfoA(11000,  5 / 6 * this.canvas.height));
-		this.gamelayer.addChild(new BigStone(12000, this.canvas.height * GAME.GROUND_HEIGHT_PERC - 0.05));
-		this.gamelayer.addChild(new UfoA(13000,  5 / 6 * this.canvas.height));
-		this.gamelayer.addChild(new UfoC(14000,  5 / 6 * this.canvas.height));
-		this.gamelayer.addChild(new Planta(15000, this.canvas.width / 60, this.canvas.height / 2));
-		this.gamelayer.addChild(new Planta(16500, this.canvas.width / 60, this.canvas.height / 2));
-		this.gamelayer.addChild(new Mina(17000, this.canvas.height * GAME.GROUND_HEIGHT_PERC));
-		this.gamelayer.addChild(new Mina(17300, this.canvas.height * GAME.GROUND_HEIGHT_PERC));
-		this.gamelayer.addChild(new UfoC(18000,  5 / 6 * this.canvas.height));
+		this.gamelayer.addChild(new UfoA(3500,  5 / 6 * this.canvas.height));
+		this.gamelayer.addChild(new UfoB(3800,  5 / 6 * this.canvas.height));
+		//this.gamelayer.addChild(new UfoC(4400,  5 / 6 * this.canvas.height));
+		//this.gamelayer.addChild(new RollingStone(5000, this.canvas.height * (GAME.GROUND_HEIGHT_PERC + 0.05)));
+		//this.gamelayer.addChild(new RollingStone(6000, this.canvas.height * (GAME.GROUND_HEIGHT_PERC + 0.05)));
+		//this.gamelayer.addChild(new RollingStone(7000, this.canvas.height * (GAME.GROUND_HEIGHT_PERC + 0.05)));
+		//this.gamelayer.addChild(new RollingStone(7500, this.canvas.height * (GAME.GROUND_HEIGHT_PERC + 0.05)));
+		//this.gamelayer.addChild(new RollingStone(7700, this.canvas.height * (GAME.GROUND_HEIGHT_PERC + 0.05)));
+		//this.gamelayer.addChild(new Mina(7800, this.canvas.height * GAME.GROUND_HEIGHT_PERC));
+		//this.gamelayer.addChild(new Mina(8100, this.canvas.height * GAME.GROUND_HEIGHT_PERC));
+		//this.gamelayer.addChild(new Mina(9000, this.canvas.height * GAME.GROUND_HEIGHT_PERC));
+		//this.gamelayer.addChild(new UfoC(10000,  5 / 6 * this.canvas.height));
+		//this.gamelayer.addChild(new UfoA(11000,  5 / 6 * this.canvas.height));
+		//this.gamelayer.addChild(new BigStone(12000, this.canvas.height * GAME.GROUND_HEIGHT_PERC - 0.05));
+		//this.gamelayer.addChild(new UfoA(13000,  5 / 6 * this.canvas.height));
+		//this.gamelayer.addChild(new UfoC(14000,  5 / 6 * this.canvas.height));
+		//this.gamelayer.addChild(new Planta(15000, this.canvas.width / 60, this.canvas.height / 2));
+		//this.gamelayer.addChild(new Planta(16500, this.canvas.width / 60, this.canvas.height / 2));
+		//this.gamelayer.addChild(new Mina(17000, this.canvas.height * GAME.GROUND_HEIGHT_PERC));
+		//this.gamelayer.addChild(new Mina(17300, this.canvas.height * GAME.GROUND_HEIGHT_PERC));
+		//this.gamelayer.addChild(new UfoC(18000,  5 / 6 * this.canvas.height));
 		
 
 		
